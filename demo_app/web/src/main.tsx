@@ -2,6 +2,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./styles.css";
+import { installStaticBackend, STATIC } from "./staticBackend";
+
+// static hosting (GitHub Pages): the browser answers /app/* and calls GoodData directly
+if (STATIC) installStaticBackend();
 
 // apply the saved light/dark choice before the first paint (no dark flash on the loading screen)
 const saved = localStorage.getItem("colorMode");

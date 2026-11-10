@@ -7,6 +7,8 @@ import { Home } from "./components/Home";
 import { ChatbotProvider, useChatbot } from "./components/Chatbot";
 import { WorkspaceView } from "./components/WorkspaceView";
 import { applyChrome, applyTheme, type ColorMode } from "./theme";
+import { STATIC, storedTokens } from "./staticBackend";
+import { TokenSetup } from "./components/TokenSetup";
 
 const initialMode = (): ColorMode => {
   const saved = localStorage.getItem("colorMode");
@@ -63,6 +65,7 @@ function Main() {
 }
 
 export default function App() {
+  if (STATIC && !storedTokens().admin) return <TokenSetup />;
   return (
     <AppProvider>
       {(status) =>
