@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { useApp } from "../AppContext";
+import { STATIC } from "../staticBackend";
 
 /** GoodData iframe authenticated as the current persona (token delivered by the postMessage handshake). */
 export function Embed({ url, label, tall, onEvent }: { url: string; label: string; tall?: boolean; onEvent?: (name: string, data: any) => void }) {
   const { persona, localeVersion } = useApp();
   const ref = useRef<HTMLIFrameElement>(null);
+  if (STATIC && persona.id === "admin") url = url.replace(/[?&]apiTokenAuthentication=true/g, (m) => (m.startsWith("?") ? "?" : "")).replace("?&", "?");
   const [ready, setReady] = useState(false);
   const onEventRef = useRef(onEvent);
   onEventRef.current = onEvent;

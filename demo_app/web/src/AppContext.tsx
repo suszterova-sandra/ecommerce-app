@@ -136,7 +136,9 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
         if (ov.error) throw new Error(`${ov.error}: ${ov.detail}`);
         ovRef.current = ov;
         setOverview(ov);
-        const start = p.personas.find((x: Persona) => x.id === personaId && x.available) ? personaId : "admin";
+        const start: PersonaId = p.personas.find((x: Persona) => x.id === personaId && x.available)
+          ? personaId
+          : (p.personas.find((x: Persona) => x.available)?.id ?? "admin");
         await switchPersona(start, parseHash());
         setStatus("ready");
       } catch (e: any) {

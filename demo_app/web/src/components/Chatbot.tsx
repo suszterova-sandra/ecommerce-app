@@ -8,7 +8,8 @@
  * users swaps the assistant, its agents and its conversation history for real.
  */
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import tigerFactory, { TigerTokenAuthProvider } from "@gooddata/sdk-backend-tiger";
+import tigerFactory, { ContextDeferredAuthProvider, TigerTokenAuthProvider } from "@gooddata/sdk-backend-tiger";
+import { STATIC } from "../staticBackend";
 import type { IAnalyticalBackend, IUserWorkspaceSettings } from "@gooddata/sdk-backend-spi";
 import { idRef, type IGenAIUserContext } from "@gooddata/sdk-model";
 import { BackendProvider, WorkspaceProvider } from "@gooddata/sdk-ui";
@@ -57,7 +58,9 @@ function backendFor(persona: PersonaId, host: string) {
   if (!backends.has(persona)) {
     backends.set(
       persona,
-      tokenFor(persona).then((token) => tigerFactory().onHostname(host).withAuthentication(new TigerTokenAuthProvider(token))),
+      STATIC && persona === "admin"
+        ? Promise.resolve(tigerFactory().onHostname(host).withAuthentication(new ContextDeferredAuthProvider()))
+        : tokenFor(persona).then((token) => tigerFactory().onHostname(host).withAuthentication(new TigerTokenAuthProvider(token))),
     );
   }
   return backends.get(persona)!;

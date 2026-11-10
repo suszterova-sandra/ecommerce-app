@@ -1,0 +1,639 @@
+{
+ "host": "https://navy-blue-eagle.trial.cloud.gooddata.com",
+ "parent": "gdc_demo_a7c3afa0-ca91-40db-a3a8-df4d5044e92f",
+ "reportId": "ecommerce_business_report",
+ "workspaces": [
+  {
+   "id": "gdc_demo_86a46377-cad8-4c3d-ab7c-6ba753b49b2c",
+   "name": "Fashion Store",
+   "isParent": false,
+   "themeId": "conference_nike",
+   "permissions": [
+    {
+     "name": "ANALYZE",
+     "assignee": {
+      "id": "analyze_group_id",
+      "type": "userGroup"
+     }
+    },
+    {
+     "name": "CREATE_AUTOMATION",
+     "assignee": {
+      "id": "analyze_group_id",
+      "type": "userGroup"
+     }
+    },
+    {
+     "name": "CREATE_METRIC",
+     "assignee": {
+      "id": "analyze_group_id",
+      "type": "userGroup"
+     }
+    },
+    {
+     "name": "EXPORT",
+     "assignee": {
+      "id": "analyze_group_id",
+      "type": "userGroup"
+     }
+    },
+    {
+     "name": "USE_AI_ASSISTANT",
+     "assignee": {
+      "id": "analyze_group_id",
+      "type": "userGroup"
+     }
+    },
+    {
+     "name": "CREATE_AUTOMATION",
+     "assignee": {
+      "id": "view_group_id",
+      "type": "userGroup"
+     }
+    },
+    {
+     "name": "CREATE_FILTER_VIEW",
+     "assignee": {
+      "id": "view_group_id",
+      "type": "userGroup"
+     }
+    },
+    {
+     "name": "EXPORT",
+     "assignee": {
+      "id": "view_group_id",
+      "type": "userGroup"
+     }
+    },
+    {
+     "name": "USE_AI_ASSISTANT",
+     "assignee": {
+      "id": "view_group_id",
+      "type": "userGroup"
+     }
+    },
+    {
+     "name": "VIEW",
+     "assignee": {
+      "id": "view_group_id",
+      "type": "userGroup"
+     }
+    }
+   ],
+   "hierarchyPermissions": [],
+   "dashboards": [
+    {
+     "id": "customers",
+     "title": "3. Customers"
+    },
+    {
+     "id": "executive_business_performance_last_quarter_2ddddfb7",
+     "title": "Executive Business Performance \u2014 Last Quarter"
+    },
+    {
+     "id": "overview",
+     "title": "1. Overview"
+    },
+    {
+     "id": "products",
+     "title": "4. Products"
+    },
+    {
+     "id": "sales",
+     "title": "2. Sales"
+    }
+   ]
+  },
+  {
+   "id": "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203",
+   "name": "Electronics Store",
+   "isParent": false,
+   "themeId": "conference_samsung",
+   "permissions": [],
+   "hierarchyPermissions": [],
+   "dashboards": [
+    {
+     "id": "customers",
+     "title": "3. Customers"
+    },
+    {
+     "id": "executive_business_performance_last_quarter_2ddddfb7",
+     "title": "Executive Business Performance \u2014 Last Quarter"
+    },
+    {
+     "id": "overview",
+     "title": "1. Overview"
+    },
+    {
+     "id": "products",
+     "title": "4. Products"
+    },
+    {
+     "id": "sales",
+     "title": "2. Sales"
+    }
+   ]
+  },
+  {
+   "id": "gdc_demo_a7c3afa0-ca91-40db-a3a8-df4d5044e92f",
+   "name": "Ecommerce Platform",
+   "isParent": true,
+   "themeId": "conference_dark_lime",
+   "permissions": [],
+   "hierarchyPermissions": [],
+   "dashboards": [
+    {
+     "id": "customers",
+     "title": "3. Customers"
+    },
+    {
+     "id": "executive_business_performance_last_quarter_2ddddfb7",
+     "title": "Executive Business Performance \u2014 Last Quarter"
+    },
+    {
+     "id": "overview",
+     "title": "1. Overview"
+    },
+    {
+     "id": "products",
+     "title": "4. Products"
+    },
+    {
+     "id": "sales",
+     "title": "2. Sales"
+    }
+   ]
+  },
+  {
+   "id": "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5",
+   "name": "Home & Living Store",
+   "isParent": false,
+   "themeId": "conference_ikea",
+   "permissions": [],
+   "hierarchyPermissions": [],
+   "dashboards": [
+    {
+     "id": "customers",
+     "title": "3. Customers"
+    },
+    {
+     "id": "executive_business_performance_last_quarter_2ddddfb7",
+     "title": "Executive Business Performance \u2014 Last Quarter"
+    },
+    {
+     "id": "overview",
+     "title": "1. Overview"
+    },
+    {
+     "id": "products",
+     "title": "4. Products"
+    },
+    {
+     "id": "sales",
+     "title": "2. Sales"
+    },
+    {
+     "id": "9efa35cd-db53-4fc9-8bab-2f5d9fdbc8dd",
+     "title": "Copy of 1. Overview"
+    },
+    {
+     "id": "9ff18d53-50ad-4617-a46d-b66237af0369",
+     "title": "My dashboard"
+    },
+    {
+     "id": "b4c8fe3b-40a8-449e-a67c-0f8429c3d541",
+     "title": "Test"
+    }
+   ]
+  }
+ ],
+ "themes": {
+  "conference_dark_lime": {
+   "id": "conference_dark_lime",
+   "name": "Conference \u2013 Dark Lime",
+   "palette": {
+    "primary": {
+     "base": "#D4F24A",
+     "contrast": "#0B0D10"
+    },
+    "error": {
+     "base": "#FB7185"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#D4F24A"
+    },
+    "complementary": {
+     "c0": "#0B0D10",
+     "c1": "#14171C",
+     "c2": "#1B1F25",
+     "c3": "#252A31",
+     "c4": "#343A43",
+     "c5": "#4E5560",
+     "c6": "#747C88",
+     "c7": "#9BA3AE",
+     "c8": "#C9CED6",
+     "c9": "#F2F4F7"
+    }
+   },
+   "logo": "https://www.gooddata.ai/img/generic/logo-gd-w.svg",
+   "cover": "https://www.gooddata.ai/img/pages/company/partnership.webp"
+  },
+  "conference_ikea": {
+   "id": "conference_ikea",
+   "name": "Conference \u2013 IKEA (BigBox Retailer)",
+   "palette": {
+    "primary": {
+     "base": "#0058A3",
+     "contrast": "#FFFFFF"
+    },
+    "error": {
+     "base": "#D1435B"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#2F9E7A"
+    },
+    "complementary": {
+     "c0": "#FFFFFF",
+     "c1": "#F4F7FB",
+     "c2": "#E8F0F9",
+     "c3": "#D6E2EF",
+     "c4": "#B8CCE3",
+     "c5": "#8AA4C2",
+     "c6": "#5F7FA3",
+     "c7": "#3D5A7A",
+     "c8": "#1F3A5C",
+     "c9": "#0B1F33"
+    }
+   },
+   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1280px-Ikea_logo.svg.png",
+   "cover": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg"
+  },
+  "conference_samsung": {
+   "id": "conference_samsung",
+   "name": "Conference \u2013 Samsung (Electronics)",
+   "palette": {
+    "primary": {
+     "base": "#1428A0",
+     "contrast": "#FFFFFF"
+    },
+    "error": {
+     "base": "#D1435B"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#2F9E7A"
+    },
+    "complementary": {
+     "c0": "#FFFFFF",
+     "c1": "#F5F6F8",
+     "c2": "#ECEEF3",
+     "c3": "#DDE1EA",
+     "c4": "#C3C9D6",
+     "c5": "#98A1B3",
+     "c6": "#6B7487",
+     "c7": "#474F60",
+     "c8": "#262B36",
+     "c9": "#0B0B0B"
+    }
+   },
+   "logo": "https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png",
+   "cover": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg"
+  },
+  "conference_nike": {
+   "id": "conference_nike",
+   "name": "Conference \u2013 Nike (Clothing)",
+   "palette": {
+    "primary": {
+     "base": "#111111",
+     "contrast": "#FFFFFF"
+    },
+    "error": {
+     "base": "#D1435B"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#2F9E7A"
+    },
+    "complementary": {
+     "c0": "#FFFFFF",
+     "c1": "#F5F5F5",
+     "c2": "#EFEFEF",
+     "c3": "#E2E2E2",
+     "c4": "#CCCCCC",
+     "c5": "#9E9E9E",
+     "c6": "#757575",
+     "c7": "#4D4D4D",
+     "c8": "#2B2B2B",
+     "c9": "#111111"
+    }
+   },
+   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png",
+   "cover": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg"
+  }
+ },
+ "wdfs": [
+  {
+   "id": "WDF__CLIENT_ID",
+   "title": "Client id",
+   "column": "wdf__client_id",
+   "values": {
+    "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5": [
+     "merchant__bigboxretailer"
+    ],
+    "gdc_demo_86a46377-cad8-4c3d-ab7c-6ba753b49b2c": [
+     "merchant__clothing"
+    ],
+    "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203": [
+     "merchant__electronics"
+    ]
+   }
+  },
+  {
+   "id": "WDF__PRODUCT_CATEGORY",
+   "title": "Product category",
+   "column": "wdf__product_category",
+   "values": {
+    "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5": [
+     "Home Goods",
+     "Furniture",
+     "Computers & Accessories"
+    ],
+    "gdc_demo_86a46377-cad8-4c3d-ab7c-6ba753b49b2c": [
+     "Home Goods",
+     "Audio & Video Accessories",
+     "Clothing"
+    ],
+    "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203": [
+     "Computers & Accessories",
+     "Audio & Video Accessories"
+    ]
+   }
+  }
+ ],
+ "groups": {
+  "02aa233b-7cb1-494d-9bf4-87d3714e74b8": "Readers Group B",
+  "213a633e-82f2-4f6a-a69b-ac1fbbba7737": "View Group MZ",
+  "30fd7628-9106-46a4-b7df-df7a9f9afae6": "Group A",
+  "3cb0c87d-7448-4d21-a021-77158e05f6f0": "Product",
+  "406f933d-bf6a-48dc-aca1-a472d643e270": "Editors Group B",
+  "a2235497-d267-4a10-973d-ebef13a76866": "Webinar - October 2026 - Broze Group",
+  "adminGroup": "admin",
+  "aee4c602-3d01-49a8-8e59-6872cd453416": "Revenue",
+  "analyze_group_id": "Analyze Group",
+  "e339e597-9ce4-47fd-9add-272b7f733a3e": "Webinar - October 2026 - Gold Group",
+  "eb580660-c7ff-46cb-b585-9d86fa16f827": "recommenders",
+  "view.access": "Financial Group A",
+  "view_group_id": "View Group"
+ },
+ "members": {
+  "admin": [
+   "aee4c602-3d01-49a8-8e59-6872cd453416",
+   "adminGroup"
+  ],
+  "analyze": [
+   "analyze_group_id"
+  ],
+  "view": [
+   "view_group_id"
+  ]
+ },
+ "agents": [
+  {
+   "id": "10609f98-4b4c-4119-8ddc-d70e2f260e03",
+   "name": "AI Assistant for business/data analysts",
+   "description": "An AI assistant for business and data analysts that helps users explore governed data, create visualizations and metrics, identify key drivers and anomalies, generate forecasts, and set up alerts using natural-language questions.",
+   "skills": [
+    "visualization",
+    "key_driver_analysis",
+    "alert",
+    "knowledge",
+    "schedule_export",
+    "anomaly_detection",
+    "what_if_analysis",
+    "forecasting",
+    "metric",
+    "clustering",
+    "dashboard_builder",
+    "dashboard_editor",
+    "visualization_summary",
+    "dashboard_summary"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "analyze_group_id"
+   ],
+   "conference": false
+  },
+  {
+   "id": "9698d477-f705-4dd3-9c07-44e35b0310b6",
+   "name": "AI Assistant for Onboarding",
+   "description": "",
+   "skills": [
+    "visualization",
+    "what_if_analysis",
+    "visualization_summary",
+    "dashboard_summary",
+    "metric"
+   ],
+   "availableToAll": true,
+   "groups": [],
+   "conference": false
+  },
+  {
+   "id": "conference-next-steps-agent",
+   "name": "Next Steps Agent",
+   "description": "Turns the current numbers into a short action plan: who does what this week, plus alerts and scheduled exports to keep watching.",
+   "skills": [
+    "visualization",
+    "forecasting",
+    "alert",
+    "schedule_export",
+    "visualization_summary",
+    "dashboard_summary"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup",
+    "analyze_group_id",
+    "view_group_id"
+   ],
+   "conference": true
+  },
+  {
+   "id": "conference-recommendations-agent",
+   "name": "Recommendations Agent",
+   "description": "Finds the levers that move net sales and gross profit, and recommends what to change, with what-if estimates and forecasts.",
+   "skills": [
+    "key_driver_analysis",
+    "what_if_analysis",
+    "forecasting",
+    "clustering",
+    "visualization",
+    "metric"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup",
+    "analyze_group_id"
+   ],
+   "conference": true
+  },
+  {
+   "id": "conference-summary-agent",
+   "name": "Executive Summary Agent",
+   "description": "Summarizes dashboards and visualizations in 5 bullets: what moved, by how much, and why it matters for this merchant.",
+   "skills": [
+    "dashboard_summary",
+    "visualization_summary",
+    "visualization",
+    "key_driver_analysis",
+    "anomaly_detection"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup",
+    "analyze_group_id",
+    "view_group_id"
+   ],
+   "conference": true
+  },
+  {
+   "id": "default-ai-assistant",
+   "name": "Default GoodData AI Assistant",
+   "description": null,
+   "skills": [
+    "all skills"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup"
+   ],
+   "conference": false
+  },
+  {
+   "id": "fd66a9af-4011-41c9-927c-1362d10d36b5",
+   "name": "AI Assistant for business users and executives",
+   "description": "An AI assistant for business users and executives that helps summarize dashboards, explain trends, identify key drivers and anomalies, create visualizations, and forecast future performance using natural language.",
+   "skills": [
+    "visualization",
+    "visualization_summary",
+    "dashboard_summary",
+    "alert",
+    "what_if_analysis",
+    "key_driver_analysis",
+    "anomaly_detection"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "view_group_id"
+   ],
+   "conference": false
+  },
+  {
+   "id": "market-signals-advisor",
+   "name": "Market Signals \u00b7 Advisor",
+   "description": "Recommends what to do next, at most three steps, each with an expected effect backed by the data.",
+   "skills": [
+    "what_if_analysis",
+    "forecasting",
+    "key_driver_analysis",
+    "visualization",
+    "knowledge"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup"
+   ],
+   "conference": false
+  },
+  {
+   "id": "market-signals-classifier",
+   "name": "Market Signals \u00b7 Classifier (alerts)",
+   "description": "Decides the type, urgency and route of every signal: send an alert now, hold it for the Monday brief, or log it.",
+   "skills": [
+    "anomaly_detection",
+    "alert",
+    "schedule_export"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup"
+   ],
+   "conference": false
+  },
+  {
+   "id": "market-signals-explainer",
+   "name": "Market Signals \u00b7 Explainer (key drivers)",
+   "description": "Explains why a signal happened: is it you or the market, and which dayparts, channels and places drive the move.",
+   "skills": [
+    "key_driver_analysis",
+    "visualization",
+    "visualization_summary"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup"
+   ],
+   "conference": false
+  },
+  {
+   "id": "market-signals-publisher",
+   "name": "Market Signals \u00b7 Publisher",
+   "description": "Writes one short brief per stakeholder, tailored to their role, and shares it.",
+   "skills": [
+    "dashboard_summary",
+    "visualization_summary",
+    "schedule_export",
+    "visualization"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup"
+   ],
+   "conference": false
+  },
+  {
+   "id": "market-signals-scout",
+   "name": "Market Signals \u00b7 Scout",
+   "description": "Suggests what to watch next: a new signal to track and a goal to recover.",
+   "skills": [
+    "anomaly_detection",
+    "forecasting",
+    "clustering",
+    "alert",
+    "visualization"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup"
+   ],
+   "conference": false
+  },
+  {
+   "id": "market-signals-watcher",
+   "name": "Market Signals \u00b7 Watcher",
+   "description": "Finds real moves: judges every place, daypart and channel against its own history and the market, and flags what really moved.",
+   "skills": [
+    "anomaly_detection",
+    "alert",
+    "visualization",
+    "visualization_summary"
+   ],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup"
+   ],
+   "conference": false
+  }
+ ]
+}

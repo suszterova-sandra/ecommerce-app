@@ -2,6 +2,7 @@ import { useApp } from "../AppContext";
 import type { ColorMode } from "../theme";
 import { useChatbot } from "./Chatbot";
 import { LANGS, type Lang } from "../i18n";
+import { adminLoginUrl, STATIC } from "../staticBackend";
 
 export function Topbar({ mode, onToggleMode }: { mode: ColorMode; onToggleMode: () => void }) {
   const { personas, persona, switchPersona, route, overview, workspaces, toast, lang, setLang, t } = useApp();
@@ -69,9 +70,15 @@ export function Topbar({ mode, onToggleMode }: { mode: ColorMode; onToggleMode: 
             key={p.id}
             role="tab"
             className={p.id === persona.id ? "active" : ""}
-            disabled={!p.available}
-            title={p.available ? p.tagline : "No API token yet: run python3 demo_app/setup_tokens.py"}
-            onClick={() => p.id !== persona.id && switchPersona(p.id, route).then(() => toast(`Now viewing as ${p.name}`))}
+            disabled={!p.available && !(STATIC && p.id === "admin")}
+            title={p.available ? p.tagline : STATIC && p.id === "admin" ? "Sign in with your GoodData account" : "No API token for this user"}
+            onClick={() => {
+              if (STATIC && p.id === "admin" && !p.available) {
+                window.location.href = adminLoginUrl(); // GoodData login, then back here as the admin
+                return;
+              }
+              if (p.id !== persona.id) switchPersona(p.id, route).then(() => toast(`Now viewing as ${p.name}`));
+            }}
           >
             <span className={`avatar sm ${p.id}`}>{p.initials}</span>
             {p.id === "admin" ? "Admin" : p.name.split(" ")[0]}

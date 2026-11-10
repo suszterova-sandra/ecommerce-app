@@ -1,50 +1,54 @@
 /**
- * Backend-less mode for static hosting (GitHub Pages): the browser does what demo_app/server.py does.
- * No token is ever part of the build; the presenter enters them once and they stay in this browser's
- * localStorage. /app/* is answered here, /gd/* goes straight to GoodData with the persona's token
- * (the site's origin must be in the GoodData organization's allowed origins).
+ * Backend-less mode for static hosting (GitHub Pages). The browser does what demo_app/server.py does:
+ *  - Analyze and View users: their API tokens are part of the build (demo_app/.tokens.json), so every
+ *    visitor can use the demo and switch between them.
+ *  - Admin: no token anywhere. The admin signs in with their own GoodData login; calls then use the
+ *    GoodData session (cookies) and the live overview. Without it, visitors get the published snapshot
+ *    (public/overview.json, from demo_app/snapshot_overview.py).
+ * The site's origin must be in the GoodData organization's allowed origins.
  */
+import userTokens from "../../.tokens.json";
+
 export const STATIC = import.meta.env.VITE_STATIC === "1";
 
-const HOST = "navy-blue-eagle.trial.cloud.gooddata.com";
+export const HOST = "navy-blue-eagle.trial.cloud.gooddata.com";
 const PARENT_WS = "gdc_demo_a7c3afa0-ca91-40db-a3a8-df4d5044e92f";
 const REPORT_ID = "ecommerce_business_report";
-const STORE = "demoTokens";
 
-export const PERSONAS = [
-  { id: "admin", userId: "sandra.suszterova", name: "Sandra Suszterova", initials: "SS", role: "Organization admin", tagline: "Manages the parent workspace, tenants, themes and AI agents" },
+const PERSONAS = [
+  { id: "admin", userId: "sandra.suszterova", name: "Sandra Suszterova", initials: "SS", role: "Organization admin", tagline: "Sign in with your GoodData account" },
   { id: "analyze", userId: "sas.analyze.user", name: "Analyze User", initials: "AU", role: "Analyst · Fashion Store", tagline: "Explores data, builds visualizations and metrics" },
   { id: "view", userId: "sas.view.user", name: "View User", initials: "VU", role: "Viewer · Fashion Store", tagline: "Consumes dashboards, reports and AI summaries" },
 ];
 
-export type StoredTokens = Partial<Record<"admin" | "analyze" | "view", string>>;
+const TOKENS: Record<string, string | undefined> = {
+  analyze: (userTokens as Record<string, string>)["sas.analyze.user"],
+  view: (userTokens as Record<string, string>)["sas.view.user"],
+};
 
-export function storedTokens(): StoredTokens {
-  try {
-    return JSON.parse(localStorage.getItem(STORE) || "{}");
-  } catch {
-    return {};
+/** GoodData's login page, coming back to this page afterwards. */
+export const adminLoginUrl = () => `https://${HOST}/appLogin?redirectTo=${encodeURIComponent(window.location.href)}`;
+
+let session: Promise<{ userId: string; name?: string } | null> | null = null;
+
+/** Is someone signed in to GoodData in this browser (the admin path)? */
+export function adminSession(nativeFetch: typeof fetch = window.fetch) {
+  if (!session) {
+    session = nativeFetch(`https://${HOST}/api/v1/profile`, { credentials: "include", redirect: "manual", headers: { Accept: "application/json" } })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((p) => (p?.userId ? { userId: p.userId, name: p.name } : null))
+      .catch(() => null);
   }
-}
-
-export function saveTokens(t: StoredTokens) {
-  localStorage.setItem(STORE, JSON.stringify(t));
-}
-
-export function clearTokens() {
-  localStorage.removeItem(STORE);
+  return session;
 }
 
 const json = (obj: unknown, status = 200) => new Response(JSON.stringify(obj), { status, headers: { "Content-Type": "application/json" } });
 
 let cached: { t: number; v: any } | null = null;
 
-async function overview(nativeFetch: typeof fetch, force: boolean) {
-  if (!force && cached && Date.now() - cached.t < 300_000) return cached.v;
-  const token = storedTokens().admin;
-  if (!token) throw new Error("No admin token");
+async function liveOverview(nativeFetch: typeof fetch) {
   const gd = async (path: string) => {
-    const r = await nativeFetch(`https://${HOST}${path}`, { headers: { Authorization: `Bearer ${token}`, Accept: "application/json" } });
+    const r = await nativeFetch(`https://${HOST}${path}`, { credentials: "include", headers: { Accept: "application/json" } });
     if (!r.ok) throw new Error(`GoodData ${r.status} on ${path}`);
     return r.json();
   };
@@ -93,7 +97,7 @@ async function overview(nativeFetch: typeof fetch, force: boolean) {
       }),
     ),
   );
-  const v = {
+  return {
     host: `https://${HOST}`,
     parent: PARENT_WS,
     reportId: REPORT_ID,
@@ -121,6 +125,15 @@ async function overview(nativeFetch: typeof fetch, force: boolean) {
         conference: a.id.startsWith("conference-"),
       })),
   };
+}
+
+async function overview(nativeFetch: typeof fetch, force: boolean) {
+  if (!force && cached && Date.now() - cached.t < 300_000) return cached.v;
+  let v: any;
+  if (await adminSession(nativeFetch)) {
+    v = await liveOverview(nativeFetch).catch(() => null);
+  }
+  if (!v) v = await nativeFetch(`${import.meta.env.BASE_URL}overview.json`).then((r) => r.json());
   cached = { t: Date.now(), v };
   return v;
 }
@@ -131,21 +144,20 @@ export function installStaticBackend() {
   window.fetch = async (input: RequestInfo | URL, init: RequestInit = {}) => {
     const raw = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
     const url = new URL(raw, window.location.origin);
-    const sameOrigin = url.origin === window.location.origin;
-    if (!sameOrigin) return nativeFetch(input, init);
-    const tokens = storedTokens();
+    if (url.origin !== window.location.origin) return nativeFetch(input, init);
 
     if (url.pathname.endsWith("/app/personas")) {
+      const signedIn = Boolean(await adminSession(nativeFetch));
       return json({
         host: `https://${HOST}`,
         parent: PARENT_WS,
         reportId: REPORT_ID,
-        personas: PERSONAS.map((p) => ({ ...p, available: Boolean(tokens[p.id as keyof StoredTokens]) })),
+        personas: PERSONAS.map((p) => ({ ...p, available: p.id === "admin" ? signedIn : Boolean(TOKENS[p.id]) })),
       });
     }
     if (url.pathname.endsWith("/app/token")) {
-      const t = tokens[(url.searchParams.get("persona") || "") as keyof StoredTokens];
-      return t ? json({ token: t }) : json({ error: "no token" }, 404);
+      const t = TOKENS[url.searchParams.get("persona") || ""];
+      return t ? json({ token: t }) : json({ error: "the admin uses the GoodData session, not a token" }, 404);
     }
     if (url.pathname.endsWith("/app/overview")) {
       try {
@@ -157,12 +169,14 @@ export function installStaticBackend() {
     const gdAt = url.pathname.indexOf("/gd/");
     if (gdAt >= 0) {
       const headers = new Headers(init.headers);
-      const persona = (headers.get("X-Persona") || "admin") as keyof StoredTokens;
-      const token = tokens[persona];
-      if (!token) return json({ error: "no token for this user" }, 401);
+      const persona = headers.get("X-Persona") || "admin";
       headers.delete("X-Persona");
+      const target = `https://${HOST}${url.pathname.slice(gdAt + 3)}${url.search}`;
+      if (persona === "admin") return nativeFetch(target, { ...init, headers, credentials: "include" });
+      const token = TOKENS[persona];
+      if (!token) return json({ error: "no token for this user" }, 401);
       headers.set("Authorization", `Bearer ${token}`);
-      return nativeFetch(`https://${HOST}${url.pathname.slice(gdAt + 3)}${url.search}`, { ...init, headers });
+      return nativeFetch(target, { ...init, headers });
     }
     return nativeFetch(input, init);
   };
