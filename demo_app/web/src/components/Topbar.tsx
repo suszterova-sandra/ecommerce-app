@@ -54,22 +54,22 @@ export function Topbar({ mode, onSetMode }: { mode: ColorMode; onSetMode: (m: Co
           ))}
         </div>
 
+        {/* language: always visible, it switches the app, the dashboards and the translated metadata */}
+        <div className="lang-seg" role="radiogroup" aria-label="Language">
+          <Icon name="globe" size={15} />
+          {LANGS.map((l) => (
+            <button key={l.id} role="radio" aria-checked={l.id === lang} className={l.id === lang ? "on" : ""} onClick={() => setLang(l.id as Lang)} title={l.name}>
+              {l.label}
+            </button>
+          ))}
+        </div>
+
         <div className="settings" ref={menuRef}>
-          <button className={`icon-btn ${menuOpen ? "on" : ""}`} onClick={() => setMenuOpen((o) => !o)} aria-label="Settings" aria-expanded={menuOpen} title="Language and appearance">
+          <button className={`icon-btn ${menuOpen ? "on" : ""}`} onClick={() => setMenuOpen((o) => !o)} aria-label="Appearance" aria-expanded={menuOpen} title="Appearance">
             <Icon name="settings" size={17} />
           </button>
           {menuOpen && (
             <div className="settings-menu" role="menu">
-              <div className="sm-label">
-                <Icon name="globe" size={14} /> Language
-              </div>
-              <div className="seg">
-                {LANGS.map((l) => (
-                  <button key={l.id} className={l.id === lang ? "on" : ""} onClick={() => setLang(l.id as Lang)} title={l.name}>
-                    {l.label}
-                  </button>
-                ))}
-              </div>
               <div className="sm-label">
                 <Icon name="sun" size={14} /> Appearance
               </div>

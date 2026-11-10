@@ -677,3 +677,10 @@ body, .sidebar, .main, .topbar, .card, .composer { transition: background-color 
 .sk-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .sk-kpi { height: 120px; border-radius: 12px; }
 .sk-chart { height: 280px; border-radius: 12px; }
+
+/* language switch, always visible in the top bar */
+.lang-seg { display: flex; align-items: center; gap: 2px; padding: 3px 4px 3px 9px; border-radius: 999px; background: var(--ws-panel); border: 1px solid var(--ws-line); color: var(--ws-muted); }
+.lang-seg .icon { margin-right: 4px; }
+.lang-seg button { border: 0; background: transparent; color: var(--ws-muted); font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 999px; }
+.lang-seg button.on { background: var(--ws-surface); color: var(--ws-text); box-shadow: var(--shadow); }
+.lang-seg button:hover:not(.on) { color: var(--ws-text); }
