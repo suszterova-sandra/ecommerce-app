@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#111111",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#F5F5F5",
+      "c2": "#EFEFEF",
+      "c3": "#E2E2E2",
+      "c4": "#CCCCCC",
+      "c5": "#9E9E9E",
+      "c6": "#757575",
+      "c7": "#4D4D4D",
+      "c8": "#2B2B2B",
+      "c9": "#111111"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#111111",
+      "lineColor": "#E2E2E2"
+    },
+    "borderColor": "#E2E2E2",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#111111"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#EFEFEF",
+    "axisColor": "#CCCCCC",
+    "axisLabelColor": "#8A8A8A",
+    "axisValueColor": "#4D4D4D",
+    "legendValueColor": "#4D4D4D",
+    "plotLineColor": "#CCCCCC",
+    "tooltipBackgroundColor": "#111111",
+    "tooltipBorderColor": "#111111",
+    "tooltipLabelColor": "#CCCCCC",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#2B2B2B",
+    "nullValueColor": "#8A8A8A",
+    "hoverBackgroundColor": "#EFEFEF",
+    "loadingIconColor": "#FA5400",
+    "headerLabelColor": "#8A8A8A",
+    "headerHoverBackgroundColor": "#EFEFEF",
+    "subtotalBackgroundColor": "#EFEFEF",
+    "totalBackgroundColor": "#E2E2E2",
+    "totalValueColor": "#111111"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#111111",
+    "secondaryInfoColor": "#4D4D4D",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#111111",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#111111",
+      "borderColor": "#2B2B2B",
+      "item": {
+        "color": "#BDBDBD",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#FFFFFF",
+        "selectedBackgroundColor": "#FA5400"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#E2E2E2",
+      "filterButton": {
+        "backgroundColor": "#F5F5F5"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#111111",
+        "lineColor": "#E2E2E2"
+      },
+      "description": {
+        "color": "#4D4D4D"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#F5F5F5",
+      "widget": {
+        "title": {
+          "color": "#111111",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#E2E2E2",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#4D4D4D",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#E2E2E2",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#111111",
+          "secondaryInfoColor": "#4D4D4D",
+          "value": {
+            "positiveColor": "#2F9E7A",
+            "negativeColor": "#D1435B"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#111111"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#111111",
+      "#FA5400",
+      "#8A8A8A",
+      "#FF9A5C",
+      "#3A3A3A",
+      "#CFCFCF",
+      "#2F9E7A",
+      "#4A90D9",
+      "#B23A00",
+      "#5E5E5E"
+    ],
+    "page": {
+      "backgroundColor": "#ECECEC"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#ECECEC"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#F7F7F7"
+        },
+        {
+          "id": "accent",
+          "color": "#FA5400"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#111111"
+        },
+        {
+          "id": "muted",
+          "color": "#4D4D4D"
+        },
+        {
+          "id": "subtle",
+          "color": "#8A8A8A"
+        },
+        {
+          "id": "accent",
+          "color": "#FA5400"
+        },
+        {
+          "id": "inverse",
+          "color": "#ECECEC"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#111111",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#111111"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#111111"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#111111"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#111111"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#111111"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#111111"
+        }
+      },
+      "paragraph": {
+        "color": "#4D4D4D",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#111111"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#4D4D4D"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#8A8A8A"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#111111",
+    "color": "#FFFFFF",
+    "activeColor": "#FA5400"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png",
+        "title": "Nike logo",
+        "altText": "Nike logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
+        "title": "Cover background",
+        "altText": "Nike store front at night"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
+        "title": "Section background",
+        "altText": "Nike store front at night"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
+        "title": "Cover background",
+        "altText": "Nike store front at night"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
+        "title": "Section background",
+        "altText": "Nike store front at night"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/FA5400/FA5400/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png",
+        "title": "Nike logo",
+        "altText": "Nike logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png)"
+  }
+}

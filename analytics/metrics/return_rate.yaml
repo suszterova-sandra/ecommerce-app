@@ -1,0 +1,16 @@
+# A metric is a computational expression of numerical data (facts or other metrics).
+# Use MAQL to create reusable multidimensional queries that combine multiple facts and attributes.
+# Read more about MAQL:
+# https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/
+
+type: metric
+id: return_rate
+
+title: Return Rate
+description: Return rate measured as total returns divided by total processed sales (amount-based).
+tags:
+  - kpi
+  - returns
+
+maql: SELECT IFNULL({metric/total_returns} / {metric/total_sales}, 0)
+format: 0.0%

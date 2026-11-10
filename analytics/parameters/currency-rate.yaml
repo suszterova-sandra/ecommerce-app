@@ -1,0 +1,22 @@
+# A parameter is a named, typed value that metrics reference instead of hardcoding a literal.
+# Changing the parameter's default changes every metric that references it, without editing their MAQL.
+# Read more about parameters:
+# https://www.gooddata.ai/docs/cloud/experimental-features/numeric-parameters/
+
+type: parameter
+id: currency-rate
+
+title: Currency
+description: Selects the target currency and applies the corresponding conversion rate.
+
+definition:
+  type: STRING
+  defaultValue: USD
+  constraints:
+    allowedValues:
+      - value: CZK
+        title: CZK
+      - value: EUR
+        title: EUR
+      - value: USD
+        title: USD

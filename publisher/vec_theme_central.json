@@ -1,0 +1,325 @@
+{
+    "version": "2",
+    "palette": {
+        "primary": {
+            "base": "#1E6BDB",
+            "contrast": "#FFFFFF"
+        },
+        "error": {
+            "base": "#E5484D"
+        },
+        "warning": {
+            "base": "#FEC84B"
+        },
+        "success": {
+            "base": "#12A150"
+        },
+        "complementary": {
+            "c0": "#FFFFFF",
+            "c1": "#F5F7FB",
+            "c2": "#ECEFF4",
+            "c3": "#DDE2EA",
+            "c4": "#C3C9D3",
+            "c5": "#98A1AE",
+            "c6": "#667085",
+            "c7": "#475467",
+            "c8": "#26303F",
+            "c9": "#161616"
+        }
+    },
+    "typography": {
+        "font": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_C-bk.woff2",
+        "fontBold": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_C-bk.woff2"
+    },
+    "button": {
+        "borderRadius": "6",
+        "dropShadow": false
+    },
+    "modal": {
+        "title": {
+            "color": "#161616",
+            "lineColor": "#DDE2EA"
+        },
+        "borderColor": "#DDE2EA",
+        "borderRadius": "8",
+        "borderWidth": "1px",
+        "dropShadow": true,
+        "outsideBackgroundColor": "rgba(19, 49, 79, 0.55)"
+    },
+    "tooltip": {
+        "color": "#FFFFFF",
+        "backgroundColor": "#13314F"
+    },
+    "chart": {
+        "backgroundColor": "#FFFFFF",
+        "gridColor": "#ECEFF4",
+        "axisColor": "#C3C9D3",
+        "axisLabelColor": "#667085",
+        "axisValueColor": "#161616",
+        "legendValueColor": "#667085",
+        "plotLineColor": "#DDE2EA",
+        "tooltipBackgroundColor": "#13314F",
+        "tooltipBorderColor": "#13314F",
+        "tooltipLabelColor": "#C3D6EC",
+        "tooltipValueColor": "#FFFFFF"
+    },
+    "table": {
+        "valueColor": "#475467",
+        "nullValueColor": "#98A1AE",
+        "hoverBackgroundColor": "#F5F7FB",
+        "loadingIconColor": "#1E6BDB",
+        "headerLabelColor": "#161616",
+        "headerHoverBackgroundColor": "#E5F0FA",
+        "subtotalBackgroundColor": "#F5F7FB",
+        "totalBackgroundColor": "#ECEFF4",
+        "totalValueColor": "#161616"
+    },
+    "kpi": {
+        "primaryMeasureColor": "#161616",
+        "secondaryInfoColor": "#475467",
+        "value": {
+            "positiveColor": "#12A150",
+            "negativeColor": "#E5484D"
+        }
+    },
+    "dashboards": {
+        "title": {
+            "color": "#161616",
+            "backgroundColor": "#F5F7FB",
+            "borderColor": "#DDE2EA"
+        },
+        "navigation": {
+            "title": {
+                "color": "#FFFFFF"
+            },
+            "backgroundColor": "#13314F",
+            "borderColor": "#21466B",
+            "item": {
+                "color": "#C3D6EC",
+                "hoverColor": "#FFFFFF",
+                "selectedColor": "#FFFFFF",
+                "selectedBackgroundColor": "#1E6BDB"
+            }
+        },
+        "filterBar": {
+            "backgroundColor": "#F5F7FB",
+            "borderColor": "#DDE2EA",
+            "filterButton": {
+                "backgroundColor": "#FFFFFF"
+            }
+        },
+        "section": {
+            "title": {
+                "color": "#161616",
+                "lineColor": "#DDE2EA"
+            },
+            "description": {
+                "color": "#667085"
+            }
+        },
+        "content": {
+            "backgroundColor": "#F5F7FB",
+            "kpiWidget": {
+                "title": {
+                    "color": "#1450B0",
+                    "textAlign": "center"
+                },
+                "kpi": {
+                    "primaryMeasureColor": "#161616",
+                    "secondaryInfoColor": "#475467",
+                    "value": {
+                        "positiveColor": "#12A150",
+                        "negativeColor": "#E5484D"
+                    }
+                },
+                "backgroundColor": "#E5F0FA",
+                "borderColor": "#B3CDEB",
+                "borderRadius": "8",
+                "borderWidth": "1px",
+                "dropShadow": false
+            },
+            "widget": {
+                "title": {
+                    "color": "#161616",
+                    "textAlign": "center"
+                },
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#DDE2EA",
+                "borderRadius": "8",
+                "borderWidth": "1px",
+                "dropShadow": false
+            }
+        }
+    },
+    "analyticalDesigner": {
+        "title": {
+            "color": "#161616"
+        }
+    },
+    "documents": {
+        "visualizationPalette": [
+            "#1E6BDB",
+            "#13314F",
+            "#1FB5C9",
+            "#FEC84B",
+            "#B44696",
+            "#12A150",
+            "#98A1AE",
+            "#8CC4F0"
+        ],
+        "page": {
+            "backgroundColor": "#F5F7FB"
+        },
+        "colors": {
+            "backgrounds": [
+                "#FFFFFF",
+                "#F5F7FB",
+                "#13314F",
+                "#1E6BDB",
+                "#E5F0FA"
+            ],
+            "text": [
+                "#161616",
+                "#475467",
+                "#98A1AE",
+                "#FFFFFF",
+                "#1E6BDB"
+            ]
+        },
+        "textStyle": {
+            "typography": {
+                "fontFamily": "Manrope, Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif",
+                "fonts": [
+                    {
+                        "family": "Manrope",
+                        "url": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_C-bk.woff2",
+                        "weight": 400
+                    },
+                    {
+                        "family": "Manrope",
+                        "url": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_C-bk.woff2",
+                        "weight": 700
+                    },
+                    {
+                        "family": "Manrope",
+                        "url": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_C-bk.woff2",
+                        "weight": 800
+                    }
+                ]
+            },
+            "heading": {
+                "color": "#161616",
+                "h1": {
+                    "fontSize": 4.4,
+                    "lineHeight": 5,
+                    "color": "#161616"
+                },
+                "h2": {
+                    "fontSize": 2.1,
+                    "lineHeight": 2.7,
+                    "color": "#161616"
+                },
+                "h3": {
+                    "fontSize": 1.6,
+                    "lineHeight": 2.1,
+                    "color": "#161616"
+                },
+                "h4": {
+                    "fontSize": 1.35,
+                    "lineHeight": 1.8,
+                    "color": "#161616"
+                },
+                "h5": {
+                    "fontSize": 1.2,
+                    "lineHeight": 1.6,
+                    "color": "#161616"
+                },
+                "h6": {
+                    "fontSize": 1.1,
+                    "lineHeight": 1.5,
+                    "color": "#161616"
+                }
+            },
+            "paragraph": {
+                "color": "#475467",
+                "largeText": {
+                    "fontSize": 1.65,
+                    "lineHeight": 2.3,
+                    "color": "#161616"
+                },
+                "normalText": {
+                    "fontSize": 1.35,
+                    "lineHeight": 1.9,
+                    "color": "#475467"
+                },
+                "smallText": {
+                    "fontSize": 1.1,
+                    "lineHeight": 1.5,
+                    "color": "#667085"
+                }
+            }
+        }
+    },
+    "assets": {
+        "logos": [
+            {
+                "id": "logo",
+                "url": "https://cdn.prod.website-files.com/61ae5cdbf6928b108c7f02cd/63a19c8b1bffad4a24a565f3_Logo.svg",
+                "title": "VEC logo",
+                "altText": "VEC official logo"
+            },
+            {
+                "id": "logo_white",
+                "url": "https://cdn.prod.website-files.com/61ae5cdbf6928b108c7f02cd/63a19c8b1bffad4a24a565f3_Logo.svg",
+                "title": "VEC logo (for dark surfaces)",
+                "altText": "VEC official logo"
+            }
+        ],
+        "backgrounds": [
+            {
+                "id": "cover_bg",
+                "url": "https://www.ebterminal.cz/web/images/header.webp",
+                "title": "Cover background",
+                "altText": "VEC cover background image"
+            },
+            {
+                "id": "section_bg",
+                "url": "https://www.ebterminal.cz/web/images/header.webp",
+                "title": "Section divider background",
+                "altText": "VEC section divider background image"
+            },
+            {
+                "id": "panel_texture",
+                "url": "https://placehold.co/800x1200/13314F/13314F/png",
+                "title": "Side panel - VEC slate navy",
+                "altText": "Solid VEC slate navy surface"
+            }
+        ],
+        "images": [
+            {
+                "id": "cover_bg",
+                "url": "https://www.ebterminal.cz/web/images/header.webp",
+                "title": "Cover background",
+                "altText": "VEC cover background image"
+            },
+            {
+                "id": "section_bg",
+                "url": "https://www.ebterminal.cz/web/images/header.webp",
+                "title": "Section divider background",
+                "altText": "VEC section divider background image"
+            },
+            {
+                "id": "panel_texture",
+                "url": "https://placehold.co/800x1200/13314F/13314F/png",
+                "title": "Side panel - VEC slate navy",
+                "altText": "Solid VEC slate navy surface"
+            },
+            {
+                "id": "accent_bar",
+                "url": "https://placehold.co/1600x12/1FB5C9/1FB5C9/png",
+                "title": "Accent rule - VEC teal",
+                "altText": "VEC teal accent rule"
+            }
+        ]
+    }
+}

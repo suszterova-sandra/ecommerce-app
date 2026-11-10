@@ -1,0 +1,32 @@
+{
+  "name": "conference-demo-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@gooddata/sdk-backend-spi": "^11.66.0",
+    "@gooddata/sdk-backend-tiger": "^11.66.0",
+    "@gooddata/sdk-model": "^11.66.0",
+    "@gooddata/sdk-ui": "^11.66.0",
+    "@gooddata/sdk-ui-charts": "^11.66.0",
+    "@gooddata/sdk-ui-ext": "^11.66.0",
+    "@gooddata/sdk-ui-gen-ai": "^11.66.0",
+    "@gooddata/sdk-ui-kit": "^11.66.0",
+    "@gooddata/sdk-ui-pivot": "^11.66.0",
+    "@gooddata/sdk-ui-theme-provider": "^11.66.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "typescript": "5.6.3",
+    "vite": "5.4.11"
+  }
+}

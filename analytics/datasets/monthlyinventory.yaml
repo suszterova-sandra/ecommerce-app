@@ -1,0 +1,64 @@
+# A dataset is a logical object that represents a set of related facts, attributes, and attribute labels.
+# Datasets are basic organization units of a logical data model.
+# Read more about Datasets:
+# https://www.gooddata.com/developers/cloud-native/doc/cloud/model-data/concepts/dataset/
+
+type: dataset
+id: monthlyinventory
+
+table_path: ECOMMERCE_DEMO_SCHEMA/monthlyinventory
+
+title: Monthly inventory
+description: Monthly inventory snapshot by product, tracking quantity at beginning of month (BOM) and end of month (EOM) for stock and turnover analysis.
+tags:
+  - Monthly inventory
+
+primary_key: monthly_inventory_id
+
+fields:
+  monthly_inventory_id:
+    type: attribute
+    source_column: monthly_inventory_id
+    data_type: STRING
+    title: Monthly inventory id
+    description: Monthly inventory id
+    tags:
+      - Monthly inventory
+    is_nullable: false
+    null_value_join_replacement: _
+  monthly_quantity_bom:
+    type: fact
+    source_column: monthly_quantity_bom
+    data_type: NUMERIC
+    title: Monthly quantity bom
+    description: Monthly quantity bom
+    tags:
+      - Monthly inventory
+    is_nullable: true
+    null_value_join_replacement: "0"
+  monthly_quantity_eom:
+    type: fact
+    source_column: monthly_quantity_eom
+    data_type: NUMERIC
+    title: Monthly quantity eom
+    description: Monthly quantity eom
+    tags:
+      - Monthly inventory
+    is_nullable: true
+    null_value_join_replacement: "0"
+
+references:
+  - dataset: date
+    sources:
+      - source_column: date
+        data_type: TIMESTAMP_TZ
+        target: date
+        is_nullable: true
+        null_value_join_replacement: 2010-01-01 00:00:00
+  - dataset: inventory_month
+    sources:
+      - source_column: inventory_month
+        data_type: DATE
+        target: inventory_month
+        is_nullable: true
+        null_value_join_replacement: 2010-01-01

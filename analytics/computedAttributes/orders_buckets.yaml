@@ -1,0 +1,19 @@
+# A computed attribute turns numbers into named groups, for example "Small", "Medium", "Large".
+# Write the break points in MAQL - the first matching branch wins - and use it like any attribute.
+# Read more about MAQL:
+# https://www.gooddata.com/developers/cloud-native/doc/cloud/create-metrics/maql/
+
+type: computed_attribute
+id: orders_buckets
+
+title: Order Values Bucket
+description: Groups order values into business-defined ranges.
+
+maql: |
+  SELECT
+    CASE
+      WHEN {metric/number_of_orders} < 100 THEN "Low"
+      WHEN {metric/number_of_orders} >= 100 THEN "Medium"
+      WHEN {metric/number_of_orders} >= 200 THEN "High"
+    END
+metric_type: UNSPECIFIED

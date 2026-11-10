@@ -1,0 +1,3072 @@
+{
+    "type": "document",
+    "id": "vec_business_report",
+    "version": "2",
+    "title": "VEC Business Report",
+    "description": "How VEC's BIM/VDC business performed: revenue, margin, project delivery and coordination quality.",
+    "period": {
+        "granularity": "MONTH",
+        "from": -5,
+        "to": -1
+    },
+    "content": {
+        "defaults": {
+            "page_size": "widescreen",
+            "takeaway": {
+                "generation": {
+                    "instructions": "Act as a professional data analyst for a BIM/VDC engineering services firm. Write short messages, max 255 characters. Explain what stands behind the numbers (projects, divisions, service lines, scope changes) more than restating the numbers themselves."
+                }
+            }
+        },
+        "sections": [
+            {
+                "id": "section_intro",
+                "pages": [
+                    {
+                        "id": "page_cover",
+                        "kind": "cover",
+                        "style": {
+                            "background_color": "#003264",
+                            "background_image": "{theme.assets.images.section_bg}"
+                        },
+                        "layout": {
+                            "type": "row",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "id": "page_cover_blank1",
+                                    "proportion": 1.4,
+                                    "decorative": true,
+                                    "markdown": " ",
+                                    "style": {
+                                        "text_style": "smallText"
+                                    }
+                                },
+                                {
+                                    "type": "column",
+                                    "style": {
+                                        "background_color": "#FFFFFF"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "id": "cover_logo",
+                                            "proportion": 1.2,
+                                            "decorative": true,
+                                            "source": "{theme.logo}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "top"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "cover_kicker",
+                                            "markdown": "BIM / VDC BUSINESS REPORT",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#1662F4",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 2.3
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "cover_title",
+                                            "markdown": "**VEC Business Report**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#161616",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.6
+                                        },
+                                        {
+                                            "type": "image",
+                                            "id": "page_cover_rule2",
+                                            "proportion": 0.06,
+                                            "decorative": true,
+                                            "source": "{theme.assets.images.accent_bar}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "center"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "cover_meta",
+                                            "markdown": "**{documentDateRange}**\n\nHow VEC's BIM/VDC business performed: revenue, margin, project delivery and coordination quality.",
+                                            "style": {
+                                                "text_style": "normalText"
+                                            },
+                                            "proportion": 2.6
+                                        }
+                                    ],
+                                    "proportion": 1.1
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "page_agenda",
+                        "kind": "content",
+                        "style": {
+                            "background_color": "#FFFFFF"
+                        },
+                        "layout": {
+                            "type": "row",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "style": {
+                                        "background_color": "#FFFFFF"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "row",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "ag_n01",
+                                                    "markdown": "**01**",
+                                                    "style": {
+                                                        "text_style": "largeText",
+                                                        "text_color": "#1662F4",
+                                                        "vertical_align": "top"
+                                                    },
+                                                    "proportion": 0.7
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 5,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "id": "ag_t01",
+                                                            "markdown": "**Commercial Performance**",
+                                                            "style": {
+                                                                "text_style": "normalText",
+                                                                "vertical_align": "top"
+                                                            },
+                                                            "proportion": 1
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "id": "ag_d01",
+                                                            "markdown": "How revenue and margin developed, and where the work is coming from.\n\nAt a Glance  ·  Revenue & Margin  ·  Growth",
+                                                            "style": {
+                                                                "text_style": "smallText"
+                                                            },
+                                                            "proportion": 2.2
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "row",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "ag_n02",
+                                                    "markdown": "**02**",
+                                                    "style": {
+                                                        "text_style": "largeText",
+                                                        "text_color": "#1662F4",
+                                                        "vertical_align": "top"
+                                                    },
+                                                    "proportion": 0.7
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 5,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "id": "ag_t02",
+                                                            "markdown": "**Project Delivery**",
+                                                            "style": {
+                                                                "text_style": "normalText",
+                                                                "vertical_align": "top"
+                                                            },
+                                                            "proportion": 1
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "id": "ag_d02",
+                                                            "markdown": "Budget, schedule and margin risk across the project portfolio.\n\nPortfolio Health  ·  Where Projects Drift",
+                                                            "style": {
+                                                                "text_style": "smallText"
+                                                            },
+                                                            "proportion": 2.2
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "row",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "ag_n03",
+                                                    "markdown": "**03**",
+                                                    "style": {
+                                                        "text_style": "largeText",
+                                                        "text_color": "#1662F4",
+                                                        "vertical_align": "top"
+                                                    },
+                                                    "proportion": 0.7
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 5,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "id": "ag_t03",
+                                                            "markdown": "**BIM Coordination & Quality**",
+                                                            "style": {
+                                                                "text_style": "normalText",
+                                                                "vertical_align": "top"
+                                                            },
+                                                            "proportion": 1
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "id": "ag_d03",
+                                                            "markdown": "Clash coordination, rework and on-time delivery.\n\nClash Coordination  ·  Rework & Delivery",
+                                                            "style": {
+                                                                "text_style": "smallText"
+                                                            },
+                                                            "proportion": 2.2
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "row",
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "ag_n04",
+                                                    "markdown": "**04**",
+                                                    "style": {
+                                                        "text_style": "largeText",
+                                                        "text_color": "#1662F4",
+                                                        "vertical_align": "top"
+                                                    },
+                                                    "proportion": 0.7
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 5,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "id": "ag_t04",
+                                                            "markdown": "**Clients & Divisions**",
+                                                            "style": {
+                                                                "text_style": "normalText",
+                                                                "vertical_align": "top"
+                                                            },
+                                                            "proportion": 1
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "id": "ag_d04",
+                                                            "markdown": "Who we work for, and how each division compares.\n\nClients  ·  Divisions & Geography",
+                                                            "style": {
+                                                                "text_style": "smallText"
+                                                            },
+                                                            "proportion": 2.2
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "proportion": 3
+                                },
+                                {
+                                    "type": "column",
+                                    "style": {
+                                        "background_color": "#003264"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "title",
+                                            "id": "ag_title",
+                                            "markdown": "**Inside this report**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#FFFFFF",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 4.2
+                                        },
+                                        {
+                                            "type": "image",
+                                            "id": "page_agenda_rule3",
+                                            "proportion": 0.06,
+                                            "decorative": true,
+                                            "source": "{theme.assets.images.accent_bar}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "center"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "ag_lead",
+                                            "markdown": "Four chapters: the commercial result first, then the projects, coordination quality and clients behind it.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "text_color": "#C9D9FC",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 4
+                                        }
+                                    ],
+                                    "proportion": 2
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "section_01",
+                "title": "Commercial Performance",
+                "description": "How revenue and margin developed, and where the work is coming from.",
+                "pages": [
+                    {
+                        "id": "page_chapter_01",
+                        "kind": "section",
+                        "style": {
+                            "background_color": "#003264",
+                            "background_image": "{theme.assets.images.cover_bg}"
+                        },
+                        "layout": {
+                            "type": "row",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "id": "page_chapter_01_blank4",
+                                    "proportion": 1.4,
+                                    "decorative": true,
+                                    "markdown": " ",
+                                    "style": {
+                                        "text_style": "smallText"
+                                    }
+                                },
+                                {
+                                    "type": "column",
+                                    "style": {
+                                        "background_color": "#003264"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_chapter_01_num",
+                                            "markdown": "**01**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#7FFA88",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 3.5
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_chapter_01_title",
+                                            "markdown": "**Commercial Performance**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#FFFFFF",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.6
+                                        },
+                                        {
+                                            "type": "image",
+                                            "id": "page_chapter_01_rule5",
+                                            "proportion": 0.06,
+                                            "decorative": true,
+                                            "source": "{theme.assets.images.accent_bar}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "center"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_chapter_01_desc",
+                                            "markdown": "How revenue and margin developed, and where the work is coming from.\n\n**In this chapter:** At a Glance  ·  Revenue & Margin  ·  Growth",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "text_color": "#C9D9FC",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 4
+                                        }
+                                    ],
+                                    "proportion": 1.1
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "page_glance",
+                        "kind": "content",
+                        "layout": {
+                            "type": "column",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "proportion": 2.4,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_glance_kicker",
+                                            "markdown": "01 — COMMERCIAL",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#1662F4",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 0.8
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_glance_title",
+                                            "markdown": "**VEC at a Glance**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.3
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_glance_lead",
+                                            "markdown": "Headline results for the period.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "image",
+                                    "id": "page_glance_rule6",
+                                    "proportion": 0.05,
+                                    "decorative": true,
+                                    "source": "{theme.assets.images.accent_bar}",
+                                    "style": {
+                                        "fit": "contain",
+                                        "horizontal_align": "left",
+                                        "vertical_align": "center"
+                                    }
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 2.6,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_glance_kpi_revenue_lbl",
+                                                    "markdown": "**REVENUE**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_glance_kpi_revenue",
+                                                            "visualization": "kpi_revenue",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_glance_kpi_gross_margin_pct_lbl",
+                                                    "markdown": "**GROSS MARGIN %**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_glance_kpi_gross_margin_pct",
+                                                            "visualization": "kpi_gross_margin_pct",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_glance_kpi_billable_hours_lbl",
+                                                    "markdown": "**BILLABLE HOURS**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_glance_kpi_billable_hours",
+                                                            "visualization": "kpi_billable_hours",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_glance_kpi_on_time_delivery_pct_lbl",
+                                                    "markdown": "**ON-TIME DELIVERY %**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_glance_kpi_on_time_delivery_pct",
+                                                            "visualization": "kpi_on_time_delivery_pct",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 5.4,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_rev_margin_lbl",
+                                                    "markdown": "**Revenue & Gross Margin % by Month**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_rev_margin",
+                                                            "visualization": "revenue_margin_trend",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "proportion": 2.7
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#003264"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_glance_ih",
+                                                    "markdown": "**What stands out**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "text_color": "#FFFFFF",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_glance_ib",
+                                                    "markdown": "Revenue peaks in October while margin slides from ~43% to ~39%.\n\nOne project explains it: Santa Clara Ph2 overruns after the Sep 14 scope change.\n\n**Next:** price scope changes before the hours are worked.",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#C9D9FC"
+                                                    },
+                                                    "proportion": 5.5
+                                                }
+                                            ],
+                                            "proportion": 1.3
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 0.6,
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "id": "page_glance_logo",
+                                            "decorative": true,
+                                            "source": "{theme.logo}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_glance_section",
+                                            "proportion": 6,
+                                            "decorative": true,
+                                            "markdown": "01  Commercial Performance",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "center",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_glance_pageno",
+                                            "decorative": true,
+                                            "markdown": "{currentPageNumber} / {totalPages}",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "right",
+                                                "vertical_align": "bottom"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "page_margin",
+                        "kind": "content",
+                        "layout": {
+                            "type": "column",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "proportion": 2.4,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_margin_kicker",
+                                            "markdown": "01 — COMMERCIAL",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#1662F4",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 0.8
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_margin_title",
+                                            "markdown": "**Revenue & Margin**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.3
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_margin_lead",
+                                            "markdown": "Which divisions and project types bring in revenue, and which earn the margin.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "image",
+                                    "id": "page_margin_rule7",
+                                    "proportion": 0.05,
+                                    "decorative": true,
+                                    "source": "{theme.assets.images.accent_bar}",
+                                    "style": {
+                                        "fit": "contain",
+                                        "horizontal_align": "left",
+                                        "vertical_align": "center"
+                                    }
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 8,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_rev_div_lbl",
+                                                    "markdown": "**Revenue by Division**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_rev_div",
+                                                            "visualization": "revenue_by_division",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "proportion": 1.0
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_margin_type_lbl",
+                                                    "markdown": "**Gross Margin % by Project Type**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_margin_type",
+                                                            "visualization": "margin_by_project_type",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#003264"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_margin_ih",
+                                                    "markdown": "**What stands out**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "text_color": "#FFFFFF",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_margin_ib",
+                                                    "markdown": "East runs structurally lower margin (NYC labor cost).\n\nIndustrial lags at ~23%: Newark Logistics Hub is discounted unit-price work.\n\n**Next:** review unit-price discounts on East work.",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#C9D9FC"
+                                                    },
+                                                    "proportion": 5.5
+                                                }
+                                            ],
+                                            "proportion": 0.75
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 0.6,
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "id": "page_margin_logo",
+                                            "decorative": true,
+                                            "source": "{theme.logo}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_margin_section",
+                                            "proportion": 6,
+                                            "decorative": true,
+                                            "markdown": "01  Commercial Performance",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "center",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_margin_pageno",
+                                            "decorative": true,
+                                            "markdown": "{currentPageNumber} / {totalPages}",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "right",
+                                                "vertical_align": "bottom"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "page_growth",
+                        "kind": "content",
+                        "layout": {
+                            "type": "column",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "proportion": 2.4,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_growth_kicker",
+                                            "markdown": "01 — COMMERCIAL",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#1662F4",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 0.8
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_growth_title",
+                                            "markdown": "**Growth**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.3
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_growth_lead",
+                                            "markdown": "Where the work is coming from.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "image",
+                                    "id": "page_growth_rule8",
+                                    "proportion": 0.05,
+                                    "decorative": true,
+                                    "source": "{theme.assets.images.accent_bar}",
+                                    "style": {
+                                        "fit": "contain",
+                                        "horizontal_align": "left",
+                                        "vertical_align": "center"
+                                    }
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 8,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_rev_type_trend_lbl",
+                                                    "markdown": "**Revenue by Week and Project Type**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_rev_type_trend",
+                                                            "visualization": "revenue_by_project_type_trend",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "proportion": 1.5
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_rev_mom_lbl",
+                                                    "markdown": "**Revenue MoM % by Month**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_rev_mom",
+                                                            "visualization": "revenue_mom_by_month",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#003264"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_growth_ih",
+                                                    "markdown": "**What stands out**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "text_color": "#FFFFFF",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_growth_ib",
+                                                    "markdown": "Data center work keeps growing; Reno AI Campus mobilized Oct 1.\n\n**Next:** staff Electrical BIM ahead of the data center ramp-up.",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#C9D9FC"
+                                                    },
+                                                    "proportion": 5.5
+                                                }
+                                            ],
+                                            "proportion": 0.75
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 0.6,
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "id": "page_growth_logo",
+                                            "decorative": true,
+                                            "source": "{theme.logo}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_growth_section",
+                                            "proportion": 6,
+                                            "decorative": true,
+                                            "markdown": "01  Commercial Performance",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "center",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_growth_pageno",
+                                            "decorative": true,
+                                            "markdown": "{currentPageNumber} / {totalPages}",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "right",
+                                                "vertical_align": "bottom"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "section_02",
+                "title": "Project Delivery",
+                "description": "Budget, schedule and margin risk across the project portfolio.",
+                "pages": [
+                    {
+                        "id": "page_chapter_02",
+                        "kind": "section",
+                        "style": {
+                            "background_color": "#003264",
+                            "background_image": "{theme.assets.images.cover_bg}"
+                        },
+                        "layout": {
+                            "type": "row",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "id": "page_chapter_02_blank9",
+                                    "proportion": 1.4,
+                                    "decorative": true,
+                                    "markdown": " ",
+                                    "style": {
+                                        "text_style": "smallText"
+                                    }
+                                },
+                                {
+                                    "type": "column",
+                                    "style": {
+                                        "background_color": "#003264"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_chapter_02_num",
+                                            "markdown": "**02**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#7FFA88",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 3.5
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_chapter_02_title",
+                                            "markdown": "**Project Delivery**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#FFFFFF",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.6
+                                        },
+                                        {
+                                            "type": "image",
+                                            "id": "page_chapter_02_rule10",
+                                            "proportion": 0.06,
+                                            "decorative": true,
+                                            "source": "{theme.assets.images.accent_bar}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "center"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_chapter_02_desc",
+                                            "markdown": "Budget, schedule and margin risk across the project portfolio.\n\n**In this chapter:** Portfolio Health  ·  Where Projects Drift",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "text_color": "#C9D9FC",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 4
+                                        }
+                                    ],
+                                    "proportion": 1.1
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "page_portfolio",
+                        "kind": "content",
+                        "layout": {
+                            "type": "column",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "proportion": 2.4,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_portfolio_kicker",
+                                            "markdown": "02 — DELIVERY",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#1662F4",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 0.8
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_portfolio_title",
+                                            "markdown": "**Portfolio Health**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.3
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_portfolio_lead",
+                                            "markdown": "How many projects are running, and how many are at risk.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "image",
+                                    "id": "page_portfolio_rule11",
+                                    "proportion": 0.05,
+                                    "decorative": true,
+                                    "source": "{theme.assets.images.accent_bar}",
+                                    "style": {
+                                        "fit": "contain",
+                                        "horizontal_align": "left",
+                                        "vertical_align": "center"
+                                    }
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 2.6,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_portfolio_kpi_active_projects_lbl",
+                                                    "markdown": "**ACTIVE PROJECTS**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_portfolio_kpi_active_projects",
+                                                            "visualization": "kpi_active_projects",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_portfolio_kpi_projects_at_risk_lbl",
+                                                    "markdown": "**PROJECTS AT RISK**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_portfolio_kpi_projects_at_risk",
+                                                            "visualization": "kpi_projects_at_risk",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_portfolio_kpi_contract_value_lbl",
+                                                    "markdown": "**CONTRACT VALUE**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_portfolio_kpi_contract_value",
+                                                            "visualization": "kpi_contract_value",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_portfolio_kpi_hours_variance_pct_lbl",
+                                                    "markdown": "**HOURS OVER PLAN %**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_portfolio_kpi_hours_variance_pct",
+                                                            "visualization": "kpi_hours_variance_pct",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 5.4,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_hours_plan_lbl",
+                                                    "markdown": "**Billable vs. Planned Hours by Project**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_hours_plan",
+                                                            "visualization": "hours_vs_plan",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "proportion": 2.7
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#003264"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_portfolio_ih",
+                                                    "markdown": "**What stands out**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "text_color": "#FFFFFF",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_portfolio_ib",
+                                                    "markdown": "Santa Clara Ph2 is ~1,060 hours over plan; every other project is within ±4%.\n\n**Next:** recover Santa Clara Ph2 through a change order.",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#C9D9FC"
+                                                    },
+                                                    "proportion": 5.5
+                                                }
+                                            ],
+                                            "proportion": 1.3
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 0.6,
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "id": "page_portfolio_logo",
+                                            "decorative": true,
+                                            "source": "{theme.logo}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_portfolio_section",
+                                            "proportion": 6,
+                                            "decorative": true,
+                                            "markdown": "02  Project Delivery",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "center",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_portfolio_pageno",
+                                            "decorative": true,
+                                            "markdown": "{currentPageNumber} / {totalPages}",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "right",
+                                                "vertical_align": "bottom"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "page_drift",
+                        "kind": "content",
+                        "layout": {
+                            "type": "column",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "proportion": 2.4,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_drift_kicker",
+                                            "markdown": "02 — DELIVERY",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#1662F4",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 0.8
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_drift_title",
+                                            "markdown": "**Where Projects Drift**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.3
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_drift_lead",
+                                            "markdown": "How hours over plan turn into lost margin.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "image",
+                                    "id": "page_drift_rule12",
+                                    "proportion": 0.05,
+                                    "decorative": true,
+                                    "source": "{theme.assets.images.accent_bar}",
+                                    "style": {
+                                        "fit": "contain",
+                                        "horizontal_align": "left",
+                                        "vertical_align": "center"
+                                    }
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 8,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_margin_overrun_lbl",
+                                                    "markdown": "**Margin vs. Hours over Plan by Project**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_margin_overrun",
+                                                            "visualization": "margin_vs_overrun",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "proportion": 1.0
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_margin_contract_lbl",
+                                                    "markdown": "**Gross Margin % by Week and Contract Type**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_margin_contract",
+                                                            "visualization": "margin_trend_by_contract",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#003264"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_drift_ih",
+                                                    "markdown": "**What stands out**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "text_color": "#FFFFFF",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_drift_ib",
+                                                    "markdown": "Fixed Fee margin drops from ~41% to ~29% after Sep 14: overrun on a capped fee.\n\nNewark is on plan but earns the lowest margin: a price issue, not delivery.\n\n**Next:** add a scope-change clause to Fixed Fee contracts.",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#C9D9FC"
+                                                    },
+                                                    "proportion": 5.5
+                                                }
+                                            ],
+                                            "proportion": 0.75
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 0.6,
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "id": "page_drift_logo",
+                                            "decorative": true,
+                                            "source": "{theme.logo}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_drift_section",
+                                            "proportion": 6,
+                                            "decorative": true,
+                                            "markdown": "02  Project Delivery",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "center",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_drift_pageno",
+                                            "decorative": true,
+                                            "markdown": "{currentPageNumber} / {totalPages}",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "right",
+                                                "vertical_align": "bottom"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "section_03",
+                "title": "BIM Coordination & Quality",
+                "description": "Clash coordination, rework and on-time delivery.",
+                "pages": [
+                    {
+                        "id": "page_chapter_03",
+                        "kind": "section",
+                        "style": {
+                            "background_color": "#003264",
+                            "background_image": "{theme.assets.images.cover_bg}"
+                        },
+                        "layout": {
+                            "type": "row",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "id": "page_chapter_03_blank13",
+                                    "proportion": 1.4,
+                                    "decorative": true,
+                                    "markdown": " ",
+                                    "style": {
+                                        "text_style": "smallText"
+                                    }
+                                },
+                                {
+                                    "type": "column",
+                                    "style": {
+                                        "background_color": "#003264"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_chapter_03_num",
+                                            "markdown": "**03**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#7FFA88",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 3.5
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_chapter_03_title",
+                                            "markdown": "**BIM Coordination & Quality**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#FFFFFF",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.6
+                                        },
+                                        {
+                                            "type": "image",
+                                            "id": "page_chapter_03_rule14",
+                                            "proportion": 0.06,
+                                            "decorative": true,
+                                            "source": "{theme.assets.images.accent_bar}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "center"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_chapter_03_desc",
+                                            "markdown": "Clash coordination, rework and on-time delivery.\n\n**In this chapter:** Clash Coordination  ·  Rework & Delivery",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "text_color": "#C9D9FC",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 4
+                                        }
+                                    ],
+                                    "proportion": 1.1
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "page_clash",
+                        "kind": "content",
+                        "layout": {
+                            "type": "column",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "proportion": 2.4,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_clash_kicker",
+                                            "markdown": "03 — QUALITY",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#1662F4",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 0.8
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_clash_title",
+                                            "markdown": "**Clash Coordination**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.3
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_clash_lead",
+                                            "markdown": "BIM clashes found, resolved and still open.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "image",
+                                    "id": "page_clash_rule15",
+                                    "proportion": 0.05,
+                                    "decorative": true,
+                                    "source": "{theme.assets.images.accent_bar}",
+                                    "style": {
+                                        "fit": "contain",
+                                        "horizontal_align": "left",
+                                        "vertical_align": "center"
+                                    }
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 2.6,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clash_kpi_clashes_detected_lbl",
+                                                    "markdown": "**CLASHES DETECTED**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_clash_kpi_clashes_detected",
+                                                            "visualization": "kpi_clashes_detected",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clash_kpi_clash_resolution_rate_lbl",
+                                                    "markdown": "**CLASH RESOLUTION %**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_clash_kpi_clash_resolution_rate",
+                                                            "visualization": "kpi_clash_resolution_rate",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clash_kpi_clash_backlog_lbl",
+                                                    "markdown": "**OPEN CLASHES**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_clash_kpi_clash_backlog",
+                                                            "visualization": "kpi_clash_backlog",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clash_kpi_rework_pct_lbl",
+                                                    "markdown": "**REWORK %**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_clash_kpi_rework_pct",
+                                                            "visualization": "kpi_rework_pct",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 5.4,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_clash_trend_lbl",
+                                                    "markdown": "**Clashes Detected vs. Resolved by Week**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_clash_trend",
+                                                            "visualization": "clash_trend",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "proportion": 2.7
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#003264"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clash_ih",
+                                                    "markdown": "**What stands out**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "text_color": "#FFFFFF",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clash_ib",
+                                                    "markdown": "The detected-vs-resolved gap closes after the VEC Coordination Hub went live on Sep 1.\n\n**Next:** roll the Hub out to all remaining projects.",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#C9D9FC"
+                                                    },
+                                                    "proportion": 5.5
+                                                }
+                                            ],
+                                            "proportion": 1.3
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 0.6,
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "id": "page_clash_logo",
+                                            "decorative": true,
+                                            "source": "{theme.logo}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_clash_section",
+                                            "proportion": 6,
+                                            "decorative": true,
+                                            "markdown": "03  BIM Coordination & Quality",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "center",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_clash_pageno",
+                                            "decorative": true,
+                                            "markdown": "{currentPageNumber} / {totalPages}",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "right",
+                                                "vertical_align": "bottom"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "page_rework",
+                        "kind": "content",
+                        "layout": {
+                            "type": "column",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "proportion": 2.4,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_rework_kicker",
+                                            "markdown": "03 — QUALITY",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#1662F4",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 0.8
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_rework_title",
+                                            "markdown": "**Rework & Delivery**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.3
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_rework_lead",
+                                            "markdown": "What rework costs, and which service lines deliver on time.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "image",
+                                    "id": "page_rework_rule16",
+                                    "proportion": 0.05,
+                                    "decorative": true,
+                                    "source": "{theme.assets.images.accent_bar}",
+                                    "style": {
+                                        "fit": "contain",
+                                        "horizontal_align": "left",
+                                        "vertical_align": "center"
+                                    }
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 8,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_rework_project_lbl",
+                                                    "markdown": "**Cost of Rework by Project**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_rework_project",
+                                                            "visualization": "rework_cost_by_project",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "proportion": 1.0
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_on_time_lbl",
+                                                    "markdown": "**On-Time Delivery % by Service Line**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_on_time",
+                                                            "visualization": "on_time_by_service_line",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#003264"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_rework_ih",
+                                                    "markdown": "**What stands out**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "text_color": "#FFFFFF",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_rework_ib",
+                                                    "markdown": "Santa Clara Ph2 burns ~$61K in rework, about twice any other project.\n\nOnsite QC was hit by the August laser-scanner calibration issue.\n\n**Next:** add calibration checks to Onsite QC.",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#C9D9FC"
+                                                    },
+                                                    "proportion": 5.5
+                                                }
+                                            ],
+                                            "proportion": 0.75
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 0.6,
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "id": "page_rework_logo",
+                                            "decorative": true,
+                                            "source": "{theme.logo}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_rework_section",
+                                            "proportion": 6,
+                                            "decorative": true,
+                                            "markdown": "03  BIM Coordination & Quality",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "center",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_rework_pageno",
+                                            "decorative": true,
+                                            "markdown": "{currentPageNumber} / {totalPages}",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "right",
+                                                "vertical_align": "bottom"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "section_04",
+                "title": "Clients & Divisions",
+                "description": "Who we work for, and how each division compares.",
+                "pages": [
+                    {
+                        "id": "page_chapter_04",
+                        "kind": "section",
+                        "style": {
+                            "background_color": "#003264",
+                            "background_image": "{theme.assets.images.cover_bg}"
+                        },
+                        "layout": {
+                            "type": "row",
+                            "children": [
+                                {
+                                    "type": "text",
+                                    "id": "page_chapter_04_blank17",
+                                    "proportion": 1.4,
+                                    "decorative": true,
+                                    "markdown": " ",
+                                    "style": {
+                                        "text_style": "smallText"
+                                    }
+                                },
+                                {
+                                    "type": "column",
+                                    "style": {
+                                        "background_color": "#003264"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_chapter_04_num",
+                                            "markdown": "**04**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#7FFA88",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 3.5
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_chapter_04_title",
+                                            "markdown": "**Clients & Divisions**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#FFFFFF",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.6
+                                        },
+                                        {
+                                            "type": "image",
+                                            "id": "page_chapter_04_rule18",
+                                            "proportion": 0.06,
+                                            "decorative": true,
+                                            "source": "{theme.assets.images.accent_bar}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "center"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_chapter_04_desc",
+                                            "markdown": "Who we work for, and how each division compares.\n\n**In this chapter:** Clients  ·  Divisions & Geography",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "text_color": "#C9D9FC",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 4
+                                        }
+                                    ],
+                                    "proportion": 1.1
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "page_clients",
+                        "kind": "content",
+                        "layout": {
+                            "type": "column",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "proportion": 2.4,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_clients_kicker",
+                                            "markdown": "04 — CLIENTS",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#1662F4",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 0.8
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_clients_title",
+                                            "markdown": "**Clients**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.3
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_clients_lead",
+                                            "markdown": "Who we work for, and what we earn from them.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "image",
+                                    "id": "page_clients_rule19",
+                                    "proportion": 0.05,
+                                    "decorative": true,
+                                    "source": "{theme.assets.images.accent_bar}",
+                                    "style": {
+                                        "fit": "contain",
+                                        "horizontal_align": "left",
+                                        "vertical_align": "center"
+                                    }
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 2.6,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clients_kpi_effective_rate_lbl",
+                                                    "markdown": "**EFFECTIVE RATE / HR**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_clients_kpi_effective_rate",
+                                                            "visualization": "kpi_effective_rate",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clients_kpi_rate_realization_pct_lbl",
+                                                    "markdown": "**RATE REALIZATION %**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_clients_kpi_rate_realization_pct",
+                                                            "visualization": "kpi_rate_realization_pct",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clients_kpi_fte_deployed_lbl",
+                                                    "markdown": "**AVG. FTE DEPLOYED**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_clients_kpi_fte_deployed",
+                                                            "visualization": "kpi_fte_deployed",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clients_kpi_contract_value_lbl",
+                                                    "markdown": "**CONTRACT VALUE**",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#1662F4",
+                                                        "horizontal_align": "center",
+                                                        "vertical_align": "bottom"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 2.2,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "page_clients_kpi_contract_value",
+                                                            "visualization": "kpi_contract_value",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 5.4,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_rev_client_lbl",
+                                                    "markdown": "**Revenue by Client**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_rev_client",
+                                                            "visualization": "revenue_by_client",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "proportion": 2.7
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#003264"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clients_ih",
+                                                    "markdown": "**What stands out**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "text_color": "#FFFFFF",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_clients_ib",
+                                                    "markdown": "Westbrook Builders is the largest client; strategic clients bring ~60% of revenue.\n\nGranite Underground earns the lowest margin (~30%) on discounted Civil Underground work.",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#C9D9FC"
+                                                    },
+                                                    "proportion": 5.5
+                                                }
+                                            ],
+                                            "proportion": 1.3
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 0.6,
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "id": "page_clients_logo",
+                                            "decorative": true,
+                                            "source": "{theme.logo}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_clients_section",
+                                            "proportion": 6,
+                                            "decorative": true,
+                                            "markdown": "04  Clients & Divisions",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "center",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_clients_pageno",
+                                            "decorative": true,
+                                            "markdown": "{currentPageNumber} / {totalPages}",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "right",
+                                                "vertical_align": "bottom"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "id": "page_divisions",
+                        "kind": "content",
+                        "layout": {
+                            "type": "column",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "proportion": 2.4,
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_divisions_kicker",
+                                            "markdown": "04 — CLIENTS",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#1662F4",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 0.8
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_divisions_title",
+                                            "markdown": "**Divisions & Geography**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "vertical_align": "center"
+                                            },
+                                            "proportion": 1.3
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_divisions_lead",
+                                            "markdown": "How each division compares, and where the work is.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 1
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "image",
+                                    "id": "page_divisions_rule20",
+                                    "proportion": 0.05,
+                                    "decorative": true,
+                                    "source": "{theme.assets.images.accent_bar}",
+                                    "style": {
+                                        "fit": "contain",
+                                        "horizontal_align": "left",
+                                        "vertical_align": "center"
+                                    }
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 8,
+                                    "children": [
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_div_compare_lbl",
+                                                    "markdown": "**Division Comparison**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_div_compare",
+                                                            "visualization": "division_comparison",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "proportion": 1.4
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#F4F6F9"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "v_rev_state_lbl",
+                                                    "markdown": "**Revenue by Project State**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 8,
+                                                    "children": [
+                                                        {
+                                                            "type": "visualization",
+                                                            "id": "v_rev_state",
+                                                            "visualization": "revenue_by_state",
+                                                            "date": "work_date"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "column",
+                                            "style": {
+                                                "background_color": "#003264"
+                                            },
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_divisions_ih",
+                                                    "markdown": "**What stands out**",
+                                                    "style": {
+                                                        "text_style": "normalText",
+                                                        "text_color": "#FFFFFF",
+                                                        "vertical_align": "center"
+                                                    },
+                                                    "proportion": 1
+                                                },
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_divisions_ib",
+                                                    "markdown": "East bills the same rates but earns ~10 pts less margin.\n\nData center work sits entirely in West and Central; Nevada is Reno AI Campus.",
+                                                    "style": {
+                                                        "text_style": "smallText",
+                                                        "text_color": "#C9D9FC"
+                                                    },
+                                                    "proportion": 5.5
+                                                }
+                                            ],
+                                            "proportion": 0.75
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "row",
+                                    "proportion": 0.6,
+                                    "children": [
+                                        {
+                                            "type": "image",
+                                            "id": "page_divisions_logo",
+                                            "decorative": true,
+                                            "source": "{theme.logo}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_divisions_section",
+                                            "proportion": 6,
+                                            "decorative": true,
+                                            "markdown": "04  Clients & Divisions",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "center",
+                                                "vertical_align": "bottom"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_divisions_pageno",
+                                            "decorative": true,
+                                            "markdown": "{currentPageNumber} / {totalPages}",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "horizontal_align": "right",
+                                                "vertical_align": "bottom"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "section_actions",
+                "pages": [
+                    {
+                        "id": "page_actions",
+                        "kind": "content",
+                        "style": {
+                            "background_color": "#003264"
+                        },
+                        "layout": {
+                            "type": "row",
+                            "children": [
+                                {
+                                    "type": "column",
+                                    "style": {
+                                        "background_color": "#003264"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "text",
+                                            "id": "page_actions_kicker",
+                                            "markdown": "WHERE TO ACT NEXT",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#7FFA88",
+                                                "vertical_align": "bottom"
+                                            },
+                                            "proportion": 3.7
+                                        },
+                                        {
+                                            "type": "title",
+                                            "id": "page_actions_title",
+                                            "markdown": "**Three priorities**",
+                                            "style": {
+                                                "text_style": "largeText",
+                                                "text_color": "#FFFFFF"
+                                            },
+                                            "proportion": 1.2
+                                        },
+                                        {
+                                            "type": "image",
+                                            "id": "page_actions_rule21",
+                                            "proportion": 0.06,
+                                            "decorative": true,
+                                            "source": "{theme.assets.images.accent_bar}",
+                                            "style": {
+                                                "fit": "contain",
+                                                "horizontal_align": "left",
+                                                "vertical_align": "center"
+                                            }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_actions_lead",
+                                            "markdown": "What the four chapters add up to.",
+                                            "style": {
+                                                "text_style": "normalText",
+                                                "text_color": "#C9D9FC",
+                                                "vertical_align": "top"
+                                            },
+                                            "proportion": 3.5
+                                        }
+                                    ],
+                                    "proportion": 2
+                                },
+                                {
+                                    "type": "column",
+                                    "style": {
+                                        "background_color": "#003264"
+                                    },
+                                    "children": [
+                                        {
+                                            "type": "row",
+                                            "proportion": 2,
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_actions_n1",
+                                                    "markdown": "**01**",
+                                                    "style": {
+                                                        "text_style": "largeText",
+                                                        "text_color": "#7FFA88",
+                                                        "vertical_align": "top"
+                                                    },
+                                                    "proportion": 0.6
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 6,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "id": "page_actions_h1",
+                                                            "markdown": "**Protect margin on scope changes**",
+                                                            "style": {
+                                                                "text_style": "normalText",
+                                                                "text_color": "#FFFFFF"
+                                                            },
+                                                            "proportion": 1
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "id": "page_actions_b1",
+                                                            "markdown": "Santa Clara Ph2 explains most of the margin slide; price changes before the hours are worked.",
+                                                            "style": {
+                                                                "text_style": "smallText",
+                                                                "text_color": "#C9D9FC"
+                                                            },
+                                                            "proportion": 2
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "row",
+                                            "proportion": 2,
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_actions_n2",
+                                                    "markdown": "**02**",
+                                                    "style": {
+                                                        "text_style": "largeText",
+                                                        "text_color": "#7FFA88",
+                                                        "vertical_align": "top"
+                                                    },
+                                                    "proportion": 0.6
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 6,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "id": "page_actions_h2",
+                                                            "markdown": "**Fix East pricing**",
+                                                            "style": {
+                                                                "text_style": "normalText",
+                                                                "text_color": "#FFFFFF"
+                                                            },
+                                                            "proportion": 1
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "id": "page_actions_b2",
+                                                            "markdown": "Same rates, ~10 pts less margin: review unit-price discounts and NYC staffing.",
+                                                            "style": {
+                                                                "text_style": "smallText",
+                                                                "text_color": "#C9D9FC"
+                                                            },
+                                                            "proportion": 2
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "row",
+                                            "proportion": 2,
+                                            "children": [
+                                                {
+                                                    "type": "text",
+                                                    "id": "page_actions_n3",
+                                                    "markdown": "**03**",
+                                                    "style": {
+                                                        "text_style": "largeText",
+                                                        "text_color": "#7FFA88",
+                                                        "vertical_align": "top"
+                                                    },
+                                                    "proportion": 0.6
+                                                },
+                                                {
+                                                    "type": "column",
+                                                    "proportion": 6,
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "id": "page_actions_h3",
+                                                            "markdown": "**Scale what works**",
+                                                            "style": {
+                                                                "text_style": "normalText",
+                                                                "text_color": "#FFFFFF"
+                                                            },
+                                                            "proportion": 1
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "id": "page_actions_b3",
+                                                            "markdown": "The Coordination Hub closed the clash gap; extend it and staff Electrical BIM for the data center ramp-up.",
+                                                            "style": {
+                                                                "text_style": "smallText",
+                                                                "text_color": "#C9D9FC"
+                                                            },
+                                                            "proportion": 2
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "text",
+                                            "id": "page_actions_pageno",
+                                            "decorative": true,
+                                            "proportion": 0.6,
+                                            "markdown": "{currentPageNumber} / {totalPages}",
+                                            "style": {
+                                                "text_style": "smallText",
+                                                "text_color": "#C9D9FC",
+                                                "horizontal_align": "right",
+                                                "vertical_align": "bottom"
+                                            }
+                                        }
+                                    ],
+                                    "proportion": 3
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

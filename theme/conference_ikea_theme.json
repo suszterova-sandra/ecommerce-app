@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#0058A3",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#F4F7FB",
+      "c2": "#E8F0F9",
+      "c3": "#D6E2EF",
+      "c4": "#B8CCE3",
+      "c5": "#8AA4C2",
+      "c6": "#5F7FA3",
+      "c7": "#3D5A7A",
+      "c8": "#1F3A5C",
+      "c9": "#0B1F33"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#0B1F33",
+      "lineColor": "#D6E2EF"
+    },
+    "borderColor": "#D6E2EF",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#0B1F33"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#E8F0F9",
+    "axisColor": "#B8CCE3",
+    "axisLabelColor": "#6B8299",
+    "axisValueColor": "#3D5A7A",
+    "legendValueColor": "#3D5A7A",
+    "plotLineColor": "#B8CCE3",
+    "tooltipBackgroundColor": "#0B1F33",
+    "tooltipBorderColor": "#0B1F33",
+    "tooltipLabelColor": "#B8CCE3",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#1F3A5C",
+    "nullValueColor": "#6B8299",
+    "hoverBackgroundColor": "#E8F0F9",
+    "loadingIconColor": "#0058A3",
+    "headerLabelColor": "#6B8299",
+    "headerHoverBackgroundColor": "#E8F0F9",
+    "subtotalBackgroundColor": "#E8F0F9",
+    "totalBackgroundColor": "#D6E2EF",
+    "totalValueColor": "#0B1F33"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#0B1F33",
+    "secondaryInfoColor": "#3D5A7A",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#0B1F33",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#0058A3",
+      "borderColor": "#004A8C",
+      "item": {
+        "color": "#D6E6F7",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#0B1F33",
+        "selectedBackgroundColor": "#FFDB00"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#D6E2EF",
+      "filterButton": {
+        "backgroundColor": "#F4F7FB"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#0B1F33",
+        "lineColor": "#D6E2EF"
+      },
+      "description": {
+        "color": "#3D5A7A"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#F4F7FB",
+      "widget": {
+        "title": {
+          "color": "#0B1F33",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#D6E2EF",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#FFFFFF",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#0058A3",
+        "borderColor": "#0058A3",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#FFDB00",
+          "secondaryInfoColor": "#D6E6F7",
+          "value": {
+            "positiveColor": "#8FE3C0",
+            "negativeColor": "#FFB3BF"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#0B1F33"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#0058A3",
+      "#FFDB00",
+      "#4A9BE0",
+      "#0B2F55",
+      "#F2A900",
+      "#8DBBE8",
+      "#2F9E7A",
+      "#E36A5C",
+      "#7A8FA6",
+      "#C9A400"
+    ],
+    "page": {
+      "backgroundColor": "#F4F5F7"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#F4F5F7"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#EAEDF1"
+        },
+        {
+          "id": "accent",
+          "color": "#0058A3"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#0B1F33"
+        },
+        {
+          "id": "muted",
+          "color": "#3D5A7A"
+        },
+        {
+          "id": "subtle",
+          "color": "#6B8299"
+        },
+        {
+          "id": "accent",
+          "color": "#0058A3"
+        },
+        {
+          "id": "inverse",
+          "color": "#F4F5F7"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#0B1F33",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#0B1F33"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#0B1F33"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#0B1F33"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#0B1F33"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#0B1F33"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#0B1F33"
+        }
+      },
+      "paragraph": {
+        "color": "#3D5A7A",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#0B1F33"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#3D5A7A"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#6B8299"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#0058A3",
+    "color": "#FFFFFF",
+    "activeColor": "#FFDB00"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1280px-Ikea_logo.svg.png",
+        "title": "IKEA logo",
+        "altText": "IKEA logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg",
+        "title": "Cover background",
+        "altText": "IKEA store at dusk"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg",
+        "title": "Section background",
+        "altText": "IKEA store at dusk"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg",
+        "title": "Cover background",
+        "altText": "IKEA store at dusk"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg",
+        "title": "Section background",
+        "altText": "IKEA store at dusk"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/FFDB00/FFDB00/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1280px-Ikea_logo.svg.png",
+        "title": "IKEA logo",
+        "altText": "IKEA logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1280px-Ikea_logo.svg.png)"
+  }
+}

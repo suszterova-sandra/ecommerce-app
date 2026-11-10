@@ -1,0 +1,19 @@
+# A parameter is a named, typed value that metrics reference instead of hardcoding a literal.
+# Changing the parameter's default changes every metric that references it, without editing their MAQL.
+# Read more about parameters:
+# https://www.gooddata.ai/docs/cloud/experimental-features/numeric-parameters/
+
+type: parameter
+id: top-n
+
+title: Top N
+description: Controls the Top-N window in ranking-style metrics.
+tags:
+  - Favorites
+
+definition:
+  type: NUMBER
+  defaultValue: 10
+  constraints:
+    min: 0
+    max: 50

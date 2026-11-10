@@ -1,0 +1,10 @@
+# Dashboard plugins allow developers to create and integrate custom code into the Dashboard component.
+# With the plugins, you as a developer can customize and enhance the default dashboard experience available to the dashboard consumers.
+# Read more about dashboard plugins:
+# https://www.gooddata.com/docs/gooddata-ui/latest/references/dashboard_component/dashboard_plugins/
+
+type: plugin
+id: dashboard_summary
+
+title: dashboard_summary
+url: https://gooddata-demo.s3.amazonaws.com/dashboard-plugins/dashboard-summary/dashboardPlugin/dp_dashboard_summary.mjs

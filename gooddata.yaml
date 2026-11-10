@@ -1,0 +1,8 @@
+profiles:
+  dev:
+    host: https://navy-blue-eagle.trial.cloud.gooddata.com/
+    token: $GOODDATA_API_TOKEN
+    workspace_id: gdc_demo_a7c3afa0-ca91-40db-a3a8-df4d5044e92f
+    data_source: 2d36ef18-41b6-4074-ac8f-8be7a85faab6
+source_dir: analytics
+default_profile: dev

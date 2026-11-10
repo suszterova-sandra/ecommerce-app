@@ -1,0 +1,325 @@
+{
+    "version": "2",
+    "palette": {
+        "primary": {
+            "base": "#1859E8",
+            "contrast": "#FFFFFF"
+        },
+        "error": {
+            "base": "#E5484D"
+        },
+        "warning": {
+            "base": "#FEC84B"
+        },
+        "success": {
+            "base": "#12A150"
+        },
+        "complementary": {
+            "c0": "#FFFFFF",
+            "c1": "#F5F7FB",
+            "c2": "#ECEFF4",
+            "c3": "#DDE2EA",
+            "c4": "#C3C9D3",
+            "c5": "#98A1AE",
+            "c6": "#667085",
+            "c7": "#475467",
+            "c8": "#26303F",
+            "c9": "#161616"
+        }
+    },
+    "typography": {
+        "font": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_C-bk.woff2",
+        "fontBold": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_C-bk.woff2"
+    },
+    "button": {
+        "borderRadius": "6",
+        "dropShadow": false
+    },
+    "modal": {
+        "title": {
+            "color": "#161616",
+            "lineColor": "#DDE2EA"
+        },
+        "borderColor": "#DDE2EA",
+        "borderRadius": "8",
+        "borderWidth": "1px",
+        "dropShadow": true,
+        "outsideBackgroundColor": "rgba(10, 37, 64, 0.55)"
+    },
+    "tooltip": {
+        "color": "#FFFFFF",
+        "backgroundColor": "#0A2540"
+    },
+    "chart": {
+        "backgroundColor": "#FFFFFF",
+        "gridColor": "#ECEFF4",
+        "axisColor": "#C3C9D3",
+        "axisLabelColor": "#667085",
+        "axisValueColor": "#161616",
+        "legendValueColor": "#667085",
+        "plotLineColor": "#DDE2EA",
+        "tooltipBackgroundColor": "#0A2540",
+        "tooltipBorderColor": "#0A2540",
+        "tooltipLabelColor": "#C6D6F5",
+        "tooltipValueColor": "#FFFFFF"
+    },
+    "table": {
+        "valueColor": "#475467",
+        "nullValueColor": "#98A1AE",
+        "hoverBackgroundColor": "#F5F7FB",
+        "loadingIconColor": "#1859E8",
+        "headerLabelColor": "#161616",
+        "headerHoverBackgroundColor": "#E7EFFD",
+        "subtotalBackgroundColor": "#F5F7FB",
+        "totalBackgroundColor": "#ECEFF4",
+        "totalValueColor": "#161616"
+    },
+    "kpi": {
+        "primaryMeasureColor": "#161616",
+        "secondaryInfoColor": "#475467",
+        "value": {
+            "positiveColor": "#12A150",
+            "negativeColor": "#E5484D"
+        }
+    },
+    "dashboards": {
+        "title": {
+            "color": "#161616",
+            "backgroundColor": "#F5F7FB",
+            "borderColor": "#DDE2EA"
+        },
+        "navigation": {
+            "title": {
+                "color": "#FFFFFF"
+            },
+            "backgroundColor": "#0A2540",
+            "borderColor": "#17365A",
+            "item": {
+                "color": "#C6D6F5",
+                "hoverColor": "#FFFFFF",
+                "selectedColor": "#FFFFFF",
+                "selectedBackgroundColor": "#1859E8"
+            }
+        },
+        "filterBar": {
+            "backgroundColor": "#F5F7FB",
+            "borderColor": "#DDE2EA",
+            "filterButton": {
+                "backgroundColor": "#FFFFFF"
+            }
+        },
+        "section": {
+            "title": {
+                "color": "#161616",
+                "lineColor": "#DDE2EA"
+            },
+            "description": {
+                "color": "#667085"
+            }
+        },
+        "content": {
+            "backgroundColor": "#F5F7FB",
+            "kpiWidget": {
+                "title": {
+                    "color": "#0E47BE",
+                    "textAlign": "center"
+                },
+                "kpi": {
+                    "primaryMeasureColor": "#161616",
+                    "secondaryInfoColor": "#475467",
+                    "value": {
+                        "positiveColor": "#12A150",
+                        "negativeColor": "#E5484D"
+                    }
+                },
+                "backgroundColor": "#E7EFFD",
+                "borderColor": "#B7CCF6",
+                "borderRadius": "8",
+                "borderWidth": "1px",
+                "dropShadow": false
+            },
+            "widget": {
+                "title": {
+                    "color": "#161616",
+                    "textAlign": "center"
+                },
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#DDE2EA",
+                "borderRadius": "8",
+                "borderWidth": "1px",
+                "dropShadow": false
+            }
+        }
+    },
+    "analyticalDesigner": {
+        "title": {
+            "color": "#161616"
+        }
+    },
+    "documents": {
+        "visualizationPalette": [
+            "#1859E8",
+            "#0A2540",
+            "#2FB36B",
+            "#FEC84B",
+            "#B44696",
+            "#12A150",
+            "#98A1AE",
+            "#93B4F5"
+        ],
+        "page": {
+            "backgroundColor": "#F5F7FB"
+        },
+        "colors": {
+            "backgrounds": [
+                "#FFFFFF",
+                "#F5F7FB",
+                "#0A2540",
+                "#1859E8",
+                "#E7EFFD"
+            ],
+            "text": [
+                "#161616",
+                "#475467",
+                "#98A1AE",
+                "#FFFFFF",
+                "#1859E8"
+            ]
+        },
+        "textStyle": {
+            "typography": {
+                "fontFamily": "Manrope, Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif",
+                "fonts": [
+                    {
+                        "family": "Manrope",
+                        "url": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk79FN_C-bk.woff2",
+                        "weight": 400
+                    },
+                    {
+                        "family": "Manrope",
+                        "url": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4aE9_C-bk.woff2",
+                        "weight": 700
+                    },
+                    {
+                        "family": "Manrope",
+                        "url": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E9_C-bk.woff2",
+                        "weight": 800
+                    }
+                ]
+            },
+            "heading": {
+                "color": "#161616",
+                "h1": {
+                    "fontSize": 4.4,
+                    "lineHeight": 5,
+                    "color": "#161616"
+                },
+                "h2": {
+                    "fontSize": 2.1,
+                    "lineHeight": 2.7,
+                    "color": "#161616"
+                },
+                "h3": {
+                    "fontSize": 1.6,
+                    "lineHeight": 2.1,
+                    "color": "#161616"
+                },
+                "h4": {
+                    "fontSize": 1.35,
+                    "lineHeight": 1.8,
+                    "color": "#161616"
+                },
+                "h5": {
+                    "fontSize": 1.2,
+                    "lineHeight": 1.6,
+                    "color": "#161616"
+                },
+                "h6": {
+                    "fontSize": 1.1,
+                    "lineHeight": 1.5,
+                    "color": "#161616"
+                }
+            },
+            "paragraph": {
+                "color": "#475467",
+                "largeText": {
+                    "fontSize": 1.65,
+                    "lineHeight": 2.3,
+                    "color": "#161616"
+                },
+                "normalText": {
+                    "fontSize": 1.35,
+                    "lineHeight": 1.9,
+                    "color": "#475467"
+                },
+                "smallText": {
+                    "fontSize": 1.1,
+                    "lineHeight": 1.5,
+                    "color": "#667085"
+                }
+            }
+        }
+    },
+    "assets": {
+        "logos": [
+            {
+                "id": "logo",
+                "url": "https://cdn.prod.website-files.com/61ae5cdbf6928b108c7f02cd/63a19c8b1bffad4a24a565f3_Logo.svg",
+                "title": "VEC logo",
+                "altText": "VEC official logo"
+            },
+            {
+                "id": "logo_white",
+                "url": "https://cdn.prod.website-files.com/61ae5cdbf6928b108c7f02cd/63a19c8b1bffad4a24a565f3_Logo.svg",
+                "title": "VEC logo (for dark surfaces)",
+                "altText": "VEC official logo"
+            }
+        ],
+        "backgrounds": [
+            {
+                "id": "cover_bg",
+                "url": "https://www.bp.com/content/dam/bp/business-sites/en/global/air-bp/images/news-and-views/newsletter/2023/bp_Castellon_Refinery_16_9.jpg",
+                "title": "Cover background",
+                "altText": "VEC cover background image"
+            },
+            {
+                "id": "section_bg",
+                "url": "https://www.bp.com/content/dam/bp/business-sites/en/global/air-bp/images/news-and-views/newsletter/2023/bp_Castellon_Refinery_16_9.jpg",
+                "title": "Section divider background",
+                "altText": "VEC section divider background image"
+            },
+            {
+                "id": "panel_texture",
+                "url": "https://placehold.co/800x1200/0A2540/0A2540/png",
+                "title": "Side panel - VEC midnight navy",
+                "altText": "Solid VEC midnight navy surface"
+            }
+        ],
+        "images": [
+            {
+                "id": "cover_bg",
+                "url": "https://www.bp.com/content/dam/bp/business-sites/en/global/air-bp/images/news-and-views/newsletter/2023/bp_Castellon_Refinery_16_9.jpg",
+                "title": "Cover background",
+                "altText": "VEC cover background image"
+            },
+            {
+                "id": "section_bg",
+                "url": "https://www.bp.com/content/dam/bp/business-sites/en/global/air-bp/images/news-and-views/newsletter/2023/bp_Castellon_Refinery_16_9.jpg",
+                "title": "Section divider background",
+                "altText": "VEC section divider background image"
+            },
+            {
+                "id": "panel_texture",
+                "url": "https://placehold.co/800x1200/0A2540/0A2540/png",
+                "title": "Side panel - VEC midnight navy",
+                "altText": "Solid VEC midnight navy surface"
+            },
+            {
+                "id": "accent_bar",
+                "url": "https://placehold.co/1600x12/2FB36B/2FB36B/png",
+                "title": "Accent rule - VEC green",
+                "altText": "VEC green accent rule"
+            }
+        ]
+    }
+}

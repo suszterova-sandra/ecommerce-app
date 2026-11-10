@@ -1,0 +1,34 @@
+# A visualization is a visual representation of a user's analytical view of the data.
+# You build visualizations from metrics, attributes, and optionally filters that are combined in a way to visualize a particular aspect of your data.
+# The visualizations are executed over and over as fresh data gets loaded.
+# Interpreting the content of a visualization is up to the user (the consumer of the visualization).
+# Read more about visualisations:
+# https://www.gooddata.com/developers/cloud-native/doc/cloud/create-visualizations/concepts/visualization/
+
+type: line_chart
+id: 4bc66228-5461-41fb-8ae4-c5b8135761be
+
+title: Net Orders by Week (2025)
+
+query:
+  fields:
+    m_net_orders: metric/net_orders
+    d_week: label/date.week
+
+  filter_by:
+    date:
+      type: date_filter
+      from: 2025-01-01
+      to: 2025-12-31
+      using: date
+
+  sort_by:
+    - type: attribute_sort
+      by: d_week
+      direction: ASC
+
+metrics:
+  - m_net_orders
+
+view_by:
+  - d_week
