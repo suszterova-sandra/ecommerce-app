@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { gd } from "../api";
+import { gd, urls } from "../api";
 import { useApp } from "../AppContext";
 import { languageName, type Key, type Lang } from "../i18n";
 import { change, fmt, loadInsights, type Driver, type Insights, type Kpi, type Target } from "../insights";
@@ -7,6 +7,8 @@ import { markdown } from "../markdown";
 import { logoTile } from "../theme";
 import type { PersonaId } from "../types";
 import { useChatbot } from "./Chatbot";
+import { Prewarm } from "./Embed";
+import { STATIC } from "../staticBackend";
 
 const DIM_ICON: Record<string, string> = { product_brand: "🏷️", product_category: "🗂️", customer_country: "🌍", customer_state: "📍" };
 const DIM_KEY: Record<string, Key> = { product_brand: "brand", product_category: "category", customer_country: "country", customer_state: "state" };
@@ -108,6 +110,7 @@ export function Portal({ fixedWs }: { fixedWs?: string }) {
 
   return (
     <div className={`portal ${fixedWs ? "in-ws" : ""}`}>
+      {!(STATIC && persona.id === "admin") && <Prewarm url={urls.dashboard(ws.id, "overview")} />}
       <section className="portal-hero" style={theme?.cover ? { backgroundImage: `url('${theme.cover}')` } : undefined}>
         <div className="ph-shade" />
         <div className="ph-inner">

@@ -174,7 +174,8 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
     const locale = localeOf(lang);
     const userId = personas.find((p) => p.id === personaId)?.userId;
     if (!userId) return;
-    if (appliedLocale.current[userId] === locale) {
+    if (appliedLocale.current[userId] === locale || localStorage.getItem(`gdLocale:${userId}`) === locale) {
+      appliedLocale.current[userId] = locale;
       setLocaleReady(true);
       return;
     }
@@ -204,6 +205,7 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
         }
       }
       appliedLocale.current[userId] = locale;
+      localStorage.setItem(`gdLocale:${userId}`, locale);
       if (changed) {
         if (personaId === "admin") await refreshOverview().catch(() => null);
         if (live) setLocaleVersion((v) => v + 1); // reload content that was showing the old language
