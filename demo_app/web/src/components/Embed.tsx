@@ -38,7 +38,7 @@ export function Embed({ url, label, tall, onEvent }: { url: string; label: strin
     if (!f) return;
     const done = () => setReady(true);
     let timer = 0;
-    const onLoad = () => (timer = window.setTimeout(done, 12000));
+    const onLoad = () => (timer = window.setTimeout(done, 30000)); // fallback only; normally a GoodData event ends it
     f.addEventListener("gd-ready", done);
     f.addEventListener("load", onLoad);
     return () => {
@@ -57,10 +57,28 @@ export function Embed({ url, label, tall, onEvent }: { url: string; label: strin
   return (
     <div className={`embed-wrap ${tall ? "tall" : ""}`}>
       {localeReady && <iframe key={frameKey} ref={ref} data-gd data-persona={persona.id} src={url} allow="clipboard-write; fullscreen" title={label} />}
-      <div className={`embed-loading ${ready ? "done" : ""}`}>
-        <div>
-          <span className="spinner" />
-          &nbsp; {label}
+      <div className={`embed-loading ${ready ? "done" : ""}`} aria-label={label} role="status">
+        <div className="dash-skel">
+          <div className="sk-row">
+            <span className="sk sk-h" />
+            <span className="sk sk-btn" />
+          </div>
+          <div className="sk-row">
+            <span className="sk sk-chip" />
+            <span className="sk sk-chip" />
+            <span className="sk sk-chip" />
+            <span className="sk sk-chip" />
+          </div>
+          <div className="sk-grid4">
+            <span className="sk sk-kpi" />
+            <span className="sk sk-kpi" />
+            <span className="sk sk-kpi" />
+            <span className="sk sk-kpi" />
+          </div>
+          <div className="sk-grid2">
+            <span className="sk sk-chart" />
+            <span className="sk sk-chart" />
+          </div>
         </div>
       </div>
     </div>

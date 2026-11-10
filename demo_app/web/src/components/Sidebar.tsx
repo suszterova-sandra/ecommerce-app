@@ -2,6 +2,7 @@ import { useApp } from "../AppContext";
 import { canCreateContent, useCatalog, usePermissions } from "../catalog";
 import { logoTile } from "../theme";
 import type { Workspace } from "../types";
+import { Icon } from "../icons";
 
 export function WsSwatch({ wsId }: { wsId: string }) {
   const { themeOf } = useApp();
@@ -43,27 +44,20 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
         </button>
       </div>
 
-      <div className="side-section">
-        <div className="side-label">{t("signedInAs")}</div>
-        <div className="persona-card" title={collapsed ? `${persona.name} · ${persona.role}` : undefined}>
-          <span className={`avatar ${persona.id}`}>{persona.initials}</span>
-          <div className="meta">
-            <div className="n">{persona.name}</div>
-            <div className="r">{persona.role}</div>
-          </div>
-        </div>
-      </div>
 
       <nav className="side-section">
         <button className={`nav-item ${route.view === "home" ? "active" : ""}`} title={collapsed ? t("home") : undefined} onClick={() => navigate({ view: "home" })}>
-          <span className="sw" style={{ background: "var(--chrome-panel)", color: "var(--chrome-accent-ink)", fontWeight: 800 }}>✦</span>
+          <span className="sw ico-sw">
+            <Icon name="home" size={15} />
+          </span>
           <span className="lbl">{t("home")}</span>
         </button>
         {persona.id === "admin" && (
           <>
-            <div className="side-label" style={{ marginTop: 10 }}>{t("administration")}</div>
             <button className={`nav-item ${route.view === "control" ? "active" : ""}`} title={collapsed ? t("controlCenter") : undefined} onClick={() => navigate({ view: "control" })}>
-              <span className="sw" style={{ background: "#D4F24A", color: "#0B0D10", fontWeight: 800 }}>⌘</span>
+              <span className="sw ico-sw">
+                <Icon name="command" size={15} />
+              </span>
               <span className="lbl">{t("controlCenter")}</span>
             </button>
           </>
@@ -78,7 +72,9 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
             >
               <WsSwatch wsId={w.id} />
               <span className="lbl">{w.name}</span>
-              <span className="tag">{expanded(w) ? "▾" : "▸"}</span>
+              <span className="tag">
+                <Icon name={expanded(w) ? "chevronDown" : "chevronRight"} size={14} />
+              </span>
             </button>
             {expanded(w) && !collapsed && <DashboardTree ws={w.id} indent={!w.isParent && hasParent} />}
           </div>
@@ -98,24 +94,24 @@ function DashboardTree({ ws, indent }: { ws: string; indent: boolean }) {
   const shared = list.filter((d) => !d.isPrivate);
   const priv = list.filter((d) => d.isPrivate);
   const item = (d: { id: string; title: string; isPrivate: boolean }) => (
-    <button key={d.id} className={`tree-item ${current === d.id ? "active" : ""}`} title={d.title} onClick={() => navigate({ view: "ws", ws, tab: "dashboards", sub: d.id })}>
-      <span className="tree-ico">{d.isPrivate ? "🔒" : "▦"}</span>
+    <button
+      key={d.id}
+      className={`tree-item ${current === d.id ? "active" : ""}`}
+      title={d.isPrivate ? `${d.title} · ${t("private")}` : d.title}
+      onClick={() => navigate({ view: "ws", ws, tab: "dashboards", sub: d.id })}
+    >
+      <Icon name={d.isPrivate ? "lock" : "dashboard"} size={14} className="tree-ico" />
       <span className="tree-lbl">{d.title}</span>
     </button>
   );
   return (
     <div className={`tree ${indent ? "indent" : ""}`}>
-      <div className="tree-label">{t("shared")}</div>
       {shared.map(item)}
-      {priv.length > 0 && (
-        <>
-          <div className="tree-label">{t("private")}</div>
-          {priv.map(item)}
-        </>
-      )}
+      {priv.length > 0 && <div className="tree-divider" />}
+      {priv.map(item)}
       {canCreateContent(perms) && (
         <button className={`tree-item new ${current === "new" ? "active" : ""}`} onClick={() => navigate({ view: "ws", ws, tab: "dashboards", sub: "new" })}>
-          <span className="tree-ico">＋</span>
+          <Icon name="plus" size={14} className="tree-ico" />
           <span className="tree-lbl">{t("newDashboard")}</span>
         </button>
       )}

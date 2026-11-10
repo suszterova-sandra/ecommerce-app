@@ -45,7 +45,8 @@ export const urls = {
   app: (ws: string, path: string) => `${HOST}/workspace/${ws}/${path}`,
 };
 
-const READY_EVENTS = ["loaded", "insightRendered", "newInsightInitialized", "dashboardLoaded", "insightOpened"];
+// GoodData posts "resized" once the dashboard is laid out; "loaded" is not always sent
+const READY_EVENTS = ["loaded", "resized", "insightRendered", "newInsightInitialized", "dashboardLoaded", "insightOpened"];
 
 /**
  * GoodData embedding handshake: the iframe posts `listeningForApiToken`, we answer with `setApiToken`

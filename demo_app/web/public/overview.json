@@ -208,6 +208,40 @@
   }
  ],
  "themes": {
+  "conference_nike": {
+   "id": "conference_nike",
+   "name": "Conference \u2013 Nike (Clothing)",
+   "palette": {
+    "primary": {
+     "base": "#111111",
+     "contrast": "#FFFFFF"
+    },
+    "error": {
+     "base": "#D1435B"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#2F9E7A"
+    },
+    "complementary": {
+     "c0": "#FFFFFF",
+     "c1": "#F5F5F5",
+     "c2": "#EFEFEF",
+     "c3": "#E2E2E2",
+     "c4": "#CCCCCC",
+     "c5": "#9E9E9E",
+     "c6": "#757575",
+     "c7": "#4D4D4D",
+     "c8": "#2B2B2B",
+     "c9": "#111111"
+    }
+   },
+   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png",
+   "cover": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
+   "accent": "#FA5400"
+  },
   "conference_dark_lime": {
    "id": "conference_dark_lime",
    "name": "Conference \u2013 Dark Lime",
@@ -239,7 +273,8 @@
     }
    },
    "logo": "https://www.gooddata.ai/img/generic/logo-gd-w.svg",
-   "cover": "https://www.gooddata.ai/img/pages/company/partnership.webp"
+   "cover": "https://www.gooddata.ai/img/pages/company/partnership.webp",
+   "accent": "#D4F24A"
   },
   "conference_ikea": {
    "id": "conference_ikea",
@@ -272,7 +307,8 @@
     }
    },
    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1280px-Ikea_logo.svg.png",
-   "cover": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg"
+   "cover": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg",
+   "accent": "#FFDB00"
   },
   "conference_samsung": {
    "id": "conference_samsung",
@@ -305,40 +341,8 @@
     }
    },
    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png",
-   "cover": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg"
-  },
-  "conference_nike": {
-   "id": "conference_nike",
-   "name": "Conference \u2013 Nike (Clothing)",
-   "palette": {
-    "primary": {
-     "base": "#111111",
-     "contrast": "#FFFFFF"
-    },
-    "error": {
-     "base": "#D1435B"
-    },
-    "warning": {
-     "base": "#FBBF24"
-    },
-    "success": {
-     "base": "#2F9E7A"
-    },
-    "complementary": {
-     "c0": "#FFFFFF",
-     "c1": "#F5F5F5",
-     "c2": "#EFEFEF",
-     "c3": "#E2E2E2",
-     "c4": "#CCCCCC",
-     "c5": "#9E9E9E",
-     "c6": "#757575",
-     "c7": "#4D4D4D",
-     "c8": "#2B2B2B",
-     "c9": "#111111"
-    }
-   },
-   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png",
-   "cover": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg"
+   "cover": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
+   "accent": "#8FD3FF"
   }
  },
  "wdfs": [

@@ -7,10 +7,11 @@ import { markdown } from "../markdown";
 import { logoTile } from "../theme";
 import type { PersonaId } from "../types";
 import { useChatbot } from "./Chatbot";
+import { Icon, type IconName } from "../icons";
 import { Prewarm } from "./Embed";
 import { STATIC } from "../staticBackend";
 
-const DIM_ICON: Record<string, string> = { product_brand: "🏷️", product_category: "🗂️", customer_country: "🌍", customer_state: "📍" };
+const DIM_ICON: Record<string, IconName> = { product_brand: "tag", product_category: "folder", customer_country: "globe", customer_state: "pin" };
 const DIM_KEY: Record<string, Key> = { product_brand: "brand", product_category: "category", customer_country: "country", customer_state: "state" };
 const KPI_KEY: Record<string, Key> = {
   net_sales: "netSales",
@@ -134,7 +135,7 @@ export function Portal({ fixedWs }: { fixedWs?: string }) {
             </label>
           </div>
           <div className="ph-hello">
-            {hello}, {persona.id === "admin" ? persona.name.split(" ")[0] : persona.name} 👋
+            {hello}, {persona.id === "admin" ? persona.name.split(" ")[0] : persona.name}
           </div>
           <h1>{headline || (insightsError ? t("overviewFallback") : <span className="sk sk-title" />)}</h1>
           <p className="ph-sub">
@@ -146,10 +147,10 @@ export function Portal({ fixedWs }: { fixedWs?: string }) {
               {t("openOverview")} →
             </button>
             <button className="btn glass" onClick={() => (headline ? chatbot.openWithMessage(`${headline}. ${subline || ""}`) : chatbot.open())}>
-              ✦ {t("askAiAbout")}
+              <Icon name="sparkles" size={15} /> {t("askAiAbout")}
             </button>
             <button className="btn glass" onClick={() => navigate({ view: "ws", ws: ws.id, tab: "report" })}>
-              📄 {t("aiBusinessReport")}
+              <Icon name="report" size={15} /> {t("aiBusinessReport")}
             </button>
           </div>
         </div>
@@ -183,7 +184,9 @@ export function Portal({ fixedWs }: { fixedWs?: string }) {
         <div className="card briefing">
           <div className="card-h">
             <div>
-              <h3>✨ {t("aiBriefing")}</h3>
+              <h3 className="with-icon">
+                <Icon name="sparkles" size={16} /> {t("aiBriefing")}
+              </h3>
               <div className="muted small">{t("aiBriefingSub", { u: persona.name })}</div>
             </div>
           </div>
@@ -265,7 +268,9 @@ function DriverCard({ d, max, onOpen }: { d: Driver; max: number; onOpen: (t: Ta
   const pct = d.prev ? (d.delta / Math.abs(d.prev)) * 100 : null;
   return (
     <button className="driver" onClick={() => onOpen(d.target)}>
-      <span className="dr-ico">{DIM_ICON[d.dim] || "•"}</span>
+      <span className="dr-ico">
+        <Icon name={DIM_ICON[d.dim] || "chart"} size={18} />
+      </span>
       <span className="dr-main">
         <span className="dr-noun">{t(DIM_KEY[d.dim])}</span>
         <span className="dr-member">{d.member}</span>

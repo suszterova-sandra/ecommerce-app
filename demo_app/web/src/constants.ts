@@ -1,10 +1,12 @@
-export const AGENT_STYLE: Record<string, { ico: string; bg: string; fg: string; short: string }> = {
-  "conference-summary-agent": { ico: "🧾", bg: "#E0F2FE", fg: "#0369A1", short: "Summary" },
-  "conference-next-steps-agent": { ico: "🧭", bg: "#FEF3C7", fg: "#B45309", short: "Next steps" },
-  "conference-recommendations-agent": { ico: "💡", bg: "#EDE9FE", fg: "#6D28D9", short: "Recommendations" },
+import type { IconName } from "./icons";
+
+export const AGENT_STYLE: Record<string, { ico: IconName; bg: string; fg: string; short: string }> = {
+  "conference-summary-agent": { ico: "summary", bg: "#E0F2FE", fg: "#0369A1", short: "Summary" },
+  "conference-next-steps-agent": { ico: "compass", bg: "#FEF3C7", fg: "#B45309", short: "Next steps" },
+  "conference-recommendations-agent": { ico: "bulb", bg: "#EDE9FE", fg: "#6D28D9", short: "Recommendations" },
 };
 
-export const agentStyle = (id: string) => AGENT_STYLE[id] || { ico: "✦", bg: "#F1F5F9", fg: "#334155", short: "Assistant" };
+export const agentStyle = (id: string) => AGENT_STYLE[id] || { ico: "bot" as IconName, bg: "#F1F5F9", fg: "#334155", short: "Assistant" };
 
 export const PLAYBOOK = [
   {

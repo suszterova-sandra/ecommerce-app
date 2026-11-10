@@ -1,6 +1,7 @@
 import { Fragment, type CSSProperties } from "react";
 import { agentAccess, useApp } from "../AppContext";
 import { agentStyle, KEY_PERMS, SKILL_LABEL } from "../constants";
+import { Icon } from "../icons";
 import { logoTile, themeVars } from "../theme";
 import type { OverviewWorkspace } from "../types";
 
@@ -214,7 +215,7 @@ export function ControlCenter() {
                 <tr key={a.id} className={a.conference ? "featured-row" : ""}>
                   <td>
                     <div className="agent-name">
-                      <span className="ico" style={{ background: st.bg, color: st.fg }}>{st.ico}</span>
+                      <span className="ico" style={{ background: st.bg, color: st.fg }}><Icon name={st.ico} size={16} /></span>
                       <div>
                         <b>{a.name}</b> {a.conference && <span className="badge-hub">new</span>}
                         <div className="muted small" style={{ maxWidth: 360 }}>{a.description}</div>

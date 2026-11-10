@@ -10,6 +10,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import tigerFactory, { ContextDeferredAuthProvider, TigerTokenAuthProvider } from "@gooddata/sdk-backend-tiger";
 import { STATIC } from "../staticBackend";
+import { Icon } from "../icons";
 import type { IAnalyticalBackend, IUserWorkspaceSettings } from "@gooddata/sdk-backend-spi";
 import { idRef, type IGenAIUserContext } from "@gooddata/sdk-model";
 import { BackendProvider, WorkspaceProvider } from "@gooddata/sdk-ui";
@@ -224,7 +225,7 @@ function ChatbotPanel({ onClose, onDispatcher }: { onClose: () => void; onDispat
           </div>
         </div>
         <button onClick={onClose} title="Close AI Assistant" aria-label="Close AI Assistant" className="chatbot-close">
-          ✕
+          <Icon name="x" size={18} />
         </button>
       </div>
       <div className="chatbot-body">

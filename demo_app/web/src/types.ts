@@ -21,6 +21,8 @@ export interface Theme {
   palette: Palette;
   logo: string | null;
   cover: string | null;
+  /** Highlight colour of the brand (theme header activeColor): IKEA yellow, Nike orange, ... */
+  accent?: string | null;
 }
 
 export interface Permission {

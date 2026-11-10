@@ -5,6 +5,7 @@ import { Topbar } from "./components/Topbar";
 import { ControlCenter } from "./components/ControlCenter";
 import { Home } from "./components/Home";
 import { ChatbotProvider, useChatbot } from "./components/Chatbot";
+import { Icon } from "./icons";
 import { WorkspaceView } from "./components/WorkspaceView";
 import { applyChrome, applyTheme, type ColorMode } from "./theme";
 
@@ -21,15 +22,15 @@ function Main() {
   const [mode, setMode] = useState<ColorMode>(initialMode);
   useEffect(() => {
     // a tenant user's whole platform carries their brand; the admin keeps the platform look
-    applyTheme(route.view === "ws" ? themeOf(route.ws) : brand.theme || null, mode);
+    // dark mode is for the platform pages only; store pages and store users always show the store's brand
+    const onStorePage = route.view === "ws" || Boolean(brand.theme);
+    applyTheme(route.view === "ws" ? themeOf(route.ws) : brand.theme || null, onStorePage ? "light" : mode);
     applyChrome(brand.theme);
   }, [route, themeOf, mode, brand.theme]);
-  const toggleMode = () =>
-    setMode((m) => {
-      const next = m === "dark" ? "light" : "dark";
-      localStorage.setItem("colorMode", next);
-      return next;
-    });
+  const changeMode = (m: ColorMode) => {
+    localStorage.setItem("colorMode", m);
+    setMode(m);
+  };
   const toggle = () =>
     setCollapsed((c) => {
       localStorage.setItem("sidebarCollapsed", c ? "0" : "1");
@@ -40,7 +41,7 @@ function Main() {
     <div className={`app ${collapsed ? "collapsed" : ""} ${chatbot.isOpen ? "chat-open" : ""}`}>
       <Sidebar collapsed={collapsed} onToggle={toggle} />
       <main className="main">
-        <Topbar mode={mode} onToggleMode={toggleMode} />
+        <Topbar mode={mode} onSetMode={changeMode} />
         <div className="viewport">
           {route.view === "home" && <Home key={persona.id} />}
           {route.view === "control" && <ControlCenter />}
@@ -49,7 +50,7 @@ function Main() {
             <div className="page">
               <div className="card locked">
                 <div>
-                  <div className="ico">🔒</div>
+                  <div className="ico"><Icon name="lock" size={24} /></div>
                   <h3>No workspaces shared with this user</h3>
                   <p>Ask an administrator to grant access.</p>
                 </div>

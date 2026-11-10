@@ -110,7 +110,8 @@ def _build_overview():
             assets = content.get("assets", {})
             logo = next((l["url"] for l in assets.get("logos", []) if l.get("id") == "logo"), None)
             cover = next((b["url"] for b in assets.get("backgrounds", []) if b.get("id") == "cover_bg"), None)
-            themes[tid] = {"id": tid, "name": c.get("name", tid), "palette": content.get("palette", {}), "logo": logo, "cover": cover}
+            themes[tid] = {"id": tid, "name": c.get("name", tid), "palette": content.get("palette", {}), "logo": logo, "cover": cover,
+                           "accent": (content.get("header") or {}).get("activeColor")}
 
         wdfs = [{"id": f["id"], "title": f["title"], "column": f["columnName"],
                  "values": {x["workspace"]["id"]: x["filterValues"] for x in f["workspaceDataFilterSettings"]}}

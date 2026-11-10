@@ -5,6 +5,8 @@ import { fmt } from "../insights";
 import { markdown } from "../markdown";
 import { useChatbot } from "./Chatbot";
 import { languageName } from "../i18n";
+import { Icon } from "../icons";
+import type { ReactNode } from "react";
 
 const inline = (t: string) => markdown(t).replace(/^<p>|<\/p>$/g, "");
 
@@ -14,8 +16,18 @@ const STEPS = ["Collecting dashboard visualizations…", "Querying data with the
  * Agentic summary above an embedded dashboard: GoodData's AI dashboard summary in three sections, and
  * key points that run key driver analysis for the metric they mention. Everything runs as the current user.
  */
-export function AgenticSummary({ ws, dashboardId, dashboardTitle, onHide }: { ws: string; dashboardId: string; dashboardTitle: string; onHide: () => void }) {
+/** First sentence of the summary, for the collapsed one-line view. */
+const firstSentence = (text: string) => (text.replace(/\*\*/g, "").match(/^.*?[.!?](\s|$)/)?.[0] || text).trim();
+
+export function AgenticSummary({ ws, dashboardId, dashboardTitle, actions }: { ws: string; dashboardId: string; dashboardTitle: string; actions?: ReactNode }) {
   const { persona, t, lang } = useApp();
+  // collapsed to one line by default, so the dashboard starts near the top of the screen
+  const [open, setOpen] = useState(() => localStorage.getItem("agenticSummaryOpen") === "1");
+  const toggle = () =>
+    setOpen((o) => {
+      localStorage.setItem("agenticSummaryOpen", o ? "0" : "1");
+      return !o;
+    });
   const chatbot = useChatbot();
   const [summary, setSummary] = useState<ParsedSummary | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -71,29 +83,47 @@ export function AgenticSummary({ ws, dashboardId, dashboardTitle, onHide }: { ws
   const q = lastQuarters();
 
   return (
-    <section className="agentic">
-      <div className="ag-head">
-        <div className="ag-title">
-          <span className="ag-badge">✦ {t("agenticSummary")}</span>
-          <span className="muted small">
-            {dashboardTitle} · {q.analyzed.label} vs {q.reference.label} · as {persona.name}
-          </span>
+    <section className={`agentic ${open ? "open" : "collapsed"}`}>
+      <div className="ag-line">
+        <button className="ag-badge" onClick={toggle} aria-expanded={open}>
+          <Icon name="sparkles" size={14} /> {t("agenticSummary")}
+        </button>
+        <div className="ag-line-text" onClick={toggle} title={open ? undefined : t("summary")}>
+          {loading ? (
+            <span className="ag-line-progress">
+              <span className="ag-bar mini">
+                <i style={{ width: `${progress}%` }} />
+              </span>
+              <span className="muted small">{STEPS[progress < 20 ? 0 : progress < 50 ? 1 : 2]}</span>
+            </span>
+          ) : error ? (
+            <span className="muted small">{error}</span>
+          ) : (
+            <span dangerouslySetInnerHTML={{ __html: inline(firstSentence(summary!.summary)) }} />
+          )}
         </div>
-        <div className="row">
-          {!loading && (
-            <button className="btn ghost sm" onClick={() => setRegen((r) => r + 1)}>
-              {t("regenerate")}
+        <div className="ag-line-actions">
+          {open && !loading && (
+            <button className="icon-btn sm" onClick={() => setRegen((r) => r + 1)} title={t("regenerate")} aria-label={t("regenerate")}>
+              <Icon name="refresh" size={15} />
             </button>
           )}
-          <button className="btn ghost sm" onClick={onHide}>
-            {t("hide")}
+          <button className="btn ghost sm" onClick={toggle}>
+            {open ? t("showLess") : t("summary")} <Icon name={open ? "chevronDown" : "chevronRight"} size={14} />
           </button>
+          {actions}
         </div>
       </div>
 
-      {error && <div className="error-box">{error}</div>}
+      {open && (
+        <div className="ag-meta muted small">
+          {dashboardTitle} · {q.analyzed.label} vs {q.reference.label} · {persona.name}
+        </div>
+      )}
 
-      {loading && (
+      {open && error && <div className="error-box">{error}</div>}
+
+      {open && loading && (
         <div className="ag-loading">
           <div className="ag-loading-label">{t("summarizing")}</div>
           <div className="ag-bar">
@@ -103,7 +133,7 @@ export function AgenticSummary({ ws, dashboardId, dashboardTitle, onHide }: { ws
         </div>
       )}
 
-      {summary && (
+      {open && summary && (
         <div className="ag-body">
           <div className="ag-main">
             <div className="ag-label">{t("summary")}</div>
@@ -122,7 +152,11 @@ export function AgenticSummary({ ws, dashboardId, dashboardTitle, onHide }: { ws
                   onClick={() => k.metric && runKda(k.metric)}
                 >
                   <span dangerouslySetInnerHTML={{ __html: inline(k.text) }} />
-                  {k.metric && <span className="ag-kda-chip">🔍 {t("why")}</span>}
+                  {k.metric && (
+                    <span className="ag-kda-chip">
+                      <Icon name="search" size={12} /> {t("why")}
+                    </span>
+                  )}
                 </button>
               ))}
             </div>
@@ -135,7 +169,7 @@ export function AgenticSummary({ ws, dashboardId, dashboardTitle, onHide }: { ws
                   )
                 }
               >
-                ✦ {t("discussSummary")}
+                <Icon name="message" size={14} /> {t("discussSummary")}
               </button>
             </div>
 
@@ -193,7 +227,7 @@ function KdaPanel({ state, onClose, onAsk }: { state: { status: string; metric?:
           )}
         </div>
         <button className="btn ghost sm" onClick={onClose}>
-          ✕
+          <Icon name="x" size={15} />
         </button>
       </div>
       {state.status === "loading" && (
@@ -242,7 +276,7 @@ function KdaPanel({ state, onClose, onAsk }: { state: { status: string; metric?:
               )
             }
           >
-            ✦ {t("askWhatToDo")}
+            <Icon name="bulb" size={14} /> {t("askWhatToDo")}
           </button>
         </div>
       )}

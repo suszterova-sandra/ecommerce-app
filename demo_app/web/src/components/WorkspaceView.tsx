@@ -6,6 +6,7 @@ import type { Tab } from "../types";
 import { AgenticSummary } from "./AgenticSummary";
 import { Portal } from "./Home";
 import { useChatbot } from "./Chatbot";
+import { Icon } from "../icons";
 import { canCreateContent, useCatalog, usePermissions } from "../catalog";
 import { Embed } from "./Embed";
 
@@ -28,22 +29,19 @@ export function WorkspaceView() {
 
   return (
     <div className="page">
-      {route.tab !== "home" && (
-        <header className="ws-head">
-          <span className="ws-logo" style={{ background: logoTile(th) }}>
-            {th?.logo ? <img src={th.logo} alt="" /> : <b style={{ color: "var(--ws-primary)" }}>GD</b>}
-          </span>
-          <h1>{ws.name}</h1>
-        </header>
-      )}
-
-      <nav className={`tabs ${route.tab === "home" ? "tabs-top" : ""}`}>
-        {tabs.map((x) => (
-          <button key={x.id} className={`tab ${x.id === route.tab ? "active" : ""}`} onClick={() => navigate({ view: "ws", ws: ws.id, tab: x.id })}>
-            {x.label}
-          </button>
-        ))}
-      </nav>
+      <header className="ws-bar">
+        <span className="ws-logo" style={{ background: logoTile(th) }}>
+          {th?.logo ? <img src={th.logo} alt="" /> : <b style={{ color: "var(--ws-primary)" }}>GD</b>}
+        </span>
+        <h1>{ws.name}</h1>
+        <nav className="tabs inline">
+          {tabs.map((x) => (
+            <button key={x.id} className={`tab ${x.id === route.tab ? "active" : ""}`} onClick={() => navigate({ view: "ws", ws: ws.id, tab: x.id })}>
+              {x.label}
+            </button>
+          ))}
+        </nav>
+      </header>
 
       {route.tab === "home" && <Portal key={`${persona.id}|${ws.id}`} fixedWs={ws.id} />}
       {route.tab === "dashboards" && <Dashboards ws={ws.id} sub={route.sub} viz={route.viz} canCreate={canAnalyze} permsKnown={perms !== null} />}
@@ -71,11 +69,6 @@ function Dashboards({ ws, sub, viz, canCreate, permsKnown }: { ws: string; sub?:
   // the catalog (Shared / Private) lives in the sidebar; this page shows the selected dashboard
   const { list, refresh } = useCatalog(persona.id, ws, localeVersion);
   const knownIds = useRef<Set<string> | null>(null);
-  const [showSummary, setShowSummary] = useState(() => localStorage.getItem("agenticSummary") !== "hidden");
-  const toggleSummary = (on: boolean) => {
-    localStorage.setItem("agenticSummary", on ? "shown" : "hidden");
-    setShowSummary(on);
-  };
 
   useEffect(() => {
     if (list && !knownIds.current) knownIds.current = new Set(list.map((d) => d.id));
@@ -120,10 +113,11 @@ function Dashboards({ ws, sub, viz, canCreate, permsKnown }: { ws: string; sub?:
     return (
       <>
         <div className="dash-bar">
-          <h2>{t("newDashboard")}</h2>
+          <Icon name="plus" size={16} />
+          <b>{t("newDashboard")}</b>
           <span className="muted small grow">{t("newDashboardHint")}</span>
-          <button className="btn ghost sm" onClick={() => refresh()}>
-            {t("refreshList")}
+          <button className="icon-btn sm" onClick={() => refresh()} title={t("refreshList")} aria-label={t("refreshList")}>
+            <Icon name="refresh" size={15} />
           </button>
         </div>
         <Embed key={`new|${persona.id}`} url={urls.newDashboard(ws)} label="…" tall onEvent={onDashboardEvent} />
@@ -135,7 +129,9 @@ function Dashboards({ ws, sub, viz, canCreate, permsKnown }: { ws: string; sub?:
     return (
       <div className="card locked">
         <div>
-          <div className="ico">📊</div>
+          <div className="ico">
+            <Icon name="dashboard" size={24} />
+          </div>
           <h3>{t("noDashboards")}</h3>
         </div>
       </div>
@@ -143,26 +139,23 @@ function Dashboards({ ws, sub, viz, canCreate, permsKnown }: { ws: string; sub?:
 
   return (
     <>
-      <div className="dash-bar">
-        <h2>
-          {cur.isPrivate && "🔒 "}
-          {cur.title}
-        </h2>
-        <span className="grow" />
-        {!showSummary && (
-          <button className="btn primary sm" onClick={() => toggleSummary(true)}>
-            ✦ {t("agenticSummary")}
-          </button>
-        )}
-        <a className="btn ghost sm" target="_blank" rel="noreferrer" href={urls.app(ws, `dashboards/#/dashboard/${cur.id}`)}>
-          {t("openInGoodData")} ↗
-        </a>
-      </div>
-      {showSummary && <AgenticSummary key={`${persona.id}|${cur.id}`} ws={ws} dashboardId={cur.id} dashboardTitle={cur.title} onHide={() => toggleSummary(false)} />}
+      <AgenticSummary
+        key={`${persona.id}|${cur.id}`}
+        ws={ws}
+        dashboardId={cur.id}
+        dashboardTitle={cur.title}
+        actions={
+          <a className="icon-btn sm" target="_blank" rel="noreferrer" href={urls.app(ws, `dashboards/#/dashboard/${cur.id}`)} title={t("openInGoodData")} aria-label={t("openInGoodData")}>
+            <Icon name="external" size={15} />
+          </a>
+        }
+      />
       {viz && cur.id === sub && (
         <div className="jump-banner">
-          <span>🎯</span> <b>{vizTitle(viz)}</b>
-          <button className="btn ghost" onClick={() => navigate({ view: "ws", ws, tab: "dashboards", sub: cur.id })}>✕</button>
+          <Icon name="target" size={15} /> <b>{vizTitle(viz)}</b>
+          <button className="icon-btn sm" onClick={() => navigate({ view: "ws", ws, tab: "dashboards", sub: cur.id })} aria-label="Clear">
+            <Icon name="x" size={14} />
+          </button>
         </div>
       )}
       <Embed url={urls.dashboard(ws, cur.id, cur.id === sub ? viz : undefined)} label={`${cur.title}…`} onEvent={onDashboardEvent} />
@@ -213,11 +206,13 @@ function Report({ ws }: { ws: string }) {
               <span className="spinner" /> Exporting…
             </>
           ) : (
-            `⤓ ${t("exportPdf")}`
+            <>
+              <Icon name="download" size={15} /> {t("exportPdf")}
+            </>
           )}
         </button>
         <a className="btn ghost" target="_blank" rel="noreferrer" href={urls.app(ws, `reports/document/${overview.reportId}`)}>
-          Open in GoodData ↗
+          {t("openInGoodData")} <Icon name="external" size={14} />
         </a>
       </div>
       <Embed url={urls.document(ws, overview.reportId)} label="Rendering the AI report…" tall />
@@ -228,13 +223,15 @@ function Report({ ws }: { ws: string }) {
 // ---------------------------------------------------------------- analyze
 
 function Analyze({ ws, canAnalyze }: { ws: string; canAnalyze: boolean }) {
-  const { persona, personas, switchPersona, toast } = useApp();
+  const { persona, personas, switchPersona, toast, t } = useApp();
   if (!canAnalyze) {
     const analyst = personas.find((p) => p.id === "analyze");
     return (
       <div className="card locked">
         <div>
-          <div className="ico">🔒</div>
+          <div className="ico">
+            <Icon name="lock" size={24} />
+          </div>
           <h3>{persona.name} can view, not author</h3>
           <p>
             The View group has <b>VIEW</b> on this workspace (plus export, filter views, schedules and AI Assistant) but not <b>ANALYZE</b>, so
@@ -258,7 +255,7 @@ function Analyze({ ws, canAnalyze }: { ws: string; canAnalyze: boolean }) {
           <b>Analytical Designer</b> <span className="muted small">· drag metrics and attributes from the governed model; results are filtered to this tenant automatically</span>
         </div>
         <a className="btn ghost" target="_blank" rel="noreferrer" href={urls.app(ws, "analyze/#/reportId/edit")}>
-          Open in GoodData ↗
+          {t("openInGoodData")} <Icon name="external" size={14} />
         </a>
       </div>
       <Embed url={urls.analyze(ws)} label="Opening Analytical Designer…" tall />
