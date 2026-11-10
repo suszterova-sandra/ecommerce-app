@@ -37,6 +37,7 @@ WORKSPACES = {
 WORKSPACE_LOCALES = {
     # Clothing stays English by default; fr-FR / de-DE translations are loaded so it can be switched.
     "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203": "de-DE",  # Electronics -> German
+    "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5": "de-DE",  # BigBox Retailer -> German
 }
 SETTING_TYPES = ["LOCALE", "METADATA_LOCALE"]
 

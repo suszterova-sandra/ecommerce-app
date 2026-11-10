@@ -23,6 +23,8 @@ interface Ctx {
   gdLocale: string;
   /** Bumps after GoodData has the new language, so embedded content reloads in it. */
   localeVersion: number;
+  /** True once GoodData has this user's language; embeds wait for it so they load only once. */
+  localeReady: boolean;
   t: (key: Key, vars?: Record<string, string>) => string;
   /** The shell's branding: the platform for the admin, the user's own tenant for everyone else. */
   brand: { name: string; logo?: string | null; logoBg?: string; theme?: Theme };
@@ -62,6 +64,7 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
   const [toastText, setToastText] = useState<string | null>(null);
   const [lang, setLangState] = useState<Lang>(() => (localStorage.getItem("lang") as Lang) || "en");
   const [localeVersion, setLocaleVersion] = useState(0);
+  const [localeReady, setLocaleReady] = useState(false);
   const appliedLocale = useRef<Record<string, string>>({});
   const toastTimer = useRef<number>();
   const ovRef = useRef<Overview | null>(null);
@@ -164,17 +167,34 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
 
   // GoodData speaks the user's language through their own settings: the UI (LOCALE) and the
   // translated metadata (METADATA_LOCALE, from the workspaces' de-DE / fr-FR translations).
+  // Read them first and write only what differs: embedded dashboards wait for this (localeReady), so each
+  // one loads once, in the right language, instead of loading and then reloading.
   useEffect(() => {
     if (!personas.length) return;
     const locale = localeOf(lang);
     const userId = personas.find((p) => p.id === personaId)?.userId;
-    if (!userId || appliedLocale.current[userId] === locale) return;
+    if (!userId) return;
+    if (appliedLocale.current[userId] === locale) {
+      setLocaleReady(true);
+      return;
+    }
     let live = true;
+    setLocaleReady(false);
     (async () => {
+      let current: Record<string, string> = {};
+      try {
+        const r = await gd(personaId, `/api/v1/entities/users/${userId}/userSettings?size=100`);
+        current = Object.fromEntries(r.data.map((x: any) => [x.attributes.type, x.attributes.content?.value]));
+      } catch {
+        // e.g. the admin on the static site without a GoodData session: just try to write
+      }
+      let changed = false;
       for (const [id, type] of [
         ["locale", "LOCALE"],
         ["metadataLocale", "METADATA_LOCALE"],
       ]) {
+        if (current[type] === locale || (!current[type] && locale === "en-US")) continue;
+        changed = true;
         const body = JSON.stringify({ data: { id, type: "userSetting", attributes: { type, content: { value: locale } } } });
         const headers = { "Content-Type": "application/vnd.gooddata.api+json" };
         try {
@@ -184,8 +204,11 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
         }
       }
       appliedLocale.current[userId] = locale;
-      if (personaId === "admin") await refreshOverview().catch(() => null);
-      if (live) setLocaleVersion((v) => v + 1);
+      if (changed) {
+        if (personaId === "admin") await refreshOverview().catch(() => null);
+        if (live) setLocaleVersion((v) => v + 1); // reload content that was showing the old language
+      }
+      if (live) setLocaleReady(true);
     })();
     return () => {
       live = false;
@@ -235,9 +258,10 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
       setLang,
       gdLocale: localeOf(lang),
       localeVersion,
+      localeReady,
       t: (key, vars) => translate(lang, key, vars),
     };
-  }, [overview, personas, personaId, workspaces, route, navigate, switchPersona, refreshOverview, toast, lang, setLang, localeVersion]);
+  }, [overview, personas, personaId, workspaces, route, navigate, switchPersona, refreshOverview, toast, lang, setLang, localeVersion, localeReady]);
 
   return (
     <>

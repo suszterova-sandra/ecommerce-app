@@ -4,7 +4,7 @@ import { STATIC } from "../staticBackend";
 
 /** GoodData iframe authenticated as the current persona (token delivered by the postMessage handshake). */
 export function Embed({ url, label, tall, onEvent }: { url: string; label: string; tall?: boolean; onEvent?: (name: string, data: any) => void }) {
-  const { persona, localeVersion } = useApp();
+  const { persona, localeVersion, localeReady } = useApp();
   const ref = useRef<HTMLIFrameElement>(null);
   if (STATIC && persona.id === "admin") url = url.replace(/[?&]apiTokenAuthentication=true/g, (m) => (m.startsWith("?") ? "?" : "")).replace("?&", "?");
   const [ready, setReady] = useState(false);
@@ -36,11 +36,11 @@ export function Embed({ url, label, tall, onEvent }: { url: string; label: strin
       f.removeEventListener("gd-ready", done);
       f.removeEventListener("load", onLoad);
     };
-  }, [url, persona.id, localeVersion]);
+  }, [url, persona.id, localeVersion, localeReady]);
 
   return (
     <div className={`embed-wrap ${tall ? "tall" : ""}`}>
-      <iframe key={`${persona.id}|${localeVersion}|${url}`} ref={ref} data-gd data-persona={persona.id} src={url} allow="clipboard-write; fullscreen" title={label} />
+      {localeReady && <iframe key={`${persona.id}|${localeVersion}|${url}`} ref={ref} data-gd data-persona={persona.id} src={url} allow="clipboard-write; fullscreen" title={label} />}
       <div className={`embed-loading ${ready ? "done" : ""}`}>
         <div>
           <span className="spinner" />
