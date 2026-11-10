@@ -9,12 +9,14 @@
 
 [build]
   base = "demo_app/web"
-  command = "npm ci && npm run build"
+  # vite build only: the type check runs locally; the GoodData SDK makes tsc + bundling too big for the default heap
+  command = "npm ci && npx vite build"
   publish = "dist"
   functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "22"
+  NODE_OPTIONS = "--max-old-space-size=4096"
 
 # single-page app: every other path is the React app (functions match first)
 [[redirects]]
