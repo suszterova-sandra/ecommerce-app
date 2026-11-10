@@ -172,8 +172,14 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
   useEffect(() => {
     if (!personas.length) return;
     const locale = localeOf(lang);
-    const userId = personas.find((p) => p.id === personaId)?.userId;
+    const who = personas.find((p) => p.id === personaId);
+    const userId = who?.userId;
     if (!userId) return;
+    // e.g. the admin on the static site before signing in: nothing to sync, and no request to send
+    if (!who?.available) {
+      setLocaleReady(true);
+      return;
+    }
     if (appliedLocale.current[userId] === locale || localStorage.getItem(`gdLocale:${userId}`) === locale) {
       appliedLocale.current[userId] = locale;
       setLocaleReady(true);
