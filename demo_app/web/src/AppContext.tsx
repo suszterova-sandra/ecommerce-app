@@ -118,6 +118,14 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
     (async () => {
       try {
         const p = await fetch("/app/personas").then((r) => r.json());
+        if (p.locked) {
+          const key = window.prompt("This demo is password protected. Password:");
+          if (key) {
+            localStorage.setItem("demoKey", key);
+            location.reload();
+          }
+          throw new Error("Password required. Reload the page to try again.");
+        }
         setHost(p.host);
         if (!handshakeInstalled) {
           installEmbedHandshake();

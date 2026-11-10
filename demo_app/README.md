@@ -56,3 +56,16 @@ exactly as GoodData resolves them for that user. Embedded iframes use the same t
 
 The server binds to 127.0.0.1 and hands tokens to the browser: keep it local.
 
+
+## Deploy to Netlify
+
+`netlify.toml` (repo root) builds `demo_app/web` and serves `dist/`; `demo_app/server.py` is replaced by Netlify
+Functions in `demo_app/web/netlify/functions` (same `/app/*` and `/gd/*` endpoints).
+
+1. Site configuration → Environment variables:
+   - `GOODDATA_API_TOKEN`: admin token (required)
+   - `DEMO_PASSWORD`: strongly recommended. The functions hand API tokens to the browser (the embedded
+     dashboards need them), so without a password anyone with the URL could use them, including the admin token.
+2. Redeploy.
+3. Add the Netlify URL (e.g. `https://<site>.netlify.app`) to the GoodData organization's allowed origins
+   (CORS), otherwise embedded dashboards and the AI Assistant panel are refused.
