@@ -2,7 +2,7 @@
   "version": "2",
   "palette": {
     "primary": {
-      "base": "#111111",
+      "base": "#1B365D",
       "contrast": "#FFFFFF"
     },
     "error": {
@@ -16,15 +16,15 @@
     },
     "complementary": {
       "c0": "#FFFFFF",
-      "c1": "#F5F5F5",
-      "c2": "#EFEFEF",
-      "c3": "#E2E2E2",
-      "c4": "#CCCCCC",
-      "c5": "#9E9E9E",
-      "c6": "#757575",
-      "c7": "#4D4D4D",
-      "c8": "#2B2B2B",
-      "c9": "#111111"
+      "c1": "#F6F5F1",
+      "c2": "#EEEBE2",
+      "c3": "#DEDAD0",
+      "c4": "#C6C0B1",
+      "c5": "#9A9686",
+      "c6": "#6F7A8C",
+      "c7": "#475468",
+      "c8": "#1B365D",
+      "c9": "#0F1E33"
     }
   },
   "typography": {
@@ -38,10 +38,10 @@
   },
   "modal": {
     "title": {
-      "color": "#111111",
-      "lineColor": "#E2E2E2"
+      "color": "#0F1E33",
+      "lineColor": "#DEDAD0"
     },
-    "borderColor": "#E2E2E2",
+    "borderColor": "#DEDAD0",
     "borderRadius": "14",
     "borderWidth": "1",
     "dropShadow": true,
@@ -49,35 +49,35 @@
   },
   "tooltip": {
     "color": "#FFFFFF",
-    "backgroundColor": "#111111"
+    "backgroundColor": "#0F1E33"
   },
   "chart": {
     "backgroundColor": "#FFFFFF",
-    "gridColor": "#EFEFEF",
-    "axisColor": "#CCCCCC",
-    "axisLabelColor": "#8A8A8A",
-    "axisValueColor": "#4D4D4D",
-    "legendValueColor": "#4D4D4D",
-    "plotLineColor": "#CCCCCC",
-    "tooltipBackgroundColor": "#111111",
-    "tooltipBorderColor": "#111111",
-    "tooltipLabelColor": "#CCCCCC",
+    "gridColor": "#EEEBE2",
+    "axisColor": "#C6C0B1",
+    "axisLabelColor": "#7A8496",
+    "axisValueColor": "#475468",
+    "legendValueColor": "#475468",
+    "plotLineColor": "#C6C0B1",
+    "tooltipBackgroundColor": "#0F1E33",
+    "tooltipBorderColor": "#0F1E33",
+    "tooltipLabelColor": "#C6C0B1",
     "tooltipValueColor": "#FFFFFF"
   },
   "table": {
-    "valueColor": "#2B2B2B",
-    "nullValueColor": "#8A8A8A",
-    "hoverBackgroundColor": "#EFEFEF",
-    "loadingIconColor": "#FA5400",
-    "headerLabelColor": "#8A8A8A",
-    "headerHoverBackgroundColor": "#EFEFEF",
-    "subtotalBackgroundColor": "#EFEFEF",
-    "totalBackgroundColor": "#E2E2E2",
-    "totalValueColor": "#111111"
+    "valueColor": "#1B365D",
+    "nullValueColor": "#7A8496",
+    "hoverBackgroundColor": "#EEEBE2",
+    "loadingIconColor": "#1B365D",
+    "headerLabelColor": "#7A8496",
+    "headerHoverBackgroundColor": "#EEEBE2",
+    "subtotalBackgroundColor": "#EEEBE2",
+    "totalBackgroundColor": "#DEDAD0",
+    "totalValueColor": "#0F1E33"
   },
   "kpi": {
-    "primaryMeasureColor": "#111111",
-    "secondaryInfoColor": "#4D4D4D",
+    "primaryMeasureColor": "#0F1E33",
+    "secondaryInfoColor": "#475468",
     "value": {
       "positiveColor": "#2F9E7A",
       "negativeColor": "#D1435B"
@@ -85,7 +85,7 @@
   },
   "dashboards": {
     "title": {
-      "color": "#111111",
+      "color": "#0F1E33",
       "backgroundColor": "#FFFFFF",
       "borderColor": "#FFFFFF"
     },
@@ -93,61 +93,61 @@
       "title": {
         "color": "#FFFFFF"
       },
-      "backgroundColor": "#111111",
-      "borderColor": "#2B2B2B",
+      "backgroundColor": "#1B365D",
+      "borderColor": "#12274A",
       "item": {
-        "color": "#BDBDBD",
+        "color": "#C8D3E3",
         "hoverColor": "#FFFFFF",
-        "selectedColor": "#FFFFFF",
-        "selectedBackgroundColor": "#FA5400"
+        "selectedColor": "#1B365D",
+        "selectedBackgroundColor": "#D4A62A"
       }
     },
     "filterBar": {
       "backgroundColor": "#FFFFFF",
-      "borderColor": "#E2E2E2",
+      "borderColor": "#DEDAD0",
       "filterButton": {
-        "backgroundColor": "#F5F5F5"
+        "backgroundColor": "#F6F5F1"
       }
     },
     "section": {
       "title": {
-        "color": "#111111",
-        "lineColor": "#E2E2E2"
+        "color": "#0F1E33",
+        "lineColor": "#DEDAD0"
       },
       "description": {
-        "color": "#4D4D4D"
+        "color": "#475468"
       },
       "backgroundColor": "#FFFFFF"
     },
     "content": {
-      "backgroundColor": "#F5F5F5",
+      "backgroundColor": "#F6F5F1",
       "widget": {
         "title": {
-          "color": "#111111",
+          "color": "#0F1E33",
           "textAlign": "center"
         },
         "backgroundColor": "#FFFFFF",
-        "borderColor": "#E2E2E2",
+        "borderColor": "#DEDAD0",
         "borderRadius": "14",
         "borderWidth": "1",
         "dropShadow": false
       },
       "kpiWidget": {
         "title": {
-          "color": "#4D4D4D",
+          "color": "#C8D3E3",
           "textAlign": "center"
         },
-        "backgroundColor": "#FFFFFF",
-        "borderColor": "#E2E2E2",
+        "backgroundColor": "#1B365D",
+        "borderColor": "#1B365D",
         "borderRadius": "14",
         "borderWidth": "1",
         "dropShadow": false,
         "kpi": {
-          "primaryMeasureColor": "#111111",
-          "secondaryInfoColor": "#4D4D4D",
+          "primaryMeasureColor": "#D4A62A",
+          "secondaryInfoColor": "#C8D3E3",
           "value": {
-            "positiveColor": "#2F9E7A",
-            "negativeColor": "#D1435B"
+            "positiveColor": "#8FE3C0",
+            "negativeColor": "#FFB3BF"
           }
         }
       }
@@ -155,30 +155,30 @@
   },
   "analyticalDesigner": {
     "title": {
-      "color": "#111111"
+      "color": "#0F1E33"
     }
   },
   "documents": {
     "visualizationPalette": [
-      "#111111",
-      "#FA5400",
-      "#8A8A8A",
-      "#FF9A5C",
-      "#3A3A3A",
-      "#CFCFCF",
+      "#1B365D",
+      "#D4A62A",
+      "#A6192E",
+      "#5B7DB1",
+      "#8C7A55",
+      "#B8C7DD",
       "#2F9E7A",
-      "#4A90D9",
-      "#B23A00",
-      "#5E5E5E"
+      "#E8CF8A",
+      "#6F7A8C",
+      "#D97A6C"
     ],
     "page": {
-      "backgroundColor": "#ECECEC"
+      "backgroundColor": "#F6F5F1"
     },
     "colors": {
       "backgrounds": [
         {
           "id": "page",
-          "color": "#ECECEC"
+          "color": "#F6F5F1"
         },
         {
           "id": "card",
@@ -186,33 +186,33 @@
         },
         {
           "id": "panel",
-          "color": "#F7F7F7"
+          "color": "#EEEBE2"
         },
         {
           "id": "accent",
-          "color": "#FA5400"
+          "color": "#1B365D"
         }
       ],
       "texts": [
         {
           "id": "default",
-          "color": "#111111"
+          "color": "#0F1E33"
         },
         {
           "id": "muted",
-          "color": "#4D4D4D"
+          "color": "#475468"
         },
         {
           "id": "subtle",
-          "color": "#8A8A8A"
+          "color": "#7A8496"
         },
         {
           "id": "accent",
-          "color": "#FA5400"
+          "color": "#1B365D"
         },
         {
           "id": "inverse",
-          "color": "#ECECEC"
+          "color": "#F6F5F1"
         }
       ]
     },
@@ -233,110 +233,110 @@
         ]
       },
       "heading": {
-        "color": "#111111",
+        "color": "#0F1E33",
         "h1": {
           "fontSize": 4.4,
           "lineHeight": 5,
-          "color": "#111111"
+          "color": "#0F1E33"
         },
         "h2": {
           "fontSize": 2.1,
           "lineHeight": 2.7,
-          "color": "#111111"
+          "color": "#0F1E33"
         },
         "h3": {
           "fontSize": 1.6,
           "lineHeight": 2.1,
-          "color": "#111111"
+          "color": "#0F1E33"
         },
         "h4": {
           "fontSize": 1.35,
           "lineHeight": 1.8,
-          "color": "#111111"
+          "color": "#0F1E33"
         },
         "h5": {
           "fontSize": 1.2,
           "lineHeight": 1.6,
-          "color": "#111111"
+          "color": "#0F1E33"
         },
         "h6": {
           "fontSize": 1.1,
           "lineHeight": 1.5,
-          "color": "#111111"
+          "color": "#0F1E33"
         }
       },
       "paragraph": {
-        "color": "#4D4D4D",
+        "color": "#475468",
         "largeText": {
           "fontSize": 1.65,
           "lineHeight": 2.3,
-          "color": "#111111"
+          "color": "#0F1E33"
         },
         "normalText": {
           "fontSize": 1.35,
           "lineHeight": 1.9,
-          "color": "#4D4D4D"
+          "color": "#475468"
         },
         "smallText": {
           "fontSize": 1.1,
           "lineHeight": 1.5,
-          "color": "#8A8A8A"
+          "color": "#7A8496"
         }
       }
     }
   },
   "header": {
-    "backgroundColor": "#111111",
+    "backgroundColor": "#1B365D",
     "color": "#FFFFFF",
-    "activeColor": "#FA5400"
+    "activeColor": "#D4A62A"
   },
   "assets": {
     "logos": [
       {
         "id": "logo",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png",
-        "title": "Nike logo",
-        "altText": "Nike logo"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Seal_of_Ohio.svg/500px-Seal_of_Ohio.svg.png",
+        "title": "Ohio Statehouse logo",
+        "altText": "Ohio Statehouse logo"
       }
     ],
     "backgrounds": [
       {
         "id": "cover_bg",
-        "url": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Ohio_Statehouse_exterior.jpg/1920px-Ohio_Statehouse_exterior.jpg",
         "title": "Cover background",
-        "altText": "Nike store front at night"
+        "altText": "Ohio Statehouse exterior"
       },
       {
         "id": "section_bg",
-        "url": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Ohio_Statehouse_exterior.jpg/1920px-Ohio_Statehouse_exterior.jpg",
         "title": "Section background",
-        "altText": "Nike store front at night"
+        "altText": "Ohio Statehouse exterior"
       }
     ],
     "images": [
       {
         "id": "cover_bg",
-        "url": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Ohio_Statehouse_exterior.jpg/1920px-Ohio_Statehouse_exterior.jpg",
         "title": "Cover background",
-        "altText": "Nike store front at night"
+        "altText": "Ohio Statehouse exterior"
       },
       {
         "id": "section_bg",
-        "url": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Ohio_Statehouse_exterior.jpg/1920px-Ohio_Statehouse_exterior.jpg",
         "title": "Section background",
-        "altText": "Nike store front at night"
+        "altText": "Ohio Statehouse exterior"
       },
       {
         "id": "accent_bar",
-        "url": "https://placehold.co/1600x12/FA5400/FA5400/png",
+        "url": "https://placehold.co/1600x12/D4A62A/D4A62A/png",
         "title": "Accent rule",
         "altText": "Accent rule"
       },
       {
         "id": "logo",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png",
-        "title": "Nike logo",
-        "altText": "Nike logo"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Seal_of_Ohio.svg/500px-Seal_of_Ohio.svg.png",
+        "title": "Ohio Statehouse logo",
+        "altText": "Ohio Statehouse logo"
       },
       {
         "id": "spacer",
@@ -347,6 +347,6 @@
     ]
   },
   "images": {
-    "logo": "url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png)"
+    "logo": "url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Seal_of_Ohio.svg/500px-Seal_of_Ohio.svg.png)"
   }
 }

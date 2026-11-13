@@ -174,7 +174,7 @@ function Report({ ws }: { ws: string }) {
     try {
       const r = await gd(persona.id, `/api/v1/actions/workspaces/${ws}/export/document`, {
         method: "POST",
-        body: JSON.stringify({ format: "PDF", fileName: "Ecommerce Business Report", documentId: overview.reportId }),
+        body: JSON.stringify({ format: "PDF", fileName: "Business Report", documentId: overview.reportId }),
       });
       for (let i = 0; i < 90; i++) {
         const res = await fetch(`/gd/api/v1/actions/workspaces/${ws}/export/document/${r.exportResult}`, {
@@ -197,7 +197,7 @@ function Report({ ws }: { ws: string }) {
     <>
       <div className="row" style={{ marginBottom: 12 }}>
         <div className="grow">
-          <b>Ecommerce Business Report</b>{" "}
+          <b>Business Report</b>{" "}
           <span className="muted small">· authored once in the parent, rendered in each tenant's theme, AI takeaways computed on {persona.name}'s data</span>
         </div>
         <button className="btn primary" onClick={exportPdf} disabled={busy}>

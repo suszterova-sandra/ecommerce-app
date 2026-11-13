@@ -3,17 +3,18 @@ Build the conference themes and chart palettes, and optionally deploy them.
 
     python3 theme/build_themes.py            # write JSON files only
     python3 theme/build_themes.py --deploy   # also PUT/POST to the org and activate them
-    python3 theme/build_themes.py conference_nike --deploy   # only one theme
+    python3 theme/build_themes.py conference_edgewood --deploy   # only one theme
 
-- conference_dark_lime  -> parent workspace "Ecommerce Company" (near-black, lime accent, GoodData visuals)
-- conference_ikea       -> child "Customer A (S)" = merchant__bigboxretailer (white, IKEA blue and yellow)
-- conference_nike       -> child "Customer B (S)" = merchant__clothing (white, black, Nike orange)
-- conference_samsung    -> child "Customer C (S)" = merchant__electronics (white, Samsung blue)
+- conference_akitabox         -> parent "AkitaBox" (navy #2B3144, gold #F2C318)
+- conference_blessing         -> child "Blessing Health System" = merchant__bigboxretailer (navy, blue, green)
+- conference_edgewood         -> child "Edgewood College" = merchant__clothing (black, Edgewood red)
+- conference_ohio_statehouse  -> child "Ohio Statehouse" = merchant__electronics (navy, gold)
 
-The IKEA theme is derived from the parent theme by swapping colours, so both stay structurally identical.
+conference_dark_lime_theme.json is the structural template: every brand theme is derived from it by swapping
+colours, so they all stay structurally identical.
 The business report takes its colours from documents.colors (backgrounds/texts by id), so the same report
 renders in each workspace's brand. GoodData limits a theme to 15,000 characters: the parent's logo is an
-inline PNG (the SVG did not render); the IKEA assets are remote PNG/JPG URLs.
+inline PNG (the SVG did not render); the brand assets are remote PNG/JPG/SVG URLs.
 """
 import json
 import os
@@ -25,9 +26,11 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 HOST = "https://navy-blue-eagle.trial.cloud.gooddata.com"
 PARENT_WS = "gdc_demo_a7c3afa0-ca91-40db-a3a8-df4d5044e92f"
-IKEA_WS = "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5"   # Customer A (S) = merchant__bigboxretailer
-CLOTHING_WS = "gdc_demo_86a46377-cad8-4c3d-ab7c-6ba753b49b2c"  # Customer B (S) = merchant__clothing
-ELECTRONICS_WS = "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203"  # Customer C (S) = merchant__electronics
+BLESSING_WS = "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5"  # Blessing Health System = merchant__bigboxretailer
+EDGEWOOD_WS = "gdc_demo_86a46377-cad8-4c3d-ab7c-6ba753b49b2c"  # Edgewood College = merchant__clothing
+OHIO_WS = "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203"      # Ohio Statehouse = merchant__electronics
+
+
 
 # Colour roles read by the report via {theme.colors.backgrounds.<id>} / {theme.colors.texts.<id>}
 DOC_BG_IDS = ["page", "card", "panel", "accent"]
@@ -41,67 +44,87 @@ PARENT_HEX = {  # role -> parent colour
 PARENT_VIZ = ["#3DD6C4", "#6C8CFF", "#A98BFA", "#F5C451", "#3FA9E0", "#F27A9B", "#E4E7EC", "#2A9D8F",
               "#8A94A3", "#F4A27A"]
 
-# Light tenant themes, derived from the parent by colour role. `primary` = buttons/links (defaults to accent),
+# Light brand themes, derived from the parent template by colour role. `primary` = buttons/links,
 # `accent` = report kickers/numbers and highlights, `accent_dim` = selected navigation item background.
+# `logo` sits on white tiles (demo app, reports); `header_logo` (optional) is the variant for a dark top bar.
 TENANTS = {
-    "conference_ikea": {
-        "name": "Conference – IKEA (BigBox Retailer)", "ws": IKEA_WS, "brand": "IKEA",
-        "header": ("#0058A3", "#FFFFFF", "#FFDB00"),  # top bar: background, text, active item
-        "hex": {"page": "#FFFFFF", "card": "#F4F7FB", "panel": "#E8F0F9", "line": "#D6E2EF", "line2": "#B8CCE3",
-                "g5": "#8AA4C2", "g6": "#5F7FA3", "muted": "#3D5A7A", "g8": "#1F3A5C", "text": "#0B1F33",
-                "subtle": "#6B8299", "accent": "#0058A3", "accent_hover": "#004A8C", "accent_dim": "#FFDB00"},
-        "primary": "#0058A3",
-        "nav": {"bg": "#0058A3", "border": "#004A8C", "item": "#D6E6F7", "selected": "#0B1F33",
-                "selected_bg": "#FFDB00"},
-        "viz": ["#0058A3", "#FFDB00", "#4A9BE0", "#0B2F55", "#F2A900", "#8DBBE8", "#2F9E7A", "#E36A5C",
-                "#7A8FA6", "#C9A400"],
-        "rule": "FFDB00",
-        # dashboard KPI tiles: IKEA blue tile, yellow main value
-        "kpi_tile": {"bg": "#0058A3", "border": "#0058A3", "title": "#FFFFFF", "value": "#FFDB00",
-                     "secondary": "#D6E6F7", "good": "#8FE3C0", "bad": "#FFB3BF"},
-        # report: light neutral-grey pages, white cards
-        "doc": {"page": "#F4F5F7", "card": "#FFFFFF", "panel": "#EAEDF1"},
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1280px-Ikea_logo.svg.png",
-        "bg": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg", "bg_alt": "IKEA store at dusk",
+    "conference_akitabox": {
+        "name": "Conference – AkitaBox (parent)", "ws": PARENT_WS, "brand": "AkitaBox",
+        "header": ("#2B3144", "#FFFFFF", "#F2C318"),  # top bar: background, text, active item
+        "hex": {"page": "#FFFFFF", "card": "#F5F6F8", "panel": "#EFF0F2", "line": "#DFE2E8", "line2": "#C4C9D4",
+                "g5": "#959CAD", "g6": "#6B7287", "muted": "#4A5165", "g8": "#2B3144", "text": "#1A1E2B",
+                "subtle": "#7D8497", "accent": "#2B3144", "accent_hover": "#1F2433", "accent_dim": "#F2C318"},
+        "primary": "#2B3144",
+        "nav": {"bg": "#2B3144", "border": "#1F2433", "item": "#C4C9D4", "selected": "#2B3144",
+                "selected_bg": "#F2C318"},
+        "viz": ["#2B3144", "#F2C318", "#1E90FF", "#CA982C", "#6B7287", "#8ED1FC", "#2F9E7A", "#E36A5C",
+                "#8A6B2A", "#AEB4C2"],
+        "rule": "F2C318",
+        "kpi_tile": {"bg": "#2B3144", "border": "#2B3144", "title": "#C4C9D4", "value": "#F2C318",
+                     "secondary": "#C4C9D4", "good": "#8FE3C0", "bad": "#FFB3BF"},
+        "doc": {"page": "#EFF0F2", "card": "#FFFFFF", "panel": "#F7F8FA"},
+        "logo": "https://builtworlds.com/wp-content/uploads/2021/12/AkitaBox-Logos-Horizontal_Full-Color-RGB-784x392.png",
+        "header_logo": "https://home.akitabox.com/wp-content/uploads/2022/02/ab-logo-light.svg",
+        "bg": "https://home.akitabox.com/wp-content/uploads/2023/01/AkitaBox-FCA-for-O_O-FCA-Page-Sub-Image-1.jpg",
+        "bg_alt": "AkitaBox facility condition assessment",
     },
-    "conference_nike": {
-        "name": "Conference – Nike (Clothing)", "ws": CLOTHING_WS, "brand": "Nike",
-        "header": ("#111111", "#FFFFFF", "#FA5400"),  # top bar: background, text, active item
-        "hex": {"page": "#FFFFFF", "card": "#F5F5F5", "panel": "#EFEFEF", "line": "#E2E2E2", "line2": "#CCCCCC",
-                "g5": "#9E9E9E", "g6": "#757575", "muted": "#4D4D4D", "g8": "#2B2B2B", "text": "#111111",
-                "subtle": "#8A8A8A", "accent": "#FA5400", "accent_hover": "#E04B00", "accent_dim": "#FA5400"},
-        "primary": "#111111",
-        "nav": {"bg": "#111111", "border": "#2B2B2B", "item": "#BDBDBD", "selected": "#FFFFFF",
-                "selected_bg": "#FA5400"},
-        "viz": ["#111111", "#FA5400", "#8A8A8A", "#FF9A5C", "#3A3A3A", "#CFCFCF", "#2F9E7A", "#4A90D9",
-                "#B23A00", "#5E5E5E"],
-        "rule": "FA5400",
-        # report: light grey pages, white cards (charts keep their white plot area)
-        "doc": {"page": "#ECECEC", "card": "#FFFFFF", "panel": "#F7F7F7"},
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png",
-        "bg": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
-        "bg_alt": "Nike store front at night",
+    "conference_blessing": {
+        "name": "Conference – Blessing Health System", "ws": BLESSING_WS, "brand": "Blessing Health System",
+        "header": ("#FFFFFF", "#00316B", "#0064A5"),  # white top bar like blessinghealth.org
+        "hex": {"page": "#FFFFFF", "card": "#F5F7FA", "panel": "#E8EFF7", "line": "#D7E1EC", "line2": "#B9C8DA",
+                "g5": "#8BA0B9", "g6": "#5E7893", "muted": "#3A3A3A", "g8": "#012248", "text": "#012248",
+                "subtle": "#878787", "accent": "#0064A5", "accent_hover": "#00316B", "accent_dim": "#A6CF39"},
+        "primary": "#0064A5",
+        "nav": {"bg": "#00316B", "border": "#012248", "item": "#C5D6EA", "selected": "#00316B",
+                "selected_bg": "#A6CF39"},
+        "viz": ["#00316B", "#0064A5", "#2098D1", "#A6CF39", "#CF6611", "#87B60B", "#7FB8E0", "#878787",
+                "#012248", "#F2B27A"],
+        "rule": "A6CF39",
+        "kpi_tile": {"bg": "#00316B", "border": "#00316B", "title": "#C5D6EA", "value": "#FFFFFF",
+                     "secondary": "#C5D6EA", "good": "#A6CF39", "bad": "#FFB3BF"},
+        "doc": {"page": "#F5F5F5", "card": "#FFFFFF", "panel": "#E8EFF7"},
+        "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8_-SvllqZODZN6uvnhyEMPH0EMbW-aSWyBDvbg5N4ig&s=10",
+        "bg": "https://www.siumed.edu/sites/default/files/u2261/southview.jpg",
+        "bg_alt": "Blessing Hospital campus",
     },
-    "conference_samsung": {
-        "name": "Conference – Samsung (Electronics)", "ws": ELECTRONICS_WS, "brand": "Samsung",
-        "header": ("#1428A0", "#FFFFFF", "#8FD3FF"),  # top bar: background, text, active item
-        "hex": {"page": "#FFFFFF", "card": "#F5F6F8", "panel": "#ECEEF3", "line": "#DDE1EA", "line2": "#C3C9D6",
-                "g5": "#98A1B3", "g6": "#6B7487", "muted": "#474F60", "g8": "#262B36", "text": "#0B0B0B",
-                "subtle": "#7C8496", "accent": "#1428A0", "accent_hover": "#0F1F80", "accent_dim": "#FFFFFF"},
-        "primary": "#1428A0",
-        "nav": {"bg": "#1428A0", "border": "#0F1F80", "item": "#C9D1F5", "selected": "#1428A0",
-                "selected_bg": "#FFFFFF"},
-        "viz": ["#1428A0", "#00A3E0", "#6C7BD8", "#0B0B0B", "#8A94A6", "#B3C2FF", "#2F9E7A", "#F2A900",
-                "#E36A5C", "#4A5BC4"],
-        "rule": "1428A0",
-        # dashboard KPI tiles: Samsung blue tile, white value
-        "kpi_tile": {"bg": "#1428A0", "border": "#1428A0", "title": "#C9D1F5", "value": "#FFFFFF",
-                     "secondary": "#C9D1F5", "good": "#8FE3C0", "bad": "#FFB3BF"},
-        # report: light grey pages, white cards
-        "doc": {"page": "#EFF1F5", "card": "#FFFFFF", "panel": "#F7F8FA"},
-        "logo": "https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png",
-        "bg": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
-        "bg_alt": "Samsung store display with Galaxy phones",
+    "conference_edgewood": {
+        "name": "Conference – Edgewood College", "ws": EDGEWOOD_WS, "brand": "Edgewood College",
+        "header": ("#1C1C1C", "#FFFFFF", "#FF4A4A"),
+        "hex": {"page": "#FFFFFF", "card": "#F6F5F5", "panel": "#EFEDED", "line": "#E2DFDF", "line2": "#CCC7C7",
+                "g5": "#9E9898", "g6": "#757070", "muted": "#4A4646", "g8": "#32373C", "text": "#1C1C1C",
+                "subtle": "#8A8585", "accent": "#BB0000", "accent_hover": "#990000", "accent_dim": "#BB0000"},
+        "primary": "#BB0000",
+        "nav": {"bg": "#1C1C1C", "border": "#32373C", "item": "#C9C5C5", "selected": "#FFFFFF",
+                "selected_bg": "#BB0000"},
+        "viz": ["#BB0000", "#1C1C1C", "#8A8585", "#E36A5C", "#5E1010", "#D9B8B8", "#2F9E7A", "#4A90D9",
+                "#F2A900", "#32373C"],
+        "rule": "BB0000",
+        "kpi_tile": {"bg": "#BB0000", "border": "#BB0000", "title": "#FBD9D9", "value": "#FFFFFF",
+                     "secondary": "#FBD9D9", "good": "#B8F0D8", "bad": "#FFE08A"},
+        "doc": {"page": "#EFEDED", "card": "#FFFFFF", "panel": "#F7F6F6"},
+        "logo": "https://www.edgewood.edu/wp-content/uploads/edgewood-university-logo.svg",
+        "header_logo": "https://www.edgewood.edu/wp-content/uploads/edgewood-university-logo-reverse.svg",
+        "bg": "https://www.commonapp.org/static/f9c430a914f85c6af11f98776eda22c3/edgewood-university_768.jpg",
+        "bg_alt": "Edgewood campus",
+    },
+    "conference_ohio_statehouse": {
+        "name": "Conference – Ohio Statehouse", "ws": OHIO_WS, "brand": "Ohio Statehouse",
+        "header": ("#1B365D", "#FFFFFF", "#D4A62A"),
+        "hex": {"page": "#FFFFFF", "card": "#F6F5F1", "panel": "#EEEBE2", "line": "#DEDAD0", "line2": "#C6C0B1",
+                "g5": "#9A9686", "g6": "#6F7A8C", "muted": "#475468", "g8": "#1B365D", "text": "#0F1E33",
+                "subtle": "#7A8496", "accent": "#1B365D", "accent_hover": "#12274A", "accent_dim": "#D4A62A"},
+        "primary": "#1B365D",
+        "nav": {"bg": "#1B365D", "border": "#12274A", "item": "#C8D3E3", "selected": "#1B365D",
+                "selected_bg": "#D4A62A"},
+        "viz": ["#1B365D", "#D4A62A", "#A6192E", "#5B7DB1", "#8C7A55", "#B8C7DD", "#2F9E7A", "#E8CF8A",
+                "#6F7A8C", "#D97A6C"],
+        "rule": "D4A62A",
+        "kpi_tile": {"bg": "#1B365D", "border": "#1B365D", "title": "#C8D3E3", "value": "#D4A62A",
+                     "secondary": "#C8D3E3", "good": "#8FE3C0", "bad": "#FFB3BF"},
+        "doc": {"page": "#F6F5F1", "card": "#FFFFFF", "panel": "#EEEBE2"},
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Seal_of_Ohio.svg/500px-Seal_of_Ohio.svg.png",
+        "bg": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Ohio_Statehouse_exterior.jpg/1920px-Ohio_Statehouse_exterior.jpg",
+        "bg_alt": "Ohio Statehouse exterior",
     },
 }
 
@@ -173,7 +196,7 @@ def tenant_theme(parent, cfg):
     rule = img("accent_bar", f"https://placehold.co/1600x12/{cfg['rule']}/{cfg['rule']}/png", "Accent rule",
                "Accent rule")
     t["assets"] = {"logos": [logo], "backgrounds": bgs, "images": bgs + [rule, logo, spacer]}
-    t["images"] = {"logo": f"url({cfg['logo']})"}
+    t["images"] = {"logo": f"url({cfg.get('header_logo', cfg['logo'])})"}
     h = cfg["header"]
     t["header"] = {"backgroundColor": h[0], "color": h[1], "activeColor": h[2]}  # top app bar
     return t
@@ -216,8 +239,7 @@ def activate(ws, setting_type, ref):
 
 def main():
     parent = parent_theme()
-    jobs = [("conference_dark_lime", "Conference – Dark Lime", parent, PARENT_VIZ, PARENT_WS)]
-    jobs += [(tid, c["name"], tenant_theme(parent, c), c["viz"], c["ws"]) for tid, c in TENANTS.items()]
+    jobs = [(tid, c["name"], tenant_theme(parent, c), c["viz"], c["ws"]) for tid, c in TENANTS.items()]
     only = [a for a in sys.argv[1:] if not a.startswith("--")]
     for tid, name, theme, viz, ws in jobs:
         if only and tid not in only:

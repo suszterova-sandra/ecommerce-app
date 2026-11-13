@@ -48,9 +48,9 @@ PERSONAS = [
     {"id": "admin", "userId": "sandra.suszterova", "name": "Sandra Suszterova", "initials": "SS",
      "role": "Organization admin", "tagline": "Manages the parent workspace, tenants, themes and AI agents"},
     {"id": "analyze", "userId": "sas.analyze.user", "name": "Analyze User", "initials": "AU",
-     "role": "Analyst · Fashion Store", "tagline": "Explores data, builds visualizations and metrics"},
+     "role": "Analyst · Edgewood College", "tagline": "Explores data, builds visualizations and metrics"},
     {"id": "view", "userId": "sas.view.user", "name": "View User", "initials": "VU",
-     "role": "Viewer · Fashion Store", "tagline": "Consumes dashboards, reports and AI summaries"},
+     "role": "Viewer · Edgewood College", "tagline": "Consumes dashboards, reports and AI summaries"},
 ]
 
 
@@ -111,7 +111,7 @@ def _build_overview():
             logo = next((l["url"] for l in assets.get("logos", []) if l.get("id") == "logo"), None)
             cover = next((b["url"] for b in assets.get("backgrounds", []) if b.get("id") == "cover_bg"), None)
             themes[tid] = {"id": tid, "name": c.get("name", tid), "palette": content.get("palette", {}), "logo": logo, "cover": cover,
-                           "accent": (content.get("header") or {}).get("activeColor")}
+                           "accent": (content.get("header") or {}).get("activeColor"), "header": content.get("header")}
 
         wdfs = [{"id": f["id"], "title": f["title"], "column": f["columnName"],
                  "values": {x["workspace"]["id"]: x["filterValues"] for x in f["workspaceDataFilterSettings"]}}

@@ -4,11 +4,11 @@
   --chrome-line: #232832;
   --chrome-text: #E8EBF0;
   --chrome-muted: #8A93A3;
-  --chrome-accent: #D4F24A;
-  --chrome-accent-ink: #D4F24A;
+  --chrome-accent: #F2C318;
+  --chrome-accent-ink: #F2C318;
 
   /* workspace theme (overwritten from the GoodData theme of the open workspace) */
-  --ws-primary: #D4F24A;
+  --ws-primary: #F2C318;
   --ws-contrast: #0B0D10;
   --ws-bg: #F6F7F9;
   --ws-surface: #FFFFFF;
@@ -45,7 +45,7 @@ a { color: inherit; }
 .persona-card .r { font-size: 12px; color: var(--chrome-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .avatar { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 700; flex: none; color: #0B0D10; }
-.avatar.admin { background: #D4F24A; }
+.avatar.admin { background: #F2C318; }
 .avatar.analyze { background: #7DD3FC; }
 .avatar.view { background: #FDBA74; }
 .avatar.sm { width: 24px; height: 24px; font-size: 10px; }
@@ -150,7 +150,7 @@ a { color: inherit; }
 .cc-hero p { margin: 6px 0 0; color: #8A93A3; }
 .stats { display: flex; gap: 10px; margin-left: auto; position: relative; z-index: 1; }
 .stat { background: #161A21; border: 1px solid #232832; border-radius: 12px; padding: 10px 14px; min-width: 92px; }
-.stat b { display: block; font-size: 22px; color: #D4F24A; }
+.stat b { display: block; font-size: 22px; color: #F2C318; }
 .stat span { font-size: 11.5px; color: #8A93A3; }
 
 .section-title { display: flex; align-items: baseline; gap: 10px; margin: 28px 0 12px; }
@@ -210,7 +210,7 @@ a { color: inherit; }
 .agent-card .ds { font-size: 12px; color: var(--ws-muted); margin: 8px 0 8px; line-height: 1.45; }
 .skills { display: flex; flex-wrap: wrap; gap: 4px; }
 .skill { font-size: 10.5px; padding: 2px 7px; border-radius: 6px; background: var(--ws-panel); color: var(--ws-muted); font-weight: 600; border: 1px solid var(--ws-line); }
-.badge-hub { font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 6px; border-radius: 5px; background: #111827; color: #D4F24A; margin-left: auto; }
+.badge-hub { font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; padding: 2px 6px; border-radius: 5px; background: #111827; color: #F2C318; margin-left: auto; }
 
 .playbook { display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 10px; margin-bottom: 14px; }
 .play { border: 1px solid var(--ws-line); background: var(--ws-surface); border-radius: 14px; padding: 12px 14px; text-align: left; color: var(--ws-text); display: flex; gap: 10px; align-items: center; }
@@ -315,7 +315,7 @@ a { color: inherit; }
 .ctx { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; flex: 1; }
 .ctx select { border: 1px solid var(--ws-line); background: var(--ws-panel); color: var(--ws-text); border-radius: 999px; padding: 5px 10px; font: inherit; font-size: 12.5px; max-width: 280px; }
 .ctx-chip { font-size: 11.5px; font-weight: 600; padding: 4px 9px; border-radius: 999px; background: var(--ws-panel); border: 1px solid var(--ws-line); color: var(--ws-muted); }
-.ctx-chip.strong { background: #0E1116; color: #D4F24A; border-color: transparent; }
+.ctx-chip.strong { background: #0E1116; color: #F2C318; border-color: transparent; }
 .send { width: 38px; height: 38px; border-radius: 50%; border: 0; background: var(--ws-text); color: var(--ws-surface); font-size: 18px; font-weight: 700; display: grid; place-items: center; flex: none; }
 .send[disabled] { opacity: .35; cursor: not-allowed; }
 .suggestions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px; }
@@ -367,7 +367,7 @@ a { color: inherit; }
   --chrome-accent-ink: #4D7C0F;
 }
 :root[data-mode="light"] .nav-item .sw { border-color: #E3E6EB; }
-:root[data-mode="light"] .nav-item.active { box-shadow: inset 2px 0 0 #84A70F; }
+:root[data-mode="light"] .nav-item.active { box-shadow: inset 2px 0 0 var(--chrome-accent); }
 :root[data-surface="dark"] .shadowed, :root[data-surface="dark"] .composer { box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 18px 40px rgba(0,0,0,.35); }
 :root[data-surface="dark"] .send { background: var(--ws-primary); color: var(--ws-contrast); }
 body, .sidebar, .main, .topbar, .card, .composer { transition: background-color .25s, border-color .25s, color .25s; }
@@ -563,7 +563,7 @@ body, .sidebar, .main, .topbar, .card, .composer { transition: background-color 
 .chatbot-chat > * { flex: 1; min-height: 0; }
 .ask-ai-launcher { position: fixed; right: 24px; bottom: 24px; z-index: 50; display: flex; align-items: center; gap: 8px; border: 0; border-radius: 999px; padding: 13px 20px; background: #14171C; color: #fff; font-weight: 700; font-size: 14px; box-shadow: 0 6px 18px rgba(0,0,0,.18); transition: transform .15s; }
 .ask-ai-launcher:hover { transform: translateY(-2px); }
-:root[data-surface="dark"] .ask-ai-launcher { background: #D4F24A; color: #0B0D10; }
+:root[data-surface="dark"] .ask-ai-launcher { background: #F2C318; color: #0B0D10; }
 .ai-top-btn { border: 1px solid var(--ws-line); background: var(--ws-surface); color: var(--ws-text); border-radius: 999px; padding: 7px 14px; font-weight: 700; font-size: 12.5px; }
 .ai-top-btn.on, .ai-top-btn:hover { background: var(--ws-text); color: var(--ws-surface); border-color: transparent; }
 @media (max-width: 1100px) { .app.chat-open .main { margin-right: 0; } .chatbot-dock { width: 100%; } }
@@ -684,3 +684,16 @@ body, .sidebar, .main, .topbar, .card, .composer { transition: background-color 
 .lang-seg button { border: 0; background: transparent; color: var(--ws-muted); font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 999px; }
 .lang-seg button.on { background: var(--ws-surface); color: var(--ws-text); box-shadow: var(--shadow); }
 .lang-seg button:hover:not(.on) { color: var(--ws-text); }
+
+/* brand logos are wide wordmarks (AkitaBox, Blessing, Edgewood): let logo tiles grow sideways */
+.brand-mark:has(img) { width: auto; min-width: 34px; max-width: 112px; padding: 0 6px; flex: none; }
+.brand-mark img { width: auto; max-width: 100px; height: 26px; }
+.ws-logo:has(img) { width: auto; min-width: 40px; max-width: 120px; padding: 0 6px; }
+.ws-logo img { width: auto; max-width: 108px; }
+.hero .logo:has(img) { width: auto; min-width: 72px; max-width: 220px; }
+.ws-card .logo:has(img) { width: auto; min-width: 48px; max-width: 150px; padding: 0 8px; }
+.ws-bar .ws-logo img { width: auto; max-width: 96px; height: 22px; }
+
+/* dark brand sidebar (AkitaBox navy for the admin): light borders on logo tiles, readable children lines */
+:root[data-chrome="dark"] .sidebar .ws-logo, :root[data-chrome="dark"] .nav-item .sw { border-color: rgba(255,255,255,.18); }
+:root[data-chrome="dark"] .nav-item.active { box-shadow: inset 3px 0 0 var(--chrome-accent); }

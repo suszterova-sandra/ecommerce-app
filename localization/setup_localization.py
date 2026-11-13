@@ -1,7 +1,7 @@
 """Metadata + UI localization (French / German) for the Ecommerce (Conference) workspaces.
 
 What it does (idempotent, safe to re-run):
-  1. For every Conference workspace that owns objects (the parent, and BigBox for its own extras),
+  1. For every Conference workspace that owns objects (the parent, and Blessing Health System for its own extras),
      exports the XLIFF for fr-FR and de-DE, fills in the <target> elements from
      translations/<locale>.json and uploads it (translations/set).
   2. Sets the LOCALE (UI) and METADATA_LOCALE (titles/descriptions) workspace settings according to
@@ -29,15 +29,15 @@ LOCALES = ["fr-FR", "de-DE"]
 PARENT = "gdc_demo_a7c3afa0-ca91-40db-a3a8-df4d5044e92f"
 WORKSPACES = {
     PARENT: "Ecommerce (Conference)",
-    "gdc_demo_86a46377-cad8-4c3d-ab7c-6ba753b49b2c": "Clothing",
-    "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203": "Electronics",
-    "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5": "BigBox Retailer",
+    "gdc_demo_86a46377-cad8-4c3d-ab7c-6ba753b49b2c": "Edgewood College",
+    "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203": "Ohio Statehouse",
+    "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5": "Blessing Health System",
 }
 # Which language each tenant shows. None = inherit (parent/org default, en-US).
 WORKSPACE_LOCALES = {
-    # Clothing stays English by default; fr-FR / de-DE translations are loaded so it can be switched.
-    "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203": "de-DE",  # Electronics -> German
-    "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5": "de-DE",  # BigBox Retailer -> German
+    # Edgewood stays English by default; fr-FR / de-DE translations are loaded so it can be switched.
+    "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203": "de-DE",  # Ohio Statehouse -> German
+    "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5": "de-DE",  # Blessing Health System -> German
 }
 SETTING_TYPES = ["LOCALE", "METADATA_LOCALE"]
 

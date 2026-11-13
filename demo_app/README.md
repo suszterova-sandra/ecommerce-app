@@ -1,7 +1,7 @@
 # Conference demo app
 
 React (Vite + TypeScript) shell around the **Ecommerce (Conference)** workspaces on
-`navy-blue-eagle.trial.cloud.gooddata.com`, built to show one parent with three branded tenants, switching
+`navy-blue-eagle.trial.cloud.gooddata.com`, built to show one parent (AkitaBox) with three branded tenants (Blessing Health System, Edgewood College, Ohio Statehouse), switching
 between users with their real permissions, the embedded AI report, and AI Hub agents.
 
 ## Run
@@ -41,7 +41,7 @@ user from that user's API token, so switching users switches the assistant, its 
 
 ## Users and access
 
-| User | Group | Clothing workspace | Conference agents |
+| User | Group | Edgewood College workspace | Conference agents |
 |---|---|---|---|
 | Admin (`sandra.suszterova`) | admin | MANAGE (org) | all three |
 | `sas.analyze.user` | Analyze Group | ANALYZE, metrics, export, automations, AI | Summary, Next steps, Recommendations |

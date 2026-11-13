@@ -5,14 +5,14 @@ export type ColorMode = "light" | "dark";
 /** Platform pages (Home, Control Center) without a tenant theme follow the light/dark switch. */
 const SHELL: Record<ColorMode, Record<string, string>> = {
   light: {
-    "--ws-primary": "#D4F24A", "--ws-contrast": "#0B0D10", "--ws-bg": "#F6F7F9", "--ws-surface": "#FFFFFF",
+    "--ws-primary": "#F2C318", "--ws-contrast": "#0B0D10", "--ws-bg": "#F6F7F9", "--ws-surface": "#FFFFFF",
     "--ws-panel": "#F1F3F6", "--ws-line": "#E3E6EB", "--ws-muted": "#6B7280", "--ws-text": "#14171C",
-    "--ws-accent": "#D4F24A", "--ws-accent-contrast": "#0B0D10",
+    "--ws-accent": "#F2C318", "--ws-accent-contrast": "#0B0D10",
   },
   dark: {
-    "--ws-primary": "#D4F24A", "--ws-contrast": "#0B0D10", "--ws-bg": "#0B0D10", "--ws-surface": "#14171C",
+    "--ws-primary": "#F2C318", "--ws-contrast": "#0B0D10", "--ws-bg": "#0B0D10", "--ws-surface": "#14171C",
     "--ws-panel": "#1B1F25", "--ws-line": "#2A3038", "--ws-muted": "#9BA3AE", "--ws-text": "#F2F4F7",
-    "--ws-accent": "#D4F24A", "--ws-accent-contrast": "#0B0D10",
+    "--ws-accent": "#F2C318", "--ws-accent-contrast": "#0B0D10",
   },
 };
 
@@ -22,7 +22,7 @@ export function themeVars(t?: Theme | null, mode: ColorMode = "light"): Record<s
   const p = t.palette || {};
   const c = p.complementary || {};
   return {
-    "--ws-primary": p.primary?.base || "#D4F24A",
+    "--ws-primary": p.primary?.base || "#F2C318",
     "--ws-contrast": p.primary?.contrast || "#0B0D10",
     "--ws-bg": c.c1 || "#F6F7F9",
     "--ws-surface": c.c0 || "#FFFFFF",
@@ -30,8 +30,8 @@ export function themeVars(t?: Theme | null, mode: ColorMode = "light"): Record<s
     "--ws-line": c.c3 || "#E3E6EB",
     "--ws-muted": c.c6 || "#6B7280",
     "--ws-text": c.c9 || c.c8 || "#14171C",
-    "--ws-accent": t.accent || p.primary?.base || "#D4F24A",
-    "--ws-accent-contrast": isDark(t.accent || p.primary?.base || "#D4F24A") ? "#FFFFFF" : "#0B0D10",
+    "--ws-accent": t.accent || p.primary?.base || "#F2C318",
+    "--ws-accent-contrast": isDark(t.accent || p.primary?.base || "#F2C318") ? "#FFFFFF" : "#0B0D10",
   };
 }
 
@@ -49,13 +49,31 @@ export const logoTile = (t?: Theme | null) => {
 };
 
 /** Sidebar/top chrome: platform look for the admin, the tenant's palette for its users. */
-export function applyChrome(brand: Theme | null | undefined) {
+export function applyChrome(brand: Theme | null | undefined, useHeader = false) {
   const root = document.documentElement;
   const keys = ["--chrome-bg", "--chrome-panel", "--chrome-line", "--chrome-text", "--chrome-muted", "--chrome-accent", "--chrome-accent-ink"];
   if (!brand) {
     keys.forEach((k) => root.style.removeProperty(k));
+    delete root.dataset.chrome;
     return;
   }
+  const h = brand.header;
+  if (useHeader && h?.backgroundColor && isDark(h.backgroundColor)) {
+    const bg = h.backgroundColor;
+    const v: Record<string, string> = {
+      "--chrome-bg": bg,
+      "--chrome-panel": "rgba(255,255,255,.08)",
+      "--chrome-line": "rgba(255,255,255,.12)",
+      "--chrome-text": h.color || "#FFFFFF",
+      "--chrome-muted": "rgba(255,255,255,.62)",
+      "--chrome-accent": h.activeColor || brand.accent || "#FFFFFF",
+      "--chrome-accent-ink": h.activeColor || brand.accent || "#FFFFFF",
+    };
+    for (const [k, val] of Object.entries(v)) root.style.setProperty(k, val);
+    root.dataset.chrome = "dark";
+    return;
+  }
+  delete root.dataset.chrome;
   const c = brand.palette.complementary || {};
   const primary = brand.palette.primary?.base || "#111111";
   const v: Record<string, string> = {

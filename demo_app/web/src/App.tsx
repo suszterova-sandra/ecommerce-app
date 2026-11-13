@@ -21,12 +21,12 @@ function Main() {
   const [collapsed, setCollapsed] = useState(() => localStorage.getItem("sidebarCollapsed") === "1");
   const [mode, setMode] = useState<ColorMode>(initialMode);
   useEffect(() => {
-    // a tenant user's whole platform carries their brand; the admin keeps the platform look
+    // every persona carries a brand: tenant users their tenant, the admin the parent (AkitaBox)
     // dark mode is for the platform pages only; store pages and store users always show the store's brand
     const onStorePage = route.view === "ws" || Boolean(brand.theme);
     applyTheme(route.view === "ws" ? themeOf(route.ws) : brand.theme || null, onStorePage ? "light" : mode);
-    applyChrome(brand.theme);
-  }, [route, themeOf, mode, brand.theme]);
+    applyChrome(brand.theme, persona.id === "admin");
+  }, [route, themeOf, mode, brand.theme, persona.id]);
   const changeMode = (m: ColorMode) => {
     localStorage.setItem("colorMode", m);
     setMode(m);

@@ -81,7 +81,7 @@ export function Topbar({ mode, onSetMode }: { mode: ColorMode; onSetMode: (m: Co
                   <Icon name="moon" size={14} /> Dark
                 </button>
               </div>
-              {!darkAvailable && <div className="sm-hint">Store pages use the store's own brand theme.</div>}
+              {!darkAvailable && <div className="sm-hint">Pages use the workspace brand theme.</div>}
             </div>
           )}
         </div>

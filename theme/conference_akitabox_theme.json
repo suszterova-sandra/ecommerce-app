@@ -2,7 +2,7 @@
   "version": "2",
   "palette": {
     "primary": {
-      "base": "#1428A0",
+      "base": "#2B3144",
       "contrast": "#FFFFFF"
     },
     "error": {
@@ -17,14 +17,14 @@
     "complementary": {
       "c0": "#FFFFFF",
       "c1": "#F5F6F8",
-      "c2": "#ECEEF3",
-      "c3": "#DDE1EA",
-      "c4": "#C3C9D6",
-      "c5": "#98A1B3",
-      "c6": "#6B7487",
-      "c7": "#474F60",
-      "c8": "#262B36",
-      "c9": "#0B0B0B"
+      "c2": "#EFF0F2",
+      "c3": "#DFE2E8",
+      "c4": "#C4C9D4",
+      "c5": "#959CAD",
+      "c6": "#6B7287",
+      "c7": "#4A5165",
+      "c8": "#2B3144",
+      "c9": "#1A1E2B"
     }
   },
   "typography": {
@@ -38,10 +38,10 @@
   },
   "modal": {
     "title": {
-      "color": "#0B0B0B",
-      "lineColor": "#DDE1EA"
+      "color": "#1A1E2B",
+      "lineColor": "#DFE2E8"
     },
-    "borderColor": "#DDE1EA",
+    "borderColor": "#DFE2E8",
     "borderRadius": "14",
     "borderWidth": "1",
     "dropShadow": true,
@@ -49,35 +49,35 @@
   },
   "tooltip": {
     "color": "#FFFFFF",
-    "backgroundColor": "#0B0B0B"
+    "backgroundColor": "#1A1E2B"
   },
   "chart": {
     "backgroundColor": "#FFFFFF",
-    "gridColor": "#ECEEF3",
-    "axisColor": "#C3C9D6",
-    "axisLabelColor": "#7C8496",
-    "axisValueColor": "#474F60",
-    "legendValueColor": "#474F60",
-    "plotLineColor": "#C3C9D6",
-    "tooltipBackgroundColor": "#0B0B0B",
-    "tooltipBorderColor": "#0B0B0B",
-    "tooltipLabelColor": "#C3C9D6",
+    "gridColor": "#EFF0F2",
+    "axisColor": "#C4C9D4",
+    "axisLabelColor": "#7D8497",
+    "axisValueColor": "#4A5165",
+    "legendValueColor": "#4A5165",
+    "plotLineColor": "#C4C9D4",
+    "tooltipBackgroundColor": "#1A1E2B",
+    "tooltipBorderColor": "#1A1E2B",
+    "tooltipLabelColor": "#C4C9D4",
     "tooltipValueColor": "#FFFFFF"
   },
   "table": {
-    "valueColor": "#262B36",
-    "nullValueColor": "#7C8496",
-    "hoverBackgroundColor": "#ECEEF3",
-    "loadingIconColor": "#1428A0",
-    "headerLabelColor": "#7C8496",
-    "headerHoverBackgroundColor": "#ECEEF3",
-    "subtotalBackgroundColor": "#ECEEF3",
-    "totalBackgroundColor": "#DDE1EA",
-    "totalValueColor": "#0B0B0B"
+    "valueColor": "#2B3144",
+    "nullValueColor": "#7D8497",
+    "hoverBackgroundColor": "#EFF0F2",
+    "loadingIconColor": "#2B3144",
+    "headerLabelColor": "#7D8497",
+    "headerHoverBackgroundColor": "#EFF0F2",
+    "subtotalBackgroundColor": "#EFF0F2",
+    "totalBackgroundColor": "#DFE2E8",
+    "totalValueColor": "#1A1E2B"
   },
   "kpi": {
-    "primaryMeasureColor": "#0B0B0B",
-    "secondaryInfoColor": "#474F60",
+    "primaryMeasureColor": "#1A1E2B",
+    "secondaryInfoColor": "#4A5165",
     "value": {
       "positiveColor": "#2F9E7A",
       "negativeColor": "#D1435B"
@@ -85,7 +85,7 @@
   },
   "dashboards": {
     "title": {
-      "color": "#0B0B0B",
+      "color": "#1A1E2B",
       "backgroundColor": "#FFFFFF",
       "borderColor": "#FFFFFF"
     },
@@ -93,29 +93,29 @@
       "title": {
         "color": "#FFFFFF"
       },
-      "backgroundColor": "#1428A0",
-      "borderColor": "#0F1F80",
+      "backgroundColor": "#2B3144",
+      "borderColor": "#1F2433",
       "item": {
-        "color": "#C9D1F5",
+        "color": "#C4C9D4",
         "hoverColor": "#FFFFFF",
-        "selectedColor": "#1428A0",
-        "selectedBackgroundColor": "#FFFFFF"
+        "selectedColor": "#2B3144",
+        "selectedBackgroundColor": "#F2C318"
       }
     },
     "filterBar": {
       "backgroundColor": "#FFFFFF",
-      "borderColor": "#DDE1EA",
+      "borderColor": "#DFE2E8",
       "filterButton": {
         "backgroundColor": "#F5F6F8"
       }
     },
     "section": {
       "title": {
-        "color": "#0B0B0B",
-        "lineColor": "#DDE1EA"
+        "color": "#1A1E2B",
+        "lineColor": "#DFE2E8"
       },
       "description": {
-        "color": "#474F60"
+        "color": "#4A5165"
       },
       "backgroundColor": "#FFFFFF"
     },
@@ -123,28 +123,28 @@
       "backgroundColor": "#F5F6F8",
       "widget": {
         "title": {
-          "color": "#0B0B0B",
+          "color": "#1A1E2B",
           "textAlign": "center"
         },
         "backgroundColor": "#FFFFFF",
-        "borderColor": "#DDE1EA",
+        "borderColor": "#DFE2E8",
         "borderRadius": "14",
         "borderWidth": "1",
         "dropShadow": false
       },
       "kpiWidget": {
         "title": {
-          "color": "#C9D1F5",
+          "color": "#C4C9D4",
           "textAlign": "center"
         },
-        "backgroundColor": "#1428A0",
-        "borderColor": "#1428A0",
+        "backgroundColor": "#2B3144",
+        "borderColor": "#2B3144",
         "borderRadius": "14",
         "borderWidth": "1",
         "dropShadow": false,
         "kpi": {
-          "primaryMeasureColor": "#FFFFFF",
-          "secondaryInfoColor": "#C9D1F5",
+          "primaryMeasureColor": "#F2C318",
+          "secondaryInfoColor": "#C4C9D4",
           "value": {
             "positiveColor": "#8FE3C0",
             "negativeColor": "#FFB3BF"
@@ -155,30 +155,30 @@
   },
   "analyticalDesigner": {
     "title": {
-      "color": "#0B0B0B"
+      "color": "#1A1E2B"
     }
   },
   "documents": {
     "visualizationPalette": [
-      "#1428A0",
-      "#00A3E0",
-      "#6C7BD8",
-      "#0B0B0B",
-      "#8A94A6",
-      "#B3C2FF",
+      "#2B3144",
+      "#F2C318",
+      "#1E90FF",
+      "#CA982C",
+      "#6B7287",
+      "#8ED1FC",
       "#2F9E7A",
-      "#F2A900",
       "#E36A5C",
-      "#4A5BC4"
+      "#8A6B2A",
+      "#AEB4C2"
     ],
     "page": {
-      "backgroundColor": "#EFF1F5"
+      "backgroundColor": "#EFF0F2"
     },
     "colors": {
       "backgrounds": [
         {
           "id": "page",
-          "color": "#EFF1F5"
+          "color": "#EFF0F2"
         },
         {
           "id": "card",
@@ -190,29 +190,29 @@
         },
         {
           "id": "accent",
-          "color": "#1428A0"
+          "color": "#2B3144"
         }
       ],
       "texts": [
         {
           "id": "default",
-          "color": "#0B0B0B"
+          "color": "#1A1E2B"
         },
         {
           "id": "muted",
-          "color": "#474F60"
+          "color": "#4A5165"
         },
         {
           "id": "subtle",
-          "color": "#7C8496"
+          "color": "#7D8497"
         },
         {
           "id": "accent",
-          "color": "#1428A0"
+          "color": "#2B3144"
         },
         {
           "id": "inverse",
-          "color": "#EFF1F5"
+          "color": "#EFF0F2"
         }
       ]
     },
@@ -233,110 +233,110 @@
         ]
       },
       "heading": {
-        "color": "#0B0B0B",
+        "color": "#1A1E2B",
         "h1": {
           "fontSize": 4.4,
           "lineHeight": 5,
-          "color": "#0B0B0B"
+          "color": "#1A1E2B"
         },
         "h2": {
           "fontSize": 2.1,
           "lineHeight": 2.7,
-          "color": "#0B0B0B"
+          "color": "#1A1E2B"
         },
         "h3": {
           "fontSize": 1.6,
           "lineHeight": 2.1,
-          "color": "#0B0B0B"
+          "color": "#1A1E2B"
         },
         "h4": {
           "fontSize": 1.35,
           "lineHeight": 1.8,
-          "color": "#0B0B0B"
+          "color": "#1A1E2B"
         },
         "h5": {
           "fontSize": 1.2,
           "lineHeight": 1.6,
-          "color": "#0B0B0B"
+          "color": "#1A1E2B"
         },
         "h6": {
           "fontSize": 1.1,
           "lineHeight": 1.5,
-          "color": "#0B0B0B"
+          "color": "#1A1E2B"
         }
       },
       "paragraph": {
-        "color": "#474F60",
+        "color": "#4A5165",
         "largeText": {
           "fontSize": 1.65,
           "lineHeight": 2.3,
-          "color": "#0B0B0B"
+          "color": "#1A1E2B"
         },
         "normalText": {
           "fontSize": 1.35,
           "lineHeight": 1.9,
-          "color": "#474F60"
+          "color": "#4A5165"
         },
         "smallText": {
           "fontSize": 1.1,
           "lineHeight": 1.5,
-          "color": "#7C8496"
+          "color": "#7D8497"
         }
       }
     }
   },
   "header": {
-    "backgroundColor": "#1428A0",
+    "backgroundColor": "#2B3144",
     "color": "#FFFFFF",
-    "activeColor": "#8FD3FF"
+    "activeColor": "#F2C318"
   },
   "assets": {
     "logos": [
       {
         "id": "logo",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png",
-        "title": "Samsung logo",
-        "altText": "Samsung logo"
+        "url": "https://builtworlds.com/wp-content/uploads/2021/12/AkitaBox-Logos-Horizontal_Full-Color-RGB-784x392.png",
+        "title": "AkitaBox logo",
+        "altText": "AkitaBox logo"
       }
     ],
     "backgrounds": [
       {
         "id": "cover_bg",
-        "url": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
+        "url": "https://home.akitabox.com/wp-content/uploads/2023/01/AkitaBox-FCA-for-O_O-FCA-Page-Sub-Image-1.jpg",
         "title": "Cover background",
-        "altText": "Samsung store display with Galaxy phones"
+        "altText": "AkitaBox facility condition assessment"
       },
       {
         "id": "section_bg",
-        "url": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
+        "url": "https://home.akitabox.com/wp-content/uploads/2023/01/AkitaBox-FCA-for-O_O-FCA-Page-Sub-Image-1.jpg",
         "title": "Section background",
-        "altText": "Samsung store display with Galaxy phones"
+        "altText": "AkitaBox facility condition assessment"
       }
     ],
     "images": [
       {
         "id": "cover_bg",
-        "url": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
+        "url": "https://home.akitabox.com/wp-content/uploads/2023/01/AkitaBox-FCA-for-O_O-FCA-Page-Sub-Image-1.jpg",
         "title": "Cover background",
-        "altText": "Samsung store display with Galaxy phones"
+        "altText": "AkitaBox facility condition assessment"
       },
       {
         "id": "section_bg",
-        "url": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
+        "url": "https://home.akitabox.com/wp-content/uploads/2023/01/AkitaBox-FCA-for-O_O-FCA-Page-Sub-Image-1.jpg",
         "title": "Section background",
-        "altText": "Samsung store display with Galaxy phones"
+        "altText": "AkitaBox facility condition assessment"
       },
       {
         "id": "accent_bar",
-        "url": "https://placehold.co/1600x12/1428A0/1428A0/png",
+        "url": "https://placehold.co/1600x12/F2C318/F2C318/png",
         "title": "Accent rule",
         "altText": "Accent rule"
       },
       {
         "id": "logo",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png",
-        "title": "Samsung logo",
-        "altText": "Samsung logo"
+        "url": "https://builtworlds.com/wp-content/uploads/2021/12/AkitaBox-Logos-Horizontal_Full-Color-RGB-784x392.png",
+        "title": "AkitaBox logo",
+        "altText": "AkitaBox logo"
       },
       {
         "id": "spacer",
@@ -347,6 +347,6 @@
     ]
   },
   "images": {
-    "logo": "url(https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png)"
+    "logo": "url(https://home.akitabox.com/wp-content/uploads/2022/02/ab-logo-light.svg)"
   }
 }

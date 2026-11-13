@@ -2,7 +2,7 @@
   "version": "2",
   "palette": {
     "primary": {
-      "base": "#0058A3",
+      "base": "#BB0000",
       "contrast": "#FFFFFF"
     },
     "error": {
@@ -16,15 +16,15 @@
     },
     "complementary": {
       "c0": "#FFFFFF",
-      "c1": "#F4F7FB",
-      "c2": "#E8F0F9",
-      "c3": "#D6E2EF",
-      "c4": "#B8CCE3",
-      "c5": "#8AA4C2",
-      "c6": "#5F7FA3",
-      "c7": "#3D5A7A",
-      "c8": "#1F3A5C",
-      "c9": "#0B1F33"
+      "c1": "#F6F5F5",
+      "c2": "#EFEDED",
+      "c3": "#E2DFDF",
+      "c4": "#CCC7C7",
+      "c5": "#9E9898",
+      "c6": "#757070",
+      "c7": "#4A4646",
+      "c8": "#32373C",
+      "c9": "#1C1C1C"
     }
   },
   "typography": {
@@ -38,10 +38,10 @@
   },
   "modal": {
     "title": {
-      "color": "#0B1F33",
-      "lineColor": "#D6E2EF"
+      "color": "#1C1C1C",
+      "lineColor": "#E2DFDF"
     },
-    "borderColor": "#D6E2EF",
+    "borderColor": "#E2DFDF",
     "borderRadius": "14",
     "borderWidth": "1",
     "dropShadow": true,
@@ -49,35 +49,35 @@
   },
   "tooltip": {
     "color": "#FFFFFF",
-    "backgroundColor": "#0B1F33"
+    "backgroundColor": "#1C1C1C"
   },
   "chart": {
     "backgroundColor": "#FFFFFF",
-    "gridColor": "#E8F0F9",
-    "axisColor": "#B8CCE3",
-    "axisLabelColor": "#6B8299",
-    "axisValueColor": "#3D5A7A",
-    "legendValueColor": "#3D5A7A",
-    "plotLineColor": "#B8CCE3",
-    "tooltipBackgroundColor": "#0B1F33",
-    "tooltipBorderColor": "#0B1F33",
-    "tooltipLabelColor": "#B8CCE3",
+    "gridColor": "#EFEDED",
+    "axisColor": "#CCC7C7",
+    "axisLabelColor": "#8A8585",
+    "axisValueColor": "#4A4646",
+    "legendValueColor": "#4A4646",
+    "plotLineColor": "#CCC7C7",
+    "tooltipBackgroundColor": "#1C1C1C",
+    "tooltipBorderColor": "#1C1C1C",
+    "tooltipLabelColor": "#CCC7C7",
     "tooltipValueColor": "#FFFFFF"
   },
   "table": {
-    "valueColor": "#1F3A5C",
-    "nullValueColor": "#6B8299",
-    "hoverBackgroundColor": "#E8F0F9",
-    "loadingIconColor": "#0058A3",
-    "headerLabelColor": "#6B8299",
-    "headerHoverBackgroundColor": "#E8F0F9",
-    "subtotalBackgroundColor": "#E8F0F9",
-    "totalBackgroundColor": "#D6E2EF",
-    "totalValueColor": "#0B1F33"
+    "valueColor": "#32373C",
+    "nullValueColor": "#8A8585",
+    "hoverBackgroundColor": "#EFEDED",
+    "loadingIconColor": "#BB0000",
+    "headerLabelColor": "#8A8585",
+    "headerHoverBackgroundColor": "#EFEDED",
+    "subtotalBackgroundColor": "#EFEDED",
+    "totalBackgroundColor": "#E2DFDF",
+    "totalValueColor": "#1C1C1C"
   },
   "kpi": {
-    "primaryMeasureColor": "#0B1F33",
-    "secondaryInfoColor": "#3D5A7A",
+    "primaryMeasureColor": "#1C1C1C",
+    "secondaryInfoColor": "#4A4646",
     "value": {
       "positiveColor": "#2F9E7A",
       "negativeColor": "#D1435B"
@@ -85,7 +85,7 @@
   },
   "dashboards": {
     "title": {
-      "color": "#0B1F33",
+      "color": "#1C1C1C",
       "backgroundColor": "#FFFFFF",
       "borderColor": "#FFFFFF"
     },
@@ -93,61 +93,61 @@
       "title": {
         "color": "#FFFFFF"
       },
-      "backgroundColor": "#0058A3",
-      "borderColor": "#004A8C",
+      "backgroundColor": "#1C1C1C",
+      "borderColor": "#32373C",
       "item": {
-        "color": "#D6E6F7",
+        "color": "#C9C5C5",
         "hoverColor": "#FFFFFF",
-        "selectedColor": "#0B1F33",
-        "selectedBackgroundColor": "#FFDB00"
+        "selectedColor": "#FFFFFF",
+        "selectedBackgroundColor": "#BB0000"
       }
     },
     "filterBar": {
       "backgroundColor": "#FFFFFF",
-      "borderColor": "#D6E2EF",
+      "borderColor": "#E2DFDF",
       "filterButton": {
-        "backgroundColor": "#F4F7FB"
+        "backgroundColor": "#F6F5F5"
       }
     },
     "section": {
       "title": {
-        "color": "#0B1F33",
-        "lineColor": "#D6E2EF"
+        "color": "#1C1C1C",
+        "lineColor": "#E2DFDF"
       },
       "description": {
-        "color": "#3D5A7A"
+        "color": "#4A4646"
       },
       "backgroundColor": "#FFFFFF"
     },
     "content": {
-      "backgroundColor": "#F4F7FB",
+      "backgroundColor": "#F6F5F5",
       "widget": {
         "title": {
-          "color": "#0B1F33",
+          "color": "#1C1C1C",
           "textAlign": "center"
         },
         "backgroundColor": "#FFFFFF",
-        "borderColor": "#D6E2EF",
+        "borderColor": "#E2DFDF",
         "borderRadius": "14",
         "borderWidth": "1",
         "dropShadow": false
       },
       "kpiWidget": {
         "title": {
-          "color": "#FFFFFF",
+          "color": "#FBD9D9",
           "textAlign": "center"
         },
-        "backgroundColor": "#0058A3",
-        "borderColor": "#0058A3",
+        "backgroundColor": "#BB0000",
+        "borderColor": "#BB0000",
         "borderRadius": "14",
         "borderWidth": "1",
         "dropShadow": false,
         "kpi": {
-          "primaryMeasureColor": "#FFDB00",
-          "secondaryInfoColor": "#D6E6F7",
+          "primaryMeasureColor": "#FFFFFF",
+          "secondaryInfoColor": "#FBD9D9",
           "value": {
-            "positiveColor": "#8FE3C0",
-            "negativeColor": "#FFB3BF"
+            "positiveColor": "#B8F0D8",
+            "negativeColor": "#FFE08A"
           }
         }
       }
@@ -155,30 +155,30 @@
   },
   "analyticalDesigner": {
     "title": {
-      "color": "#0B1F33"
+      "color": "#1C1C1C"
     }
   },
   "documents": {
     "visualizationPalette": [
-      "#0058A3",
-      "#FFDB00",
-      "#4A9BE0",
-      "#0B2F55",
-      "#F2A900",
-      "#8DBBE8",
-      "#2F9E7A",
+      "#BB0000",
+      "#1C1C1C",
+      "#8A8585",
       "#E36A5C",
-      "#7A8FA6",
-      "#C9A400"
+      "#5E1010",
+      "#D9B8B8",
+      "#2F9E7A",
+      "#4A90D9",
+      "#F2A900",
+      "#32373C"
     ],
     "page": {
-      "backgroundColor": "#F4F5F7"
+      "backgroundColor": "#EFEDED"
     },
     "colors": {
       "backgrounds": [
         {
           "id": "page",
-          "color": "#F4F5F7"
+          "color": "#EFEDED"
         },
         {
           "id": "card",
@@ -186,33 +186,33 @@
         },
         {
           "id": "panel",
-          "color": "#EAEDF1"
+          "color": "#F7F6F6"
         },
         {
           "id": "accent",
-          "color": "#0058A3"
+          "color": "#BB0000"
         }
       ],
       "texts": [
         {
           "id": "default",
-          "color": "#0B1F33"
+          "color": "#1C1C1C"
         },
         {
           "id": "muted",
-          "color": "#3D5A7A"
+          "color": "#4A4646"
         },
         {
           "id": "subtle",
-          "color": "#6B8299"
+          "color": "#8A8585"
         },
         {
           "id": "accent",
-          "color": "#0058A3"
+          "color": "#BB0000"
         },
         {
           "id": "inverse",
-          "color": "#F4F5F7"
+          "color": "#EFEDED"
         }
       ]
     },
@@ -233,110 +233,110 @@
         ]
       },
       "heading": {
-        "color": "#0B1F33",
+        "color": "#1C1C1C",
         "h1": {
           "fontSize": 4.4,
           "lineHeight": 5,
-          "color": "#0B1F33"
+          "color": "#1C1C1C"
         },
         "h2": {
           "fontSize": 2.1,
           "lineHeight": 2.7,
-          "color": "#0B1F33"
+          "color": "#1C1C1C"
         },
         "h3": {
           "fontSize": 1.6,
           "lineHeight": 2.1,
-          "color": "#0B1F33"
+          "color": "#1C1C1C"
         },
         "h4": {
           "fontSize": 1.35,
           "lineHeight": 1.8,
-          "color": "#0B1F33"
+          "color": "#1C1C1C"
         },
         "h5": {
           "fontSize": 1.2,
           "lineHeight": 1.6,
-          "color": "#0B1F33"
+          "color": "#1C1C1C"
         },
         "h6": {
           "fontSize": 1.1,
           "lineHeight": 1.5,
-          "color": "#0B1F33"
+          "color": "#1C1C1C"
         }
       },
       "paragraph": {
-        "color": "#3D5A7A",
+        "color": "#4A4646",
         "largeText": {
           "fontSize": 1.65,
           "lineHeight": 2.3,
-          "color": "#0B1F33"
+          "color": "#1C1C1C"
         },
         "normalText": {
           "fontSize": 1.35,
           "lineHeight": 1.9,
-          "color": "#3D5A7A"
+          "color": "#4A4646"
         },
         "smallText": {
           "fontSize": 1.1,
           "lineHeight": 1.5,
-          "color": "#6B8299"
+          "color": "#8A8585"
         }
       }
     }
   },
   "header": {
-    "backgroundColor": "#0058A3",
+    "backgroundColor": "#1C1C1C",
     "color": "#FFFFFF",
-    "activeColor": "#FFDB00"
+    "activeColor": "#FF4A4A"
   },
   "assets": {
     "logos": [
       {
         "id": "logo",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1280px-Ikea_logo.svg.png",
-        "title": "IKEA logo",
-        "altText": "IKEA logo"
+        "url": "https://www.edgewood.edu/wp-content/uploads/edgewood-university-logo.svg",
+        "title": "Edgewood College logo",
+        "altText": "Edgewood College logo"
       }
     ],
     "backgrounds": [
       {
         "id": "cover_bg",
-        "url": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg",
+        "url": "https://www.commonapp.org/static/f9c430a914f85c6af11f98776eda22c3/edgewood-university_768.jpg",
         "title": "Cover background",
-        "altText": "IKEA store at dusk"
+        "altText": "Edgewood campus"
       },
       {
         "id": "section_bg",
-        "url": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg",
+        "url": "https://www.commonapp.org/static/f9c430a914f85c6af11f98776eda22c3/edgewood-university_768.jpg",
         "title": "Section background",
-        "altText": "IKEA store at dusk"
+        "altText": "Edgewood campus"
       }
     ],
     "images": [
       {
         "id": "cover_bg",
-        "url": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg",
+        "url": "https://www.commonapp.org/static/f9c430a914f85c6af11f98776eda22c3/edgewood-university_768.jpg",
         "title": "Cover background",
-        "altText": "IKEA store at dusk"
+        "altText": "Edgewood campus"
       },
       {
         "id": "section_bg",
-        "url": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg",
+        "url": "https://www.commonapp.org/static/f9c430a914f85c6af11f98776eda22c3/edgewood-university_768.jpg",
         "title": "Section background",
-        "altText": "IKEA store at dusk"
+        "altText": "Edgewood campus"
       },
       {
         "id": "accent_bar",
-        "url": "https://placehold.co/1600x12/FFDB00/FFDB00/png",
+        "url": "https://placehold.co/1600x12/BB0000/BB0000/png",
         "title": "Accent rule",
         "altText": "Accent rule"
       },
       {
         "id": "logo",
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1280px-Ikea_logo.svg.png",
-        "title": "IKEA logo",
-        "altText": "IKEA logo"
+        "url": "https://www.edgewood.edu/wp-content/uploads/edgewood-university-logo.svg",
+        "title": "Edgewood College logo",
+        "altText": "Edgewood College logo"
       },
       {
         "id": "spacer",
@@ -347,6 +347,6 @@
     ]
   },
   "images": {
-    "logo": "url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1280px-Ikea_logo.svg.png)"
+    "logo": "url(https://www.edgewood.edu/wp-content/uploads/edgewood-university-logo-reverse.svg)"
   }
 }

@@ -21,8 +21,10 @@ export interface Theme {
   palette: Palette;
   logo: string | null;
   cover: string | null;
-  /** Highlight colour of the brand (theme header activeColor): IKEA yellow, Nike orange, ... */
+  /** Highlight colour of the brand (theme header activeColor): AkitaBox gold, Edgewood red, ... */
   accent?: string | null;
+  /** Theme top bar colours; a dark one also paints the admin's sidebar (AkitaBox navy) */
+  header?: { backgroundColor?: string; color?: string; activeColor?: string } | null;
 }
 
 export interface Permission {

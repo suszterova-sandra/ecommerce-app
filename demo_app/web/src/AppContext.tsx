@@ -229,9 +229,11 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
     const homeWs = persona.id === "admin" ? overview.parent : workspaces.find((w) => !w.isParent)?.id || workspaces[0]?.id;
     const homeWsMeta = overview.workspaces.find((w) => w.id === homeWs);
     const tenantTheme = persona.id !== "admin" && homeWsMeta?.themeId ? overview.themes[homeWsMeta.themeId] : undefined;
+    // the admin's platform carries the parent's brand (AkitaBox): its logo and theme colours
+    const parentTheme = overview.themes[overview.workspaces.find((w) => w.isParent)?.themeId || ""];
     const brand = tenantTheme
-      ? { name: workspaces.find((w) => w.id === homeWs)?.name || "Store", logo: tenantTheme.logo, logoBg: logoTile(tenantTheme), theme: tenantTheme }
-      : { name: "Ecommerce Platform" };
+      ? { name: workspaces.find((w) => w.id === homeWs)?.name || "Workspace", logo: tenantTheme.logo, logoBg: logoTile(tenantTheme), theme: tenantTheme }
+      : { name: "AkitaBox", logo: parentTheme?.logo, logoBg: "#FFFFFF", theme: parentTheme };
     return {
       brand,
       homeWs,
