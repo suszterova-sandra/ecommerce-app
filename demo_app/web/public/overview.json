@@ -7,7 +7,7 @@
    "id": "gdc_demo_86a46377-cad8-4c3d-ab7c-6ba753b49b2c",
    "name": "Edgewood College",
    "isParent": false,
-   "themeId": "conference_edgewood",
+   "themeId": "conference_nike",
    "permissions": [
     {
      "name": "ANALYZE",
@@ -87,12 +87,8 @@
      "title": "3. Customers"
     },
     {
-     "id": "executive_business_performance_last_quarter_2ddddfb7",
-     "title": "Executive Business Performance \u2014 Last Quarter"
-    },
-    {
-     "id": "executive_performance_dashboard_last_quarter_5053baac",
-     "title": "Executive Performance Dashboard \u2014 Last Quarter"
+     "id": "executive_business_performance_dashboard_8f5189fd",
+     "title": "Executive Business Performance Dashboard"
     },
     {
      "id": "overview",
@@ -112,7 +108,7 @@
    "id": "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203",
    "name": "Ohio Statehouse",
    "isParent": false,
-   "themeId": "conference_ohio_statehouse",
+   "themeId": "conference_samsung",
    "permissions": [],
    "hierarchyPermissions": [],
    "dashboards": [
@@ -121,12 +117,8 @@
      "title": "3. Customers"
     },
     {
-     "id": "executive_business_performance_last_quarter_2ddddfb7",
-     "title": "Executive Business Performance \u2014 Last Quarter"
-    },
-    {
-     "id": "executive_performance_dashboard_last_quarter_5053baac",
-     "title": "Executive Performance Dashboard \u2014 Last Quarter"
+     "id": "executive_business_performance_dashboard_8f5189fd",
+     "title": "Executive Business Performance Dashboard"
     },
     {
      "id": "overview",
@@ -146,7 +138,7 @@
    "id": "gdc_demo_a7c3afa0-ca91-40db-a3a8-df4d5044e92f",
    "name": "AkitaBox",
    "isParent": true,
-   "themeId": "conference_akitabox",
+   "themeId": "conference_dark_lime",
    "permissions": [],
    "hierarchyPermissions": [],
    "dashboards": [
@@ -155,12 +147,8 @@
      "title": "3. Customers"
     },
     {
-     "id": "executive_business_performance_last_quarter_2ddddfb7",
-     "title": "Executive Business Performance \u2014 Last Quarter"
-    },
-    {
-     "id": "executive_performance_dashboard_last_quarter_5053baac",
-     "title": "Executive Performance Dashboard \u2014 Last Quarter"
+     "id": "executive_business_performance_dashboard_8f5189fd",
+     "title": "Executive Business Performance Dashboard"
     },
     {
      "id": "overview",
@@ -180,7 +168,7 @@
    "id": "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5",
    "name": "Blessing Health System",
    "isParent": false,
-   "themeId": "conference_blessing",
+   "themeId": "conference_ikea",
    "permissions": [],
    "hierarchyPermissions": [],
    "dashboards": [
@@ -189,12 +177,8 @@
      "title": "3. Customers"
     },
     {
-     "id": "executive_business_performance_last_quarter_2ddddfb7",
-     "title": "Executive Business Performance \u2014 Last Quarter"
-    },
-    {
-     "id": "executive_performance_dashboard_last_quarter_5053baac",
-     "title": "Executive Performance Dashboard \u2014 Last Quarter"
+     "id": "executive_business_performance_dashboard_8f5189fd",
+     "title": "Executive Business Performance Dashboard"
     },
     {
      "id": "overview",
@@ -224,12 +208,12 @@
   }
  ],
  "themes": {
-  "conference_akitabox": {
-   "id": "conference_akitabox",
-   "name": "Conference \u2013 AkitaBox (parent)",
+  "conference_samsung": {
+   "id": "conference_samsung",
+   "name": "Conference \u2013 Samsung (Electronics)",
    "palette": {
     "primary": {
-     "base": "#2B3144",
+     "base": "#1428A0",
      "contrast": "#FFFFFF"
     },
     "error": {
@@ -244,31 +228,70 @@
     "complementary": {
      "c0": "#FFFFFF",
      "c1": "#F5F6F8",
-     "c2": "#EFF0F2",
-     "c3": "#DFE2E8",
-     "c4": "#C4C9D4",
-     "c5": "#959CAD",
-     "c6": "#6B7287",
-     "c7": "#4A5165",
-     "c8": "#2B3144",
-     "c9": "#1A1E2B"
+     "c2": "#ECEEF3",
+     "c3": "#DDE1EA",
+     "c4": "#C3C9D6",
+     "c5": "#98A1B3",
+     "c6": "#6B7487",
+     "c7": "#474F60",
+     "c8": "#262B36",
+     "c9": "#0B0B0B"
     }
    },
-   "logo": "https://builtworlds.com/wp-content/uploads/2021/12/AkitaBox-Logos-Horizontal_Full-Color-RGB-784x392.png",
-   "cover": "https://home.akitabox.com/wp-content/uploads/2023/01/AkitaBox-FCA-for-O_O-FCA-Page-Sub-Image-1.jpg",
-   "accent": "#F2C318",
+   "logo": "https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png",
+   "cover": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
+   "accent": "#8FD3FF",
    "header": {
-    "backgroundColor": "#2B3144",
+    "backgroundColor": "#1428A0",
     "color": "#FFFFFF",
-    "activeColor": "#F2C318"
+    "activeColor": "#8FD3FF"
    }
   },
-  "conference_blessing": {
-   "id": "conference_blessing",
-   "name": "Conference \u2013 Blessing Health System",
+  "conference_dark_lime": {
+   "id": "conference_dark_lime",
+   "name": "Conference \u2013 Dark Lime",
    "palette": {
     "primary": {
-     "base": "#0064A5",
+     "base": "#D4F24A",
+     "contrast": "#0B0D10"
+    },
+    "error": {
+     "base": "#FB7185"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#D4F24A"
+    },
+    "complementary": {
+     "c0": "#0B0D10",
+     "c1": "#14171C",
+     "c2": "#1B1F25",
+     "c3": "#252A31",
+     "c4": "#343A43",
+     "c5": "#4E5560",
+     "c6": "#747C88",
+     "c7": "#9BA3AE",
+     "c8": "#C9CED6",
+     "c9": "#F2F4F7"
+    }
+   },
+   "logo": "https://www.gooddata.ai/img/generic/logo-gd-w.svg",
+   "cover": "https://www.gooddata.ai/img/pages/company/partnership.webp",
+   "accent": "#D4F24A",
+   "header": {
+    "backgroundColor": "#101317",
+    "color": "#9BA3AE",
+    "activeColor": "#D4F24A"
+   }
+  },
+  "conference_ikea": {
+   "id": "conference_ikea",
+   "name": "Conference \u2013 IKEA (BigBox Retailer)",
+   "palette": {
+    "primary": {
+     "base": "#0058A3",
      "contrast": "#FFFFFF"
     },
     "error": {
@@ -282,32 +305,32 @@
     },
     "complementary": {
      "c0": "#FFFFFF",
-     "c1": "#F5F7FA",
-     "c2": "#E8EFF7",
-     "c3": "#D7E1EC",
-     "c4": "#B9C8DA",
-     "c5": "#8BA0B9",
-     "c6": "#5E7893",
-     "c7": "#3A3A3A",
-     "c8": "#012248",
-     "c9": "#012248"
+     "c1": "#F4F7FB",
+     "c2": "#E8F0F9",
+     "c3": "#D6E2EF",
+     "c4": "#B8CCE3",
+     "c5": "#8AA4C2",
+     "c6": "#5F7FA3",
+     "c7": "#3D5A7A",
+     "c8": "#1F3A5C",
+     "c9": "#0B1F33"
     }
    },
-   "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8_-SvllqZODZN6uvnhyEMPH0EMbW-aSWyBDvbg5N4ig&s=10",
-   "cover": "https://www.siumed.edu/sites/default/files/u2261/southview.jpg",
-   "accent": "#0064A5",
+   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/1280px-Ikea_logo.svg.png",
+   "cover": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg",
+   "accent": "#FFDB00",
    "header": {
-    "backgroundColor": "#FFFFFF",
-    "color": "#00316B",
-    "activeColor": "#0064A5"
+    "backgroundColor": "#0058A3",
+    "color": "#FFFFFF",
+    "activeColor": "#FFDB00"
    }
   },
-  "conference_edgewood": {
-   "id": "conference_edgewood",
-   "name": "Conference \u2013 Edgewood College",
+  "conference_nike": {
+   "id": "conference_nike",
+   "name": "Conference \u2013 Nike (Clothing)",
    "palette": {
     "primary": {
-     "base": "#BB0000",
+     "base": "#111111",
      "contrast": "#FFFFFF"
     },
     "error": {
@@ -321,63 +344,24 @@
     },
     "complementary": {
      "c0": "#FFFFFF",
-     "c1": "#F6F5F5",
-     "c2": "#EFEDED",
-     "c3": "#E2DFDF",
-     "c4": "#CCC7C7",
-     "c5": "#9E9898",
-     "c6": "#757070",
-     "c7": "#4A4646",
-     "c8": "#32373C",
-     "c9": "#1C1C1C"
+     "c1": "#F5F5F5",
+     "c2": "#EFEFEF",
+     "c3": "#E2E2E2",
+     "c4": "#CCCCCC",
+     "c5": "#9E9E9E",
+     "c6": "#757575",
+     "c7": "#4D4D4D",
+     "c8": "#2B2B2B",
+     "c9": "#111111"
     }
    },
-   "logo": "https://www.edgewood.edu/wp-content/uploads/edgewood-university-logo.svg",
-   "cover": "https://www.commonapp.org/static/f9c430a914f85c6af11f98776eda22c3/edgewood-university_768.jpg",
-   "accent": "#FF4A4A",
+   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1280px-Logo_NIKE.svg.png",
+   "cover": "https://www.weavabel.com/hubfs/thomas-serer-R_0rTS9ENnk-unsplash.jpeg",
+   "accent": "#FA5400",
    "header": {
-    "backgroundColor": "#1C1C1C",
+    "backgroundColor": "#111111",
     "color": "#FFFFFF",
-    "activeColor": "#FF4A4A"
-   }
-  },
-  "conference_ohio_statehouse": {
-   "id": "conference_ohio_statehouse",
-   "name": "Conference \u2013 Ohio Statehouse",
-   "palette": {
-    "primary": {
-     "base": "#1B365D",
-     "contrast": "#FFFFFF"
-    },
-    "error": {
-     "base": "#D1435B"
-    },
-    "warning": {
-     "base": "#FBBF24"
-    },
-    "success": {
-     "base": "#2F9E7A"
-    },
-    "complementary": {
-     "c0": "#FFFFFF",
-     "c1": "#F6F5F1",
-     "c2": "#EEEBE2",
-     "c3": "#DEDAD0",
-     "c4": "#C6C0B1",
-     "c5": "#9A9686",
-     "c6": "#6F7A8C",
-     "c7": "#475468",
-     "c8": "#1B365D",
-     "c9": "#0F1E33"
-    }
-   },
-   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Seal_of_Ohio.svg/500px-Seal_of_Ohio.svg.png",
-   "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Ohio_Statehouse_exterior.jpg/1920px-Ohio_Statehouse_exterior.jpg",
-   "accent": "#D4A62A",
-   "header": {
-    "backgroundColor": "#1B365D",
-    "color": "#FFFFFF",
-    "activeColor": "#D4A62A"
+    "activeColor": "#FA5400"
    }
   }
  },

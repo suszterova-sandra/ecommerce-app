@@ -5,14 +5,14 @@ export type ColorMode = "light" | "dark";
 /** Platform pages (Home, Control Center) without a tenant theme follow the light/dark switch. */
 const SHELL: Record<ColorMode, Record<string, string>> = {
   light: {
-    "--ws-primary": "#F2C318", "--ws-contrast": "#0B0D10", "--ws-bg": "#F6F7F9", "--ws-surface": "#FFFFFF",
+    "--ws-primary": "#D4F24A", "--ws-contrast": "#0B0D10", "--ws-bg": "#F6F7F9", "--ws-surface": "#FFFFFF",
     "--ws-panel": "#F1F3F6", "--ws-line": "#E3E6EB", "--ws-muted": "#6B7280", "--ws-text": "#14171C",
-    "--ws-accent": "#F2C318", "--ws-accent-contrast": "#0B0D10",
+    "--ws-accent": "#D4F24A", "--ws-accent-contrast": "#0B0D10",
   },
   dark: {
-    "--ws-primary": "#F2C318", "--ws-contrast": "#0B0D10", "--ws-bg": "#0B0D10", "--ws-surface": "#14171C",
+    "--ws-primary": "#D4F24A", "--ws-contrast": "#0B0D10", "--ws-bg": "#0B0D10", "--ws-surface": "#14171C",
     "--ws-panel": "#1B1F25", "--ws-line": "#2A3038", "--ws-muted": "#9BA3AE", "--ws-text": "#F2F4F7",
-    "--ws-accent": "#F2C318", "--ws-accent-contrast": "#0B0D10",
+    "--ws-accent": "#D4F24A", "--ws-accent-contrast": "#0B0D10",
   },
 };
 
@@ -22,7 +22,7 @@ export function themeVars(t?: Theme | null, mode: ColorMode = "light"): Record<s
   const p = t.palette || {};
   const c = p.complementary || {};
   return {
-    "--ws-primary": p.primary?.base || "#F2C318",
+    "--ws-primary": p.primary?.base || "#D4F24A",
     "--ws-contrast": p.primary?.contrast || "#0B0D10",
     "--ws-bg": c.c1 || "#F6F7F9",
     "--ws-surface": c.c0 || "#FFFFFF",
@@ -30,8 +30,8 @@ export function themeVars(t?: Theme | null, mode: ColorMode = "light"): Record<s
     "--ws-line": c.c3 || "#E3E6EB",
     "--ws-muted": c.c6 || "#6B7280",
     "--ws-text": c.c9 || c.c8 || "#14171C",
-    "--ws-accent": t.accent || p.primary?.base || "#F2C318",
-    "--ws-accent-contrast": isDark(t.accent || p.primary?.base || "#F2C318") ? "#FFFFFF" : "#0B0D10",
+    "--ws-accent": t.accent || p.primary?.base || "#D4F24A",
+    "--ws-accent-contrast": isDark(t.accent || p.primary?.base || "#D4F24A") ? "#FFFFFF" : "#0B0D10",
   };
 }
 

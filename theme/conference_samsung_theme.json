@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#1428A0",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#F5F6F8",
+      "c2": "#ECEEF3",
+      "c3": "#DDE1EA",
+      "c4": "#C3C9D6",
+      "c5": "#98A1B3",
+      "c6": "#6B7487",
+      "c7": "#474F60",
+      "c8": "#262B36",
+      "c9": "#0B0B0B"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#0B0B0B",
+      "lineColor": "#DDE1EA"
+    },
+    "borderColor": "#DDE1EA",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#0B0B0B"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#ECEEF3",
+    "axisColor": "#C3C9D6",
+    "axisLabelColor": "#7C8496",
+    "axisValueColor": "#474F60",
+    "legendValueColor": "#474F60",
+    "plotLineColor": "#C3C9D6",
+    "tooltipBackgroundColor": "#0B0B0B",
+    "tooltipBorderColor": "#0B0B0B",
+    "tooltipLabelColor": "#C3C9D6",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#262B36",
+    "nullValueColor": "#7C8496",
+    "hoverBackgroundColor": "#ECEEF3",
+    "loadingIconColor": "#1428A0",
+    "headerLabelColor": "#7C8496",
+    "headerHoverBackgroundColor": "#ECEEF3",
+    "subtotalBackgroundColor": "#ECEEF3",
+    "totalBackgroundColor": "#DDE1EA",
+    "totalValueColor": "#0B0B0B"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#0B0B0B",
+    "secondaryInfoColor": "#474F60",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#0B0B0B",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#1428A0",
+      "borderColor": "#0F1F80",
+      "item": {
+        "color": "#C9D1F5",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#1428A0",
+        "selectedBackgroundColor": "#FFFFFF"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#DDE1EA",
+      "filterButton": {
+        "backgroundColor": "#F5F6F8"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#0B0B0B",
+        "lineColor": "#DDE1EA"
+      },
+      "description": {
+        "color": "#474F60"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#F5F6F8",
+      "widget": {
+        "title": {
+          "color": "#0B0B0B",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#DDE1EA",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#C9D1F5",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#1428A0",
+        "borderColor": "#1428A0",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#FFFFFF",
+          "secondaryInfoColor": "#C9D1F5",
+          "value": {
+            "positiveColor": "#8FE3C0",
+            "negativeColor": "#FFB3BF"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#0B0B0B"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#1428A0",
+      "#00A3E0",
+      "#6C7BD8",
+      "#0B0B0B",
+      "#8A94A6",
+      "#B3C2FF",
+      "#2F9E7A",
+      "#F2A900",
+      "#E36A5C",
+      "#4A5BC4"
+    ],
+    "page": {
+      "backgroundColor": "#EFF1F5"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#EFF1F5"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#F7F8FA"
+        },
+        {
+          "id": "accent",
+          "color": "#1428A0"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#0B0B0B"
+        },
+        {
+          "id": "muted",
+          "color": "#474F60"
+        },
+        {
+          "id": "subtle",
+          "color": "#7C8496"
+        },
+        {
+          "id": "accent",
+          "color": "#1428A0"
+        },
+        {
+          "id": "inverse",
+          "color": "#EFF1F5"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#0B0B0B",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#0B0B0B"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#0B0B0B"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#0B0B0B"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#0B0B0B"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#0B0B0B"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#0B0B0B"
+        }
+      },
+      "paragraph": {
+        "color": "#474F60",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#0B0B0B"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#474F60"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#7C8496"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#1428A0",
+    "color": "#FFFFFF",
+    "activeColor": "#8FD3FF"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png",
+        "title": "Samsung logo",
+        "altText": "Samsung logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
+        "title": "Cover background",
+        "altText": "Samsung store display with Galaxy phones"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
+        "title": "Section background",
+        "altText": "Samsung store display with Galaxy phones"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
+        "title": "Cover background",
+        "altText": "Samsung store display with Galaxy phones"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://vivaldigroup.com/wp-content/uploads/2022/06/case_study-header-Samsung-large.jpg",
+        "title": "Section background",
+        "altText": "Samsung store display with Galaxy phones"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/1428A0/1428A0/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png",
+        "title": "Samsung logo",
+        "altText": "Samsung logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://upload.wikimedia.org/wikipedia/commons/0/00/Samsung_Orig_Wordmark_BLACK_RGB.png)"
+  }
+}
