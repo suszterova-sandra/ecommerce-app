@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#1C294A",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#FAF9F9",
+      "c2": "#F2EFEC",
+      "c3": "#E0E0E0",
+      "c4": "#C9CCD3",
+      "c5": "#9097A6",
+      "c6": "#6A7286",
+      "c7": "#35495E",
+      "c8": "#1C294A",
+      "c9": "#292929"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#292929",
+      "lineColor": "#E0E0E0"
+    },
+    "borderColor": "#E0E0E0",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#292929"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#F2EFEC",
+    "axisColor": "#C9CCD3",
+    "axisLabelColor": "#7E8594",
+    "axisValueColor": "#35495E",
+    "legendValueColor": "#35495E",
+    "plotLineColor": "#C9CCD3",
+    "tooltipBackgroundColor": "#292929",
+    "tooltipBorderColor": "#292929",
+    "tooltipLabelColor": "#C9CCD3",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#1C294A",
+    "nullValueColor": "#7E8594",
+    "hoverBackgroundColor": "#F2EFEC",
+    "loadingIconColor": "#D01F35",
+    "headerLabelColor": "#7E8594",
+    "headerHoverBackgroundColor": "#F2EFEC",
+    "subtotalBackgroundColor": "#F2EFEC",
+    "totalBackgroundColor": "#E0E0E0",
+    "totalValueColor": "#292929"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#292929",
+    "secondaryInfoColor": "#35495E",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#292929",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#1C294A",
+      "borderColor": "#141E37",
+      "item": {
+        "color": "#C7CEDD",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#1C294A",
+        "selectedBackgroundColor": "#80D14A"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#E0E0E0",
+      "filterButton": {
+        "backgroundColor": "#FAF9F9"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#292929",
+        "lineColor": "#E0E0E0"
+      },
+      "description": {
+        "color": "#35495E"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#FAF9F9",
+      "widget": {
+        "title": {
+          "color": "#292929",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#E0E0E0",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#C7CEDD",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#1C294A",
+        "borderColor": "#1C294A",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#FFFFFF",
+          "secondaryInfoColor": "#C7CEDD",
+          "value": {
+            "positiveColor": "#80D14A",
+            "negativeColor": "#FFB3BF"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#292929"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#1C294A",
+      "#D01F35",
+      "#80D14A",
+      "#C08726",
+      "#5B7DB1",
+      "#A9B4C8",
+      "#35495E",
+      "#F08A97",
+      "#4E8F2A",
+      "#8C7A55"
+    ],
+    "page": {
+      "backgroundColor": "#D6D0C7"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#D6D0C7"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#ECE8E2"
+        },
+        {
+          "id": "accent",
+          "color": "#D01F35"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#292929"
+        },
+        {
+          "id": "muted",
+          "color": "#35495E"
+        },
+        {
+          "id": "subtle",
+          "color": "#7E8594"
+        },
+        {
+          "id": "accent",
+          "color": "#D01F35"
+        },
+        {
+          "id": "inverse",
+          "color": "#D6D0C7"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#292929",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#292929"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#292929"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#292929"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#292929"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#292929"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#292929"
+        }
+      },
+      "paragraph": {
+        "color": "#35495E",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#292929"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#35495E"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#7E8594"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#1C294A",
+    "color": "#FFFFFF",
+    "activeColor": "#80D14A"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://chambermaster.blob.core.windows.net/images/customers/527/members/6857/logos/MEMBER_PAGE_HEADER/(Floor_Coverings_Intl_official_Logo_transparent_Back)_FCI_LOGO_RGB_clear_back_1637174394.png",
+        "title": "Floor Coverings International logo",
+        "altText": "Floor Coverings International logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://floorcoveringsinternational.com/img/upload/ikjbq92roxtczfnu.webp",
+        "title": "Cover background",
+        "altText": "Living room with wide-plank hardwood flooring"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://floorcoveringsinternational.com/img/upload/ikjbq92roxtczfnu.webp",
+        "title": "Section background",
+        "altText": "Living room with wide-plank hardwood flooring"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://floorcoveringsinternational.com/img/upload/ikjbq92roxtczfnu.webp",
+        "title": "Cover background",
+        "altText": "Living room with wide-plank hardwood flooring"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://floorcoveringsinternational.com/img/upload/ikjbq92roxtczfnu.webp",
+        "title": "Section background",
+        "altText": "Living room with wide-plank hardwood flooring"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/D01F35/D01F35/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://chambermaster.blob.core.windows.net/images/customers/527/members/6857/logos/MEMBER_PAGE_HEADER/(Floor_Coverings_Intl_official_Logo_transparent_Back)_FCI_LOGO_RGB_clear_back_1637174394.png",
+        "title": "Floor Coverings International logo",
+        "altText": "Floor Coverings International logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://floorcoveringsinternational.com/img/upload/fci_logo-white03b25d-1.png)"
+  }
+}

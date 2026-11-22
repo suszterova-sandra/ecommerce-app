@@ -5,6 +5,9 @@ Build publisher/ecommerce_business_report.json: a GoodData document (v2) over th
 
     python3 publisher/build_ecommerce_report.py
 
+Note: the live document was edited after this build (logo source {theme.logo}, accent rules), so the deployed
+version is ahead of this builder; patch text in place rather than re-deploying the whole content from here.
+
 Layout notes (same rules as build_report.py)
 - No small spacer elements; spacers only for large empty areas and the accent rules.
 - Page is near-black (theme page background), KPI tiles and chart cards are charcoal (CARD).
@@ -215,8 +218,8 @@ CHAPTERS = [
     ("04", "Orders & Fulfillment", "How orders move from placement to completion.",
      "Fulfillment Funnel  ·  Completed vs. Canceled"),
 ]
-REPORT_TITLE = "Ecommerce Business Report"
-SUMMARY = "Sales, products, customers and fulfillment across every tenant, in one view."
+REPORT_TITLE = "Franchise Business Report"
+SUMMARY = "Sales, products, customers and fulfillment across every franchise brand, in one view."
 
 
 def cover():
@@ -392,7 +395,8 @@ def build():
             "defaults": {
                 "page_size": "widescreen",
                 "takeaway": {"generation": {"instructions": (
-                    "Act as a professional data analyst for an ecommerce company. Write short messages, max 255 "
+                    "Act as a professional data analyst for a franchise brand on the FranConnect platform. Write short "
+                    "messages, max 255 "
                     "characters. Explain what stands behind the numbers (categories, brands, customer segments, "
                     "countries, order outcomes) more than restating the numbers themselves.")}},
             },

@@ -47,7 +47,7 @@ function WsCard({ w, isParent }: { w: OverviewWorkspace; isParent?: boolean }) {
             <>
               <dt>Data</dt>
               <dd>
-                <span className="tchip">All merchants</span>
+                <span className="tchip">All franchise brands</span>
               </dd>
             </>
           ) : (

@@ -1,6 +1,6 @@
 # Conference demo app
 
-React (Vite + TypeScript) shell around the **Ecommerce (Conference)** workspaces on
+React (Vite + TypeScript) shell around the **FranConnect** conference workspaces (ecommerce data) on
 `navy-blue-eagle.trial.cloud.gooddata.com`, built to show one parent (AkitaBox) with three branded tenants (Blessing Health System, Edgewood College, Ohio Statehouse), switching
 between users with their real permissions, the embedded AI report, and AI Hub agents.
 

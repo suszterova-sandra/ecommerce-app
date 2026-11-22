@@ -22,11 +22,11 @@ function Main() {
   const [mode, setMode] = useState<ColorMode>(initialMode);
   useEffect(() => {
     // a tenant user's whole platform carries their brand; the admin keeps the platform look
-    // dark mode is for the platform pages only; store pages and store users always show the store's brand
+    // dark mode is for the platform pages only; brand pages and brand users always show the brand's theme
     const onStorePage = route.view === "ws" || Boolean(brand.theme);
     applyTheme(route.view === "ws" ? themeOf(route.ws) : brand.theme || null, onStorePage ? "light" : mode);
-    applyChrome(brand.theme);
-  }, [route, themeOf, mode, brand.theme]);
+    applyChrome(brand.theme, persona.id === "admin");
+  }, [route, themeOf, mode, brand.theme, persona.id]);
   const changeMode = (m: ColorMode) => {
     localStorage.setItem("colorMode", m);
     setMode(m);

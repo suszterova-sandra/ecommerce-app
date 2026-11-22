@@ -18,12 +18,21 @@ Theme set "akitabox":
 - conference_edgewood         -> child "Edgewood College" = merchant__clothing (black, Edgewood red)
 - conference_ohio_statehouse  -> child "Ohio Statehouse" = merchant__electronics (navy, gold)
 
+Theme set "franconnect" (python3 theme/build_themes.py --set=franconnect --deploy; also renames the workspaces):
+- conference_franconnect     -> parent "FranConnect" (navy #004191, orange #F58220)
+- conference_fci             -> child "Floor Coverings International" = merchant__bigboxretailer (navy, red, green)
+- conference_paris_baguette  -> child "Paris Baguette" = merchant__clothing (navy #001871, gold #FFC600)
+- conference_arbys           -> child "Arby's" = merchant__electronics (Arby's red #DC0032)
+The ecommerce data and analytics stay as they are; only names, themes and palettes change.
+
 conference_dark_lime_theme.json is the structural template: every brand theme is derived from it by swapping
 colours, so they all stay structurally identical.
 The business report takes its colours from documents.colors (backgrounds/texts by id), so the same report
 renders in each workspace's brand. GoodData limits a theme to 15,000 characters: the parent's logo is an
-inline PNG (the SVG did not render); the brand assets are remote PNG/JPG/SVG URLs.
+inline PNG (the SVG did not render); the brand assets are remote PNG/JPG/SVG URLs. The report (documents) does not
+render data: URIs, so a brand "logo" must be a remote URL (it resolves {theme.assets.images.logo} from assets.logos).
 """
+import base64
 import json
 import os
 import sys
@@ -199,7 +208,101 @@ ORIGINAL = {
     },
 }
 
-SETS = {"original": ORIGINAL, "akitabox": AKITABOX}
+def inline_png(name):
+    """Small brand PNGs from theme/franconnect_assets, inlined: no public host serves a dark-on-light version."""
+    return "data:image/png;base64," + base64.b64encode((HERE / "franconnect_assets" / name).read_bytes()).decode()
+
+
+# FranConnect (franconnect.com) as the publisher, three of its case-study customers as tenants.
+# `ws_name` renames the workspace on --deploy. Logos: theme/franconnect_assets (sources in its README).
+FRANCONNECT = {
+    "conference_franconnect": {
+        "name": "Conference – FranConnect (parent)", "ws": PARENT_WS, "brand": "FranConnect",
+        "ws_name": "FranConnect",
+        "header": ("#004191", "#FFFFFF", "#F58220"),
+        "hex": {"page": "#FFFFFF", "card": "#F4F7FB", "panel": "#E1E8F0", "line": "#DBE4EE", "line2": "#CBD7E4",
+                "g5": "#8FA3BC", "g6": "#5E7491", "muted": "#3B4F6B", "g8": "#10213A", "text": "#00152F",
+                "subtle": "#6E819A", "accent": "#004191", "accent_hover": "#002E69", "accent_dim": "#F58220"},
+        "primary": "#004191",
+        "nav": {"bg": "#004191", "border": "#002E69", "item": "#C9D8EC", "selected": "#FFFFFF",
+                "selected_bg": "#F58220"},
+        "viz": ["#004191", "#F58220", "#3A9AD9", "#00152F", "#FFB066", "#8FB4DE", "#2F9E7A", "#8A9BB0",
+                "#B85A0E", "#5C6BC0"],
+        "rule": "F58220",
+        "kpi_tile": {"bg": "#004191", "border": "#004191", "title": "#C9D8EC", "value": "#FFFFFF",
+                     "secondary": "#C9D8EC", "good": "#8FE3C0", "bad": "#FFB3BF"},
+        "doc": {"page": "#F4F7FB", "card": "#FFFFFF", "panel": "#E1E8F0"},
+        "logo": "https://www.franconnect.com/wp-content/uploads/2020/02/FranConnect-Logo-PRIMARY-Color-Small.png",
+        "header_logo": inline_png("franconnect_logo_white.png"),
+        "bg": "https://www.franconnect.com/wp-content/uploads/2024/01/shutterstock_2168498267-scaled.jpg",
+        "bg_alt": "Franchise owner working on a laptop",
+    },
+    "conference_fci": {
+        "name": "Conference – Floor Coverings International", "ws": BLESSING_WS,  # merchant__bigboxretailer
+        "brand": "Floor Coverings International", "ws_name": "Floor Coverings International",
+        "header": ("#1C294A", "#FFFFFF", "#80D14A"),
+        "hex": {"page": "#FFFFFF", "card": "#FAF9F9", "panel": "#F2EFEC", "line": "#E0E0E0", "line2": "#C9CCD3",
+                "g5": "#9097A6", "g6": "#6A7286", "muted": "#35495E", "g8": "#1C294A", "text": "#292929",
+                "subtle": "#7E8594", "accent": "#D01F35", "accent_hover": "#A8182A", "accent_dim": "#80D14A"},
+        "primary": "#1C294A",
+        "nav": {"bg": "#1C294A", "border": "#141E37", "item": "#C7CEDD", "selected": "#1C294A",
+                "selected_bg": "#80D14A"},
+        "viz": ["#1C294A", "#D01F35", "#80D14A", "#C08726", "#5B7DB1", "#A9B4C8", "#35495E", "#F08A97",
+                "#4E8F2A", "#8C7A55"],
+        "rule": "D01F35",
+        "kpi_tile": {"bg": "#1C294A", "border": "#1C294A", "title": "#C7CEDD", "value": "#FFFFFF",
+                     "secondary": "#C7CEDD", "good": "#80D14A", "bad": "#FFB3BF"},
+        "doc": {"page": "#D6D0C7", "card": "#FFFFFF", "panel": "#ECE8E2"},  # darker stone report page
+        # official transparent logo, hosted on the Eastern Lake County Chamber member page (the report needs a remote URL)
+        "logo": "https://chambermaster.blob.core.windows.net/images/customers/527/members/6857/logos/MEMBER_PAGE_HEADER/(Floor_Coverings_Intl_official_Logo_transparent_Back)_FCI_LOGO_RGB_clear_back_1637174394.png",
+        "header_logo": "https://floorcoveringsinternational.com/img/upload/fci_logo-white03b25d-1.png",
+        "bg": "https://floorcoveringsinternational.com/img/upload/ikjbq92roxtczfnu.webp",
+        "bg_alt": "Living room with wide-plank hardwood flooring",
+    },
+    "conference_paris_baguette": {
+        "name": "Conference – Paris Baguette", "ws": EDGEWOOD_WS,  # merchant__clothing
+        "brand": "Paris Baguette", "ws_name": "Paris Baguette",
+        "header": ("#001871", "#FFFFFF", "#FFC600"),
+        "hex": {"page": "#FFFFFF", "card": "#FFFAF3", "panel": "#F3EEE4", "line": "#E6DFD2", "line2": "#CFC6B5",
+                "g5": "#9C9584", "g6": "#6E7391", "muted": "#3C4370", "g8": "#0E1144", "text": "#0E1144",
+                "subtle": "#7D8299", "accent": "#001871", "accent_hover": "#0E1144", "accent_dim": "#FFC600"},
+        "primary": "#001871",
+        "nav": {"bg": "#001871", "border": "#0E1144", "item": "#C9CDEB", "selected": "#001871",
+                "selected_bg": "#FFC600"},
+        "viz": ["#001871", "#FFC600", "#4A6FD1", "#B5835A", "#0E1144", "#9DB0E8", "#2F9E7A", "#E36A5C",
+                "#7D8299", "#E8D9B5"],
+        "rule": "FFC600",
+        "kpi_tile": {"bg": "#001871", "border": "#001871", "title": "#C9CDEB", "value": "#FFC600",
+                     "secondary": "#C9CDEB", "good": "#8FE3C0", "bad": "#FFB3BF"},
+        "doc": {"page": "#DDD0BB", "card": "#FFFFFF", "panel": "#F0E8DA"},  # darker sand report page
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Paris_Baguette_logo.svg/960px-Paris_Baguette_logo.svg.png",
+        "header_logo": "https://parisbaguette.com/wp-content/uploads/2024/04/paris-baguette-logo.svg",
+        "bg": "https://parisbaguette.com/wp-content/uploads/2025/01/2024_0910_ParisBaguette_DW9_6560-1536x1024.jpg",
+        "bg_alt": "Croissants, fruit danishes and coffee at Paris Baguette",
+    },
+    "conference_arbys": {
+        "name": "Conference – Arby's", "ws": OHIO_WS,  # merchant__electronics
+        "brand": "Arby's", "ws_name": "Arby's",
+        "header": ("#FFFFFF", "#000000", "#DC0032"),  # white top bar with the red hat logo, like arbys.com
+        "hex": {"page": "#FFFFFF", "card": "#FFFBF5", "panel": "#FCF2F2", "line": "#EFE3E3", "line2": "#D9C7C7",
+                "g5": "#A39494", "g6": "#737373", "muted": "#4A4040", "g8": "#2B2222", "text": "#000000",
+                "subtle": "#8A7F7F", "accent": "#DC0032", "accent_hover": "#B0082B", "accent_dim": "#DC0032"},
+        "primary": "#DC0032",
+        "nav": {"bg": "#830621", "border": "#5E0418", "item": "#F5CBD3", "selected": "#830621",
+                "selected_bg": "#FFFFFF"},
+        "viz": ["#DC0032", "#000000", "#F28C28", "#830621", "#737373", "#F5A3B3", "#328500", "#C9A27E",
+                "#4A90D9", "#FFC857"],
+        "rule": "DC0032",
+        "kpi_tile": {"bg": "#DC0032", "border": "#DC0032", "title": "#FCD6DE", "value": "#FFFFFF",
+                     "secondary": "#FCD6DE", "good": "#B8F0D8", "bad": "#FFE08A"},
+        "doc": {"page": "#FFFBF5", "card": "#FFFFFF", "panel": "#FCF2F2"},
+        "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Arby%27s_logo.svg/960px-Arby%27s_logo.svg.png",
+        "bg": "https://images.ctfassets.net/30q5w5l98nbx/3iGaTQDizG4yk5VfEteTjL/8703abaac9a58eb846426821b760d4d2/Website_App_Favorites_2025.jpg",
+        "bg_alt": "Arby's roast beef sandwich, gyro, curly fries and shake",
+    },
+}
+
+SETS = {"original": ORIGINAL, "akitabox": AKITABOX, "franconnect": FRANCONNECT}
 
 
 def doc_colors(hexes):
@@ -331,6 +434,14 @@ def main():
                   "| ACTIVE_THEME", activate(ws, "ACTIVE_THEME", {"id": tid, "type": "theme"}),
                   "| ACTIVE_COLOR_PALETTE", activate(ws, "ACTIVE_COLOR_PALETTE", {"id": tid, "type": "colorPalette"}),
                   f"-> {ws}")
+            ws_name = tenants.get(tid, {}).get("ws_name")
+            if ws_name:
+                code, cur = api("GET", f"/api/v1/entities/workspaces/{ws}")
+                if code == 200 and cur["data"]["attributes"].get("name") != ws_name:
+                    cur["data"]["attributes"]["name"] = ws_name
+                    body = {"data": {k: cur["data"][k] for k in ("id", "type", "attributes", "relationships")
+                                     if k in cur["data"]}}
+                    print("  rename", api("PUT", f"/api/v1/entities/workspaces/{ws}", body)[0], "->", ws_name)
 
 
 if __name__ == "__main__":

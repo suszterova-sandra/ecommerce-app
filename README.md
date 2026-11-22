@@ -1,14 +1,15 @@
-# Ecommerce Platform: conference demo
+# FranConnect: conference demo
 
-GoodData Cloud demo on `navy-blue-eagle.trial.cloud.gooddata.com`: one parent workspace (**Ecommerce Platform**)
-with three branded tenants (**Home & Living Store**, **Fashion Store**, **Electronics Store**), and a React portal
+GoodData Cloud demo on `navy-blue-eagle.trial.cloud.gooddata.com`: one parent workspace (**FranConnect**)
+with three branded tenants, all FranConnect case-study customers (**Floor Coverings International**, **Paris Baguette**,
+**Arby's**), on unchanged ecommerce data, and a React portal
 that switches between an admin, an Analyze user and a View user with their real permissions.
 
 | Folder | What it is |
 |---|---|
 | `demo_app/` | The portal: Vite + React UI and a small Python backend. Run steps in [demo_app/README.md](demo_app/README.md). |
 | `analytics/` | Analytics as code of the parent workspace (`gooddata.yaml` profile). |
-| `theme/` | Branded themes and chart palettes per workspace (`build_themes.py --deploy`). |
+| `theme/` | Branded themes and chart palettes per workspace (`build_themes.py --set=franconnect --deploy`; also `original`, `akitabox`). |
 | `publisher/` | The AI business report document and its builder. |
 | `localization/` | Metadata translations (de-DE, fr-FR). |
 

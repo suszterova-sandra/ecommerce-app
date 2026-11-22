@@ -21,9 +21,9 @@ export interface Theme {
   palette: Palette;
   logo: string | null;
   cover: string | null;
-  /** Highlight colour of the brand (theme header activeColor): AkitaBox gold, Edgewood red, ... */
+  /** Highlight colour of the brand (theme header activeColor): FranConnect orange, Paris Baguette gold, ... */
   accent?: string | null;
-  /** Theme top bar colours; a dark one also paints the admin's sidebar (AkitaBox navy) */
+  /** Theme top bar colours; a dark one also paints the admin's sidebar (FranConnect navy) */
   header?: { backgroundColor?: string; color?: string; activeColor?: string } | null;
 }
 

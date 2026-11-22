@@ -11,7 +11,7 @@ export function Topbar({ mode, onSetMode }: { mode: ColorMode; onSetMode: (m: Co
   const chatbot = useChatbot();
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-  // dark mode belongs to the platform pages; tenant pages and tenant users always carry the store's brand
+  // dark mode belongs to the platform pages; tenant pages and tenant users always carry the tenant's brand
   const darkAvailable = !brand.theme && route.view !== "ws";
 
   useEffect(() => {

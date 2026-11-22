@@ -1,4 +1,4 @@
-"""Conference demo app: localhost shell around the Ecommerce (Conference) workspaces.
+"""Conference demo app: localhost shell around the FranConnect conference workspaces (ecommerce data).
 
     python3 demo_app/server.py            # backend on :8765
     cd demo_app/web && npm run dev        # React UI on http://localhost:5173 (proxies /gd and /app here)
@@ -48,9 +48,9 @@ PERSONAS = [
     {"id": "admin", "userId": "sandra.suszterova", "name": "Sandra Suszterova", "initials": "SS",
      "role": "Organization admin", "tagline": "Manages the parent workspace, tenants, themes and AI agents"},
     {"id": "analyze", "userId": "sas.analyze.user", "name": "Analyze User", "initials": "AU",
-     "role": "Analyst · Edgewood College", "tagline": "Explores data, builds visualizations and metrics"},
+     "role": "Analyst · Paris Baguette", "tagline": "Explores data, builds visualizations and metrics"},
     {"id": "view", "userId": "sas.view.user", "name": "View User", "initials": "VU",
-     "role": "Viewer · Edgewood College", "tagline": "Consumes dashboards, reports and AI summaries"},
+     "role": "Viewer · Paris Baguette", "tagline": "Consumes dashboards, reports and AI summaries"},
 ]
 
 

@@ -2,8 +2,8 @@
     "type": "document",
     "id": "ecommerce_business_report",
     "version": "2",
-    "title": "Ecommerce Business Report",
-    "description": "Sales, products, customers and fulfillment across every tenant, in one view.",
+    "title": "Franchise Business Report",
+    "description": "Sales, products, customers and fulfillment across every franchise brand, in one view.",
     "period": {
         "granularity": "MONTH",
         "from": -5,
@@ -14,7 +14,7 @@
             "page_size": "widescreen",
             "takeaway": {
                 "generation": {
-                    "instructions": "Act as a professional data analyst for an ecommerce company. Write short messages, max 255 characters. Explain what stands behind the numbers (categories, brands, customer segments, countries, order outcomes) more than restating the numbers themselves."
+                    "instructions": "Act as a professional data analyst for a franchise brand on the FranConnect platform. Write short messages, max 255 characters. Explain what stands behind the numbers (categories, brands, customer segments, countries, order outcomes) more than restating the numbers themselves."
                 }
             }
         },
@@ -95,7 +95,7 @@
                                                         {
                                                             "type": "title",
                                                             "id": "cover_title",
-                                                            "markdown": "**Ecommerce Business Report**",
+                                                            "markdown": "**Franchise Business Report**",
                                                             "style": {
                                                                 "text_style": "largeText",
                                                                 "text_color": "{theme.colors.texts.default}",
@@ -118,7 +118,7 @@
                                                         {
                                                             "type": "text",
                                                             "id": "cover_meta",
-                                                            "markdown": "Sales, products, customers and fulfillment across every tenant, in one view.",
+                                                            "markdown": "Sales, products, customers and fulfillment across every franchise brand, in one view.",
                                                             "style": {
                                                                 "text_style": "normalText",
                                                                 "text_color": "{theme.colors.texts.muted}",

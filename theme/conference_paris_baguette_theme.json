@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#001871",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#FFFAF3",
+      "c2": "#F3EEE4",
+      "c3": "#E6DFD2",
+      "c4": "#CFC6B5",
+      "c5": "#9C9584",
+      "c6": "#6E7391",
+      "c7": "#3C4370",
+      "c8": "#0E1144",
+      "c9": "#0E1144"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#0E1144",
+      "lineColor": "#E6DFD2"
+    },
+    "borderColor": "#E6DFD2",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#0E1144"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#F3EEE4",
+    "axisColor": "#CFC6B5",
+    "axisLabelColor": "#7D8299",
+    "axisValueColor": "#3C4370",
+    "legendValueColor": "#3C4370",
+    "plotLineColor": "#CFC6B5",
+    "tooltipBackgroundColor": "#0E1144",
+    "tooltipBorderColor": "#0E1144",
+    "tooltipLabelColor": "#CFC6B5",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#0E1144",
+    "nullValueColor": "#7D8299",
+    "hoverBackgroundColor": "#F3EEE4",
+    "loadingIconColor": "#001871",
+    "headerLabelColor": "#7D8299",
+    "headerHoverBackgroundColor": "#F3EEE4",
+    "subtotalBackgroundColor": "#F3EEE4",
+    "totalBackgroundColor": "#E6DFD2",
+    "totalValueColor": "#0E1144"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#0E1144",
+    "secondaryInfoColor": "#3C4370",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#0E1144",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#001871",
+      "borderColor": "#0E1144",
+      "item": {
+        "color": "#C9CDEB",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#001871",
+        "selectedBackgroundColor": "#FFC600"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#E6DFD2",
+      "filterButton": {
+        "backgroundColor": "#FFFAF3"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#0E1144",
+        "lineColor": "#E6DFD2"
+      },
+      "description": {
+        "color": "#3C4370"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#FFFAF3",
+      "widget": {
+        "title": {
+          "color": "#0E1144",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#E6DFD2",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#C9CDEB",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#001871",
+        "borderColor": "#001871",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#FFC600",
+          "secondaryInfoColor": "#C9CDEB",
+          "value": {
+            "positiveColor": "#8FE3C0",
+            "negativeColor": "#FFB3BF"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#0E1144"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#001871",
+      "#FFC600",
+      "#4A6FD1",
+      "#B5835A",
+      "#0E1144",
+      "#9DB0E8",
+      "#2F9E7A",
+      "#E36A5C",
+      "#7D8299",
+      "#E8D9B5"
+    ],
+    "page": {
+      "backgroundColor": "#DDD0BB"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#DDD0BB"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#F0E8DA"
+        },
+        {
+          "id": "accent",
+          "color": "#001871"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#0E1144"
+        },
+        {
+          "id": "muted",
+          "color": "#3C4370"
+        },
+        {
+          "id": "subtle",
+          "color": "#7D8299"
+        },
+        {
+          "id": "accent",
+          "color": "#001871"
+        },
+        {
+          "id": "inverse",
+          "color": "#DDD0BB"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#0E1144",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#0E1144"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#0E1144"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#0E1144"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#0E1144"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#0E1144"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#0E1144"
+        }
+      },
+      "paragraph": {
+        "color": "#3C4370",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#0E1144"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#3C4370"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#7D8299"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#001871",
+    "color": "#FFFFFF",
+    "activeColor": "#FFC600"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Paris_Baguette_logo.svg/960px-Paris_Baguette_logo.svg.png",
+        "title": "Paris Baguette logo",
+        "altText": "Paris Baguette logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://parisbaguette.com/wp-content/uploads/2025/01/2024_0910_ParisBaguette_DW9_6560-1536x1024.jpg",
+        "title": "Cover background",
+        "altText": "Croissants, fruit danishes and coffee at Paris Baguette"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://parisbaguette.com/wp-content/uploads/2025/01/2024_0910_ParisBaguette_DW9_6560-1536x1024.jpg",
+        "title": "Section background",
+        "altText": "Croissants, fruit danishes and coffee at Paris Baguette"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://parisbaguette.com/wp-content/uploads/2025/01/2024_0910_ParisBaguette_DW9_6560-1536x1024.jpg",
+        "title": "Cover background",
+        "altText": "Croissants, fruit danishes and coffee at Paris Baguette"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://parisbaguette.com/wp-content/uploads/2025/01/2024_0910_ParisBaguette_DW9_6560-1536x1024.jpg",
+        "title": "Section background",
+        "altText": "Croissants, fruit danishes and coffee at Paris Baguette"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/FFC600/FFC600/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Paris_Baguette_logo.svg/960px-Paris_Baguette_logo.svg.png",
+        "title": "Paris Baguette logo",
+        "altText": "Paris Baguette logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://parisbaguette.com/wp-content/uploads/2024/04/paris-baguette-logo.svg)"
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#DC0032",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#FFFBF5",
+      "c2": "#FCF2F2",
+      "c3": "#EFE3E3",
+      "c4": "#D9C7C7",
+      "c5": "#A39494",
+      "c6": "#737373",
+      "c7": "#4A4040",
+      "c8": "#2B2222",
+      "c9": "#000000"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#000000",
+      "lineColor": "#EFE3E3"
+    },
+    "borderColor": "#EFE3E3",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#000000"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#FCF2F2",
+    "axisColor": "#D9C7C7",
+    "axisLabelColor": "#8A7F7F",
+    "axisValueColor": "#4A4040",
+    "legendValueColor": "#4A4040",
+    "plotLineColor": "#D9C7C7",
+    "tooltipBackgroundColor": "#000000",
+    "tooltipBorderColor": "#000000",
+    "tooltipLabelColor": "#D9C7C7",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#2B2222",
+    "nullValueColor": "#8A7F7F",
+    "hoverBackgroundColor": "#FCF2F2",
+    "loadingIconColor": "#DC0032",
+    "headerLabelColor": "#8A7F7F",
+    "headerHoverBackgroundColor": "#FCF2F2",
+    "subtotalBackgroundColor": "#FCF2F2",
+    "totalBackgroundColor": "#EFE3E3",
+    "totalValueColor": "#000000"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#000000",
+    "secondaryInfoColor": "#4A4040",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#000000",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#830621",
+      "borderColor": "#5E0418",
+      "item": {
+        "color": "#F5CBD3",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#830621",
+        "selectedBackgroundColor": "#FFFFFF"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#EFE3E3",
+      "filterButton": {
+        "backgroundColor": "#FFFBF5"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#000000",
+        "lineColor": "#EFE3E3"
+      },
+      "description": {
+        "color": "#4A4040"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#FFFBF5",
+      "widget": {
+        "title": {
+          "color": "#000000",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#EFE3E3",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#FCD6DE",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#DC0032",
+        "borderColor": "#DC0032",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#FFFFFF",
+          "secondaryInfoColor": "#FCD6DE",
+          "value": {
+            "positiveColor": "#B8F0D8",
+            "negativeColor": "#FFE08A"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#000000"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#DC0032",
+      "#000000",
+      "#F28C28",
+      "#830621",
+      "#737373",
+      "#F5A3B3",
+      "#328500",
+      "#C9A27E",
+      "#4A90D9",
+      "#FFC857"
+    ],
+    "page": {
+      "backgroundColor": "#FFFBF5"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#FFFBF5"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#FCF2F2"
+        },
+        {
+          "id": "accent",
+          "color": "#DC0032"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#000000"
+        },
+        {
+          "id": "muted",
+          "color": "#4A4040"
+        },
+        {
+          "id": "subtle",
+          "color": "#8A7F7F"
+        },
+        {
+          "id": "accent",
+          "color": "#DC0032"
+        },
+        {
+          "id": "inverse",
+          "color": "#FFFBF5"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#000000",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#000000"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#000000"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#000000"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#000000"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#000000"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#000000"
+        }
+      },
+      "paragraph": {
+        "color": "#4A4040",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#000000"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#4A4040"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#8A7F7F"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#000000",
+    "activeColor": "#DC0032"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Arby%27s_logo.svg/960px-Arby%27s_logo.svg.png",
+        "title": "Arby's logo",
+        "altText": "Arby's logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://images.ctfassets.net/30q5w5l98nbx/3iGaTQDizG4yk5VfEteTjL/8703abaac9a58eb846426821b760d4d2/Website_App_Favorites_2025.jpg",
+        "title": "Cover background",
+        "altText": "Arby's roast beef sandwich, gyro, curly fries and shake"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://images.ctfassets.net/30q5w5l98nbx/3iGaTQDizG4yk5VfEteTjL/8703abaac9a58eb846426821b760d4d2/Website_App_Favorites_2025.jpg",
+        "title": "Section background",
+        "altText": "Arby's roast beef sandwich, gyro, curly fries and shake"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://images.ctfassets.net/30q5w5l98nbx/3iGaTQDizG4yk5VfEteTjL/8703abaac9a58eb846426821b760d4d2/Website_App_Favorites_2025.jpg",
+        "title": "Cover background",
+        "altText": "Arby's roast beef sandwich, gyro, curly fries and shake"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://images.ctfassets.net/30q5w5l98nbx/3iGaTQDizG4yk5VfEteTjL/8703abaac9a58eb846426821b760d4d2/Website_App_Favorites_2025.jpg",
+        "title": "Section background",
+        "altText": "Arby's roast beef sandwich, gyro, curly fries and shake"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/DC0032/DC0032/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Arby%27s_logo.svg/960px-Arby%27s_logo.svg.png",
+        "title": "Arby's logo",
+        "altText": "Arby's logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Arby%27s_logo.svg/960px-Arby%27s_logo.svg.png)"
+  }
+}

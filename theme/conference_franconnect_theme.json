@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#004191",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#F4F7FB",
+      "c2": "#E1E8F0",
+      "c3": "#DBE4EE",
+      "c4": "#CBD7E4",
+      "c5": "#8FA3BC",
+      "c6": "#5E7491",
+      "c7": "#3B4F6B",
+      "c8": "#10213A",
+      "c9": "#00152F"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#00152F",
+      "lineColor": "#DBE4EE"
+    },
+    "borderColor": "#DBE4EE",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#00152F"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#E1E8F0",
+    "axisColor": "#CBD7E4",
+    "axisLabelColor": "#6E819A",
+    "axisValueColor": "#3B4F6B",
+    "legendValueColor": "#3B4F6B",
+    "plotLineColor": "#CBD7E4",
+    "tooltipBackgroundColor": "#00152F",
+    "tooltipBorderColor": "#00152F",
+    "tooltipLabelColor": "#CBD7E4",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#10213A",
+    "nullValueColor": "#6E819A",
+    "hoverBackgroundColor": "#E1E8F0",
+    "loadingIconColor": "#004191",
+    "headerLabelColor": "#6E819A",
+    "headerHoverBackgroundColor": "#E1E8F0",
+    "subtotalBackgroundColor": "#E1E8F0",
+    "totalBackgroundColor": "#DBE4EE",
+    "totalValueColor": "#00152F"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#00152F",
+    "secondaryInfoColor": "#3B4F6B",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#00152F",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#004191",
+      "borderColor": "#002E69",
+      "item": {
+        "color": "#C9D8EC",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#FFFFFF",
+        "selectedBackgroundColor": "#F58220"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#DBE4EE",
+      "filterButton": {
+        "backgroundColor": "#F4F7FB"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#00152F",
+        "lineColor": "#DBE4EE"
+      },
+      "description": {
+        "color": "#3B4F6B"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#F4F7FB",
+      "widget": {
+        "title": {
+          "color": "#00152F",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#DBE4EE",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#C9D8EC",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#004191",
+        "borderColor": "#004191",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#FFFFFF",
+          "secondaryInfoColor": "#C9D8EC",
+          "value": {
+            "positiveColor": "#8FE3C0",
+            "negativeColor": "#FFB3BF"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#00152F"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#004191",
+      "#F58220",
+      "#3A9AD9",
+      "#00152F",
+      "#FFB066",
+      "#8FB4DE",
+      "#2F9E7A",
+      "#8A9BB0",
+      "#B85A0E",
+      "#5C6BC0"
+    ],
+    "page": {
+      "backgroundColor": "#F4F7FB"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#F4F7FB"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#E1E8F0"
+        },
+        {
+          "id": "accent",
+          "color": "#004191"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#00152F"
+        },
+        {
+          "id": "muted",
+          "color": "#3B4F6B"
+        },
+        {
+          "id": "subtle",
+          "color": "#6E819A"
+        },
+        {
+          "id": "accent",
+          "color": "#004191"
+        },
+        {
+          "id": "inverse",
+          "color": "#F4F7FB"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#00152F",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#00152F"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#00152F"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#00152F"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#00152F"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#00152F"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#00152F"
+        }
+      },
+      "paragraph": {
+        "color": "#3B4F6B",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#00152F"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#3B4F6B"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#6E819A"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#004191",
+    "color": "#FFFFFF",
+    "activeColor": "#F58220"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://www.franconnect.com/wp-content/uploads/2020/02/FranConnect-Logo-PRIMARY-Color-Small.png",
+        "title": "FranConnect logo",
+        "altText": "FranConnect logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://www.franconnect.com/wp-content/uploads/2024/01/shutterstock_2168498267-scaled.jpg",
+        "title": "Cover background",
+        "altText": "Franchise owner working on a laptop"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://www.franconnect.com/wp-content/uploads/2024/01/shutterstock_2168498267-scaled.jpg",
+        "title": "Section background",
+        "altText": "Franchise owner working on a laptop"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://www.franconnect.com/wp-content/uploads/2024/01/shutterstock_2168498267-scaled.jpg",
+        "title": "Cover background",
+        "altText": "Franchise owner working on a laptop"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://www.franconnect.com/wp-content/uploads/2024/01/shutterstock_2168498267-scaled.jpg",
+        "title": "Section background",
+        "altText": "Franchise owner working on a laptop"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/F58220/F58220/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://www.franconnect.com/wp-content/uploads/2020/02/FranConnect-Logo-PRIMARY-Color-Small.png",
+        "title": "FranConnect logo",
+        "altText": "FranConnect logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAAAoBAMAAACY1axfAAAAMFBMVEUAAAD+/v7//v7////ZXgD+/v7qYADXXgLZXQD/AAC/PwCuXQzjmmf//wB/fwDjhTwpN4ACAAAAEHRSTlMA+A2f/F0TZ6QBBAP+AQKCGRBL8QAABGBJREFUeNqtlk9sVEUYwH/7vd1uC2Xb2UpgI32dnUKMiabdGjGBAJVs9FKlf+LFk4mJZw7GgycSE0w4eTCcPHAyMY2mAc/YIAkJWLJ4wIjwOn0FBVp3t0XbUrezHt7utvw5lfcd5s18M+/3vvlmvu97ALAzfZqzXxGvtKWLp2mzceESAHRsHMXLTX5wLh6oB0BtZt3W/33r+49/iRHKmtynvnLwmx++iwMq0WOwCtTufzb+SXw+ZWftCABDZ86un4wLytTlEgDHP2+7OhjT9vnz6+h58csPD34Ul6Udq5+WGkeX+/bMyVigooO2ow1Vcu+5WCwV35qAYpOaf+Xki/tU/HCiot7sGY50tT0lQIx5EUvFv/eaBXjn9enoS9ProLeZCsS3Hoh/r7MKwOztExZA7v6HLI13PKhvA1qvkkBcqrNl9z9uGEheWkEXphNVtw2oIRDxN5nJTO+uU0AdJJwWvZ3d64GqJP17LabsTC3y3oVTAOTLR6aMEwIDAcYJziIaZ4k0AIFou6nCgBOLJqWa0qOj/uXiuzvAUxoETOuWCGhAa1paHakQQBptoZtEoXXIx84PRP0LX/y8xonp/b03dj1aXujPJK/pNzY821sKKdB73k1Yuaa9rqXueskbnCnIAnjdck2TyshCajE5nFBN5ttTA02+q616nZA4drkm3WXIl1XokIruskhXogz5cuGSAzWX0ZZ8db6TRpvos5sJhfzUiZbN/XvYGMZoaojDMG9xop0/b+W4I4NhjpITTUawhvlghKKesyPs1xjE0HDoEGMt5w5B5NMxNWRS44z1UOjRnhrNq1FMSmXJq9ExpUVlPTXEWI+oLJ7SajeiUd14HdFlutP/W8vm66aC5FcPrebCoOJf4ff0Wq76oH+FV8Mb+SC/emz9bhsqfKDXEo/TA+v3H6+15zt6Vg7Zei4T5tckF21fFvrLW5gBYLkexb+ZGIQoaq3owDh+jY48imNx4DFbWQR8F2oLNqkt4IYqTzEbYvE6L0a9Rol0CZzYTiA6AtdInVBCtoyAWTX8PCb4IxSHW9HirAlDhGdirXdmZsYSiLGAlka+n717/HlMZDoxOdUaOT/QkAmCJ7EbhKBBgsAHF8hcY+J2qIpF9TQTC9IqhCWyZqmPe+Z9SlsXOV03Bx75um76l0HGxc82qd2Tk8HTTHxdb8UEc8xWnBuuVaaTTyRbqVJZdFKlUvY09Z8kvNOkzg6ZZ5hIFVtsRIj2s5APfwQO69LWYjynIW/nNBx23YhXN8HLq9HUcrurblaEXJ2H6Wp5eV/6yt7KjvZqPfdXWO5N3+zLPBz5+2ol215O5Norub+Q9nLfrX3pm31dt0YqV5aXRhYBw4FmKD2nKjUTUXNgkNad2dxPNKFBoyPzDalClPxkyzoDxjTuP0YjRkeaqCcGjBajEdOskhK9oBsVQCLqqCY+ES1jSimVjROKaCaUUruFmKn9Tzo1FjEcUErrGP+kgcD88VJMLv0fz4+Gw+EaaBoAAAAASUVORK5CYII=)"
+  }
+}
