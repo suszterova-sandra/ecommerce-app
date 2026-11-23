@@ -691,7 +691,10 @@ body, .sidebar, .main, .topbar, .card, .composer { transition: background-color 
 .ws-logo:has(img) { width: auto; min-width: 40px; max-width: 120px; padding: 0 6px; }
 .ws-logo img { width: auto; max-width: 108px; }
 .hero .logo:has(img) { width: auto; min-width: 72px; max-width: 220px; }
-.ws-card .logo:has(img) { width: auto; min-width: 48px; max-width: 150px; padding: 0 8px; }
+.ws-card .logo:has(img) { width: auto; min-width: 56px; max-width: 176px; height: 60px; bottom: -30px; padding: 8px 12px; box-shadow: 0 2px 8px rgba(0,0,0,.10); }
+.ws-card .logo img { width: auto; height: 44px; max-width: 150px; max-height: none; }
+.ws-card:has(.logo img) .body { padding-top: 42px; }
+.hero .logo img { width: auto; height: 52px; max-width: 196px; max-height: none; }
 .ws-bar .ws-logo img { width: auto; max-width: 96px; height: 22px; }
 
 /* dark brand sidebar (FranConnect navy for the admin): light borders on logo tiles, readable children lines */
