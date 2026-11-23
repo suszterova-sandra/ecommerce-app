@@ -229,3 +229,7 @@ filters:
   product_rating_filter:
     type: attribute_filter
     using: label/product_rating
+
+permissions:
+  VIEW:
+    all: true
