@@ -74,8 +74,9 @@ def attr(lid, label):
 
 def viz(kind, measures, view=(), props=None):
     buckets = [{"localIdentifier": "measures", "items": list(measures)}]
-    if view:
-        buckets.append({"localIdentifier": "view" if kind != "local:table" else "attribute", "items": list(view)})
+    if view:  # the bucket name depends on the chart type: line charts read their axis from "trend"
+        name = {"local:table": "attribute", "local:line": "trend", "local:area": "view"}.get(kind, "view")
+        buckets.append({"localIdentifier": name, "items": list(view)})
     return {"version": "2", "visualizationUrl": kind, "buckets": buckets, "sorts": [], "filters": [],
             "properties": {"controls": props or {}}}
 
