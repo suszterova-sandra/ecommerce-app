@@ -24,6 +24,13 @@
      }
     },
     {
+     "name": "CREATE_DOCUMENT",
+     "assignee": {
+      "id": "analyze_group_id",
+      "type": "userGroup"
+     }
+    },
+    {
      "name": "CREATE_METRIC",
      "assignee": {
       "id": "analyze_group_id",
@@ -91,8 +98,16 @@
      "title": "test"
     },
     {
+     "id": "my_measure_explorer",
+     "title": "My Measure Explorer (copy)"
+    },
+    {
      "id": "customers",
      "title": "3. Customers"
+    },
+    {
+     "id": "measure_explorer",
+     "title": "5. Measure Explorer"
     },
     {
      "id": "overview",
@@ -121,6 +136,10 @@
      "title": "3. Customers"
     },
     {
+     "id": "measure_explorer",
+     "title": "5. Measure Explorer"
+    },
+    {
      "id": "overview",
      "title": "1. Overview"
     },
@@ -147,6 +166,10 @@
      "title": "3. Customers"
     },
     {
+     "id": "measure_explorer",
+     "title": "5. Measure Explorer"
+    },
+    {
      "id": "overview",
      "title": "1. Overview"
     },
@@ -171,6 +194,10 @@
     {
      "id": "customers",
      "title": "3. Customers"
+    },
+    {
+     "id": "measure_explorer",
+     "title": "5. Measure Explorer"
     },
     {
      "id": "overview",
@@ -200,6 +227,45 @@
   }
  ],
  "themes": {
+  "conference_cedia_expo": {
+   "id": "conference_cedia_expo",
+   "name": "Conference \u2013 CEDIA Expo",
+   "palette": {
+    "primary": {
+     "base": "#0077C8",
+     "contrast": "#FFFFFF"
+    },
+    "error": {
+     "base": "#D1435B"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#2F9E7A"
+    },
+    "complementary": {
+     "c0": "#FFFFFF",
+     "c1": "#F6F7F8",
+     "c2": "#ECEEF1",
+     "c3": "#DFE2E6",
+     "c4": "#C5CAD1",
+     "c5": "#979DA6",
+     "c6": "#6B717A",
+     "c7": "#444950",
+     "c8": "#222222",
+     "c9": "#111111"
+    }
+   },
+   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_logo.png",
+   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_panel.jpg",
+   "accent": "#00A3E0",
+   "header": {
+    "backgroundColor": "#111111",
+    "color": "#FFFFFF",
+    "activeColor": "#00A3E0"
+   }
+  },
   "conference_nynow": {
    "id": "conference_nynow",
    "name": "Conference \u2013 NY NOW",
@@ -276,45 +342,6 @@
     "backgroundColor": "#3B4223",
     "color": "#ECE9D8",
     "activeColor": "#F5C518"
-   }
-  },
-  "conference_cedia_expo": {
-   "id": "conference_cedia_expo",
-   "name": "Conference \u2013 CEDIA Expo",
-   "palette": {
-    "primary": {
-     "base": "#0077C8",
-     "contrast": "#FFFFFF"
-    },
-    "error": {
-     "base": "#D1435B"
-    },
-    "warning": {
-     "base": "#FBBF24"
-    },
-    "success": {
-     "base": "#2F9E7A"
-    },
-    "complementary": {
-     "c0": "#FFFFFF",
-     "c1": "#F6F7F8",
-     "c2": "#ECEEF1",
-     "c3": "#DFE2E6",
-     "c4": "#C5CAD1",
-     "c5": "#979DA6",
-     "c6": "#6B717A",
-     "c7": "#444950",
-     "c8": "#222222",
-     "c9": "#111111"
-    }
-   },
-   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_logo.png",
-   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_panel.jpg",
-   "accent": "#00A3E0",
-   "header": {
-    "backgroundColor": "#111111",
-    "color": "#FFFFFF",
-    "activeColor": "#00A3E0"
    }
   },
   "conference_emerald": {
