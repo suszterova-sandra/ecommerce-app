@@ -26,8 +26,9 @@ interface Ctx {
   /** True once GoodData has this user's language; embeds wait for it so they load only once. */
   localeReady: boolean;
   t: (key: Key, vars?: Record<string, string>) => string;
-  /** The shell's branding: the platform for the admin, the user's own tenant for everyone else. */
-  brand: { name: string; logo?: string | null; logoBg?: string; theme?: Theme };
+  /** The shell's branding. `theme` colours the pages (the user's own show, or the platform for the admin);
+   *  `chrome` is the portal's own brand (Emerald) that frames every persona; `sub` names the user's show. */
+  brand: { name: string; logo?: string | null; logoBg?: string; theme?: Theme; chrome?: Theme; sub?: string };
   /** The workspace a user belongs to (their tenant); the parent for the admin. */
   homeWs?: string;
 }
@@ -233,10 +234,15 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
     // with the generic Dark Lime parent theme (theme set "original") it keeps the platform look
     const parentWs = overview.workspaces.find((w) => w.isParent);
     const parentTheme = parentWs?.themeId && parentWs.themeId !== "conference_dark_lime" ? overview.themes[parentWs.themeId] : undefined;
-    const brand = tenantTheme
-      ? { name: workspaces.find((w) => w.id === homeWs)?.name || "Workspace", logo: tenantTheme.logo, logoBg: logoTile(tenantTheme), theme: tenantTheme }
+    const homeName = workspaces.find((w) => w.id === homeWs)?.name || "Workspace";
+    // a branded parent (Emerald) is the portal for everyone: its name, logo and chrome; a show user's pages keep the
+    // show's theme. Without one (theme set "original") a tenant user's portal is white-labelled to the tenant.
+    const brand = tenantTheme && parentTheme
+      ? { name: parentWs?.name || "Platform", logo: parentTheme.logo, logoBg: "#FFFFFF", theme: tenantTheme, chrome: parentTheme, sub: homeName }
+      : tenantTheme
+      ? { name: homeName, logo: tenantTheme.logo, logoBg: logoTile(tenantTheme), theme: tenantTheme }
       : parentTheme
-        ? { name: parentWs?.name || "Platform", logo: parentTheme.logo, logoBg: "#FFFFFF", theme: parentTheme }
+        ? { name: parentWs?.name || "Platform", logo: parentTheme.logo, logoBg: "#FFFFFF", theme: parentTheme, chrome: parentTheme }
         : { name: "Ecommerce Platform" };
     return {
       brand,

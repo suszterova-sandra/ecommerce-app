@@ -25,8 +25,8 @@ function Main() {
     // dark mode is for the platform pages only; brand pages and brand users always show the brand's theme
     const onStorePage = route.view === "ws" || Boolean(brand.theme);
     applyTheme(route.view === "ws" ? themeOf(route.ws) : brand.theme || null, onStorePage ? "light" : mode);
-    applyChrome(brand.theme, persona.id === "admin");
-  }, [route, themeOf, mode, brand.theme, persona.id]);
+    applyChrome(brand.chrome || brand.theme, persona.id === "admin" || Boolean(brand.chrome));
+  }, [route, themeOf, mode, brand.theme, brand.chrome, persona.id]);
   const changeMode = (m: ColorMode) => {
     localStorage.setItem("colorMode", m);
     setMode(m);

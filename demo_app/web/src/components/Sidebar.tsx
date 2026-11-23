@@ -35,7 +35,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
         </div>
         <div className="brand-text">
           <div className="brand-name">{brand.name}</div>
-          <div className="brand-sub">Powered by GoodData</div>
+          <div className="brand-sub">{brand.sub ? `${brand.sub} · Powered by GoodData` : "Powered by GoodData"}</div>
         </div>
         <button className="collapse-btn" onClick={onToggle} title={collapsed ? "Expand sidebar" : "Collapse sidebar"} aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"} aria-expanded={!collapsed}>
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" style={{ transform: collapsed ? "rotate(180deg)" : undefined }}>
