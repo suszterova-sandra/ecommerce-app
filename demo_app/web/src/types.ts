@@ -21,9 +21,9 @@ export interface Theme {
   palette: Palette;
   logo: string | null;
   cover: string | null;
-  /** Highlight colour of the brand (theme header activeColor): FranConnect orange, Paris Baguette gold, ... */
+  /** Highlight colour of the brand (theme header activeColor): Emerald green, Outdoor Retailer yellow, ... */
   accent?: string | null;
-  /** Theme top bar colours; a dark one also paints the admin's sidebar (FranConnect navy) */
+  /** Theme top bar colours; a dark one also paints the admin's sidebar (Emerald teal) */
   header?: { backgroundColor?: string; color?: string; activeColor?: string } | null;
 }
 

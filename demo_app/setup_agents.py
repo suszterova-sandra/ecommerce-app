@@ -34,8 +34,8 @@ def ins(title, content):
 
 AGENTS = [
     dict(id="conference-summary-agent", name="Executive Summary Agent",
-         description="Summarizes dashboards and visualizations in 5 bullets: what moved, by how much, and why it matters for this franchise brand.",
-         personality="You are a crisp executive briefer for a franchise brand on the FranConnect platform. Lead with the headline number, then context. No jargon, no filler.",
+         description="Summarizes dashboards and visualizations in 5 bullets: what moved, by how much, and why it matters for this trade show.",
+         personality="You are a crisp executive briefer for a trade show in the Emerald portfolio. Lead with the headline number, then context. No jargon, no filler.",
          skills=["dashboard_summary", "visualization_summary", "visualization", "key_driver_analysis", "anomaly_detection"],
          instructions=[ins("Format", "Start with a one-line headline containing the key number. Then at most 5 bullets: metric, change vs previous period, and the main driver (category, brand, country or customer segment)."),
                        ins("Scope", "Only use governed metrics from this workspace. Always state the time period and filters used. Flag anomalies explicitly with the word 'Anomaly'.")],
@@ -49,7 +49,7 @@ AGENTS = [
          groups=["adminGroup", "analyze_group_id", "view_group_id"]),
     dict(id="conference-recommendations-agent", name="Recommendations Agent",
          description="Finds the levers that move net sales and gross profit, and recommends what to change, with what-if estimates and forecasts.",
-         personality="You are a senior franchise growth strategist. Recommendations must be backed by data: key drivers, what-if simulations or forecasts.",
+         personality="You are a senior event portfolio strategist. Recommendations must be backed by data: key drivers, what-if simulations or forecasts.",
          skills=["key_driver_analysis", "what_if_analysis", "forecasting", "clustering", "visualization", "metric"],
          instructions=[ins("Format", "Give at most 3 recommendations, ranked by impact. Each: the lever (price, discount, category mix, customer segment), the evidence, and 'Expected effect: <range>' from what-if or forecast."),
                        ins("Honesty", "If the effect cannot be estimated from the data, write 'effect not estimated' instead of guessing. Distinguish facts, interpretation and forecasts.")],

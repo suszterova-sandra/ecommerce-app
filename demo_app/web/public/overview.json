@@ -5,9 +5,9 @@
  "workspaces": [
   {
    "id": "gdc_demo_86a46377-cad8-4c3d-ab7c-6ba753b49b2c",
-   "name": "Paris Baguette",
+   "name": "Outdoor Retailer",
    "isParent": false,
-   "themeId": "conference_paris_baguette",
+   "themeId": "conference_outdoor_retailer",
    "permissions": [
     {
      "name": "ANALYZE",
@@ -91,24 +91,8 @@
      "title": "test"
     },
     {
-     "id": "4d04d8a6-e721-4826-bd67-4851e2e6a176",
-     "title": "Copy of 1. Overview"
-    },
-    {
-     "id": "a7527c62-fab2-4b3c-bdea-b4bc6a552388",
-     "title": "Untitled"
-    },
-    {
      "id": "customers",
      "title": "3. Customers"
-    },
-    {
-     "id": "executive_business_performance_dashboard_8f5189fd",
-     "title": "Executive Business Performance Dashboard"
-    },
-    {
-     "id": "executive_performance_dashboard_last_quarter_2dbc2fbf",
-     "title": "Executive Performance Dashboard \u2014 Last Quarter"
     },
     {
      "id": "overview",
@@ -126,31 +110,15 @@
   },
   {
    "id": "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203",
-   "name": "Arby's",
+   "name": "CEDIA Expo",
    "isParent": false,
-   "themeId": "conference_arbys",
+   "themeId": "conference_cedia_expo",
    "permissions": [],
    "hierarchyPermissions": [],
    "dashboards": [
     {
-     "id": "4d04d8a6-e721-4826-bd67-4851e2e6a176",
-     "title": "Copy of 1. Overview"
-    },
-    {
-     "id": "a7527c62-fab2-4b3c-bdea-b4bc6a552388",
-     "title": "Untitled"
-    },
-    {
      "id": "customers",
      "title": "3. Customers"
-    },
-    {
-     "id": "executive_business_performance_dashboard_8f5189fd",
-     "title": "Executive Business Performance Dashboard"
-    },
-    {
-     "id": "executive_performance_dashboard_last_quarter_2dbc2fbf",
-     "title": "Executive Performance Dashboard \u2014 Last Quarter"
     },
     {
      "id": "overview",
@@ -168,46 +136,15 @@
   },
   {
    "id": "gdc_demo_a7c3afa0-ca91-40db-a3a8-df4d5044e92f",
-   "name": "FranConnect",
+   "name": "Emerald",
    "isParent": true,
-   "themeId": "conference_franconnect",
-   "permissions": [
-    {
-     "name": "MANAGE",
-     "assignee": {
-      "id": "sas.analyze.user",
-      "type": "user"
-     }
-    },
-    {
-     "name": "USE_AI_ASSISTANT",
-     "assignee": {
-      "id": "sas.analyze.user",
-      "type": "user"
-     }
-    }
-   ],
+   "themeId": "conference_emerald",
+   "permissions": [],
    "hierarchyPermissions": [],
    "dashboards": [
     {
-     "id": "4d04d8a6-e721-4826-bd67-4851e2e6a176",
-     "title": "Copy of 1. Overview"
-    },
-    {
-     "id": "a7527c62-fab2-4b3c-bdea-b4bc6a552388",
-     "title": "Untitled"
-    },
-    {
      "id": "customers",
      "title": "3. Customers"
-    },
-    {
-     "id": "executive_business_performance_dashboard_8f5189fd",
-     "title": "Executive Business Performance Dashboard"
-    },
-    {
-     "id": "executive_performance_dashboard_last_quarter_2dbc2fbf",
-     "title": "Executive Performance Dashboard \u2014 Last Quarter"
     },
     {
      "id": "overview",
@@ -225,31 +162,15 @@
   },
   {
    "id": "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5",
-   "name": "Floor Coverings International",
+   "name": "NY NOW",
    "isParent": false,
-   "themeId": "conference_fci",
+   "themeId": "conference_nynow",
    "permissions": [],
    "hierarchyPermissions": [],
    "dashboards": [
     {
-     "id": "4d04d8a6-e721-4826-bd67-4851e2e6a176",
-     "title": "Copy of 1. Overview"
-    },
-    {
-     "id": "a7527c62-fab2-4b3c-bdea-b4bc6a552388",
-     "title": "Untitled"
-    },
-    {
      "id": "customers",
      "title": "3. Customers"
-    },
-    {
-     "id": "executive_business_performance_dashboard_8f5189fd",
-     "title": "Executive Business Performance Dashboard"
-    },
-    {
-     "id": "executive_performance_dashboard_last_quarter_2dbc2fbf",
-     "title": "Executive Performance Dashboard \u2014 Last Quarter"
     },
     {
      "id": "overview",
@@ -279,12 +200,12 @@
   }
  ],
  "themes": {
-  "conference_arbys": {
-   "id": "conference_arbys",
-   "name": "Conference \u2013 Arby's",
+  "conference_nynow": {
+   "id": "conference_nynow",
+   "name": "Conference \u2013 NY NOW",
    "palette": {
     "primary": {
-     "base": "#DC0032",
+     "base": "#184056",
      "contrast": "#FFFFFF"
     },
     "error": {
@@ -298,32 +219,32 @@
     },
     "complementary": {
      "c0": "#FFFFFF",
-     "c1": "#FFFBF5",
-     "c2": "#FCF2F2",
-     "c3": "#EFE3E3",
-     "c4": "#D9C7C7",
-     "c5": "#A39494",
-     "c6": "#737373",
-     "c7": "#4A4040",
-     "c8": "#2B2222",
-     "c9": "#000000"
+     "c1": "#F5F9FA",
+     "c2": "#E8F2F3",
+     "c3": "#D8E6E8",
+     "c4": "#BCD3D7",
+     "c5": "#8FA9B0",
+     "c6": "#627F88",
+     "c7": "#3E5560",
+     "c8": "#184056",
+     "c9": "#0A0A0A"
     }
    },
-   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Arby%27s_logo.svg/960px-Arby%27s_logo.svg.png",
-   "cover": "https://images.ctfassets.net/30q5w5l98nbx/3iGaTQDizG4yk5VfEteTjL/8703abaac9a58eb846426821b760d4d2/Website_App_Favorites_2025.jpg",
-   "accent": "#DC0032",
+   "logo": "https://nynow.com/wp-content/uploads/2026/06/NYNOW_Logo_Black_Nav.png",
+   "cover": "https://nynow.com/wp-content/uploads/2026/08/home-00.jpg",
+   "accent": "#184056",
    "header": {
     "backgroundColor": "#FFFFFF",
-    "color": "#000000",
-    "activeColor": "#DC0032"
+    "color": "#0A0A0A",
+    "activeColor": "#184056"
    }
   },
-  "conference_paris_baguette": {
-   "id": "conference_paris_baguette",
-   "name": "Conference \u2013 Paris Baguette",
+  "conference_outdoor_retailer": {
+   "id": "conference_outdoor_retailer",
+   "name": "Conference \u2013 Outdoor Retailer",
    "palette": {
     "primary": {
-     "base": "#001871",
+     "base": "#3B4223",
      "contrast": "#FFFFFF"
     },
     "error": {
@@ -337,32 +258,32 @@
     },
     "complementary": {
      "c0": "#FFFFFF",
-     "c1": "#FFFAF3",
-     "c2": "#F3EEE4",
-     "c3": "#E6DFD2",
-     "c4": "#CFC6B5",
-     "c5": "#9C9584",
-     "c6": "#6E7391",
-     "c7": "#3C4370",
-     "c8": "#0E1144",
-     "c9": "#0E1144"
+     "c1": "#F8F7F1",
+     "c2": "#EFEDE2",
+     "c3": "#E2DFD0",
+     "c4": "#CCC8B3",
+     "c5": "#A19D86",
+     "c6": "#737058",
+     "c7": "#4D4B3A",
+     "c8": "#2A2F18",
+     "c9": "#1A1C12"
     }
    },
-   "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Paris_Baguette_logo.svg/960px-Paris_Baguette_logo.svg.png",
-   "cover": "https://parisbaguette.com/wp-content/uploads/2025/01/2024_0910_ParisBaguette_DW9_6560-1536x1024.jpg",
-   "accent": "#FFC600",
+   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_logo.png",
+   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_show_floor.jpg",
+   "accent": "#F5C518",
    "header": {
-    "backgroundColor": "#001871",
-    "color": "#FFFFFF",
-    "activeColor": "#FFC600"
+    "backgroundColor": "#3B4223",
+    "color": "#ECE9D8",
+    "activeColor": "#F5C518"
    }
   },
-  "conference_fci": {
-   "id": "conference_fci",
-   "name": "Conference \u2013 Floor Coverings International",
+  "conference_cedia_expo": {
+   "id": "conference_cedia_expo",
+   "name": "Conference \u2013 CEDIA Expo",
    "palette": {
     "primary": {
-     "base": "#1C294A",
+     "base": "#0077C8",
      "contrast": "#FFFFFF"
     },
     "error": {
@@ -376,32 +297,32 @@
     },
     "complementary": {
      "c0": "#FFFFFF",
-     "c1": "#FAF9F9",
-     "c2": "#F2EFEC",
-     "c3": "#E0E0E0",
-     "c4": "#C9CCD3",
-     "c5": "#9097A6",
-     "c6": "#6A7286",
-     "c7": "#35495E",
-     "c8": "#1C294A",
-     "c9": "#292929"
+     "c1": "#F6F7F8",
+     "c2": "#ECEEF1",
+     "c3": "#DFE2E6",
+     "c4": "#C5CAD1",
+     "c5": "#979DA6",
+     "c6": "#6B717A",
+     "c7": "#444950",
+     "c8": "#222222",
+     "c9": "#111111"
     }
    },
-   "logo": "https://chambermaster.blob.core.windows.net/images/customers/527/members/6857/logos/MEMBER_PAGE_HEADER/(Floor_Coverings_Intl_official_Logo_transparent_Back)_FCI_LOGO_RGB_clear_back_1637174394.png",
-   "cover": "https://floorcoveringsinternational.com/img/upload/ikjbq92roxtczfnu.webp",
-   "accent": "#80D14A",
+   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_logo.png",
+   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_panel.jpg",
+   "accent": "#00A3E0",
    "header": {
-    "backgroundColor": "#1C294A",
+    "backgroundColor": "#111111",
     "color": "#FFFFFF",
-    "activeColor": "#80D14A"
+    "activeColor": "#00A3E0"
    }
   },
-  "conference_franconnect": {
-   "id": "conference_franconnect",
-   "name": "Conference \u2013 FranConnect (parent)",
+  "conference_emerald": {
+   "id": "conference_emerald",
+   "name": "Conference \u2013 Emerald (parent)",
    "palette": {
     "primary": {
-     "base": "#004191",
+     "base": "#008098",
      "contrast": "#FFFFFF"
     },
     "error": {
@@ -415,24 +336,24 @@
     },
     "complementary": {
      "c0": "#FFFFFF",
-     "c1": "#F4F7FB",
-     "c2": "#E1E8F0",
-     "c3": "#DBE4EE",
-     "c4": "#CBD7E4",
-     "c5": "#8FA3BC",
-     "c6": "#5E7491",
-     "c7": "#3B4F6B",
-     "c8": "#10213A",
-     "c9": "#00152F"
+     "c1": "#F4F7F8",
+     "c2": "#EDF1F4",
+     "c3": "#D5D8DD",
+     "c4": "#C2C9D0",
+     "c5": "#9AA3AE",
+     "c6": "#6E7884",
+     "c7": "#5F6673",
+     "c8": "#193A3D",
+     "c9": "#0E2A2D"
     }
    },
-   "logo": "https://www.franconnect.com/wp-content/uploads/2020/02/FranConnect-Logo-PRIMARY-Color-Small.png",
-   "cover": "https://www.franconnect.com/wp-content/uploads/2024/01/shutterstock_2168498267-scaled.jpg",
-   "accent": "#F58220",
+   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/emerald_logo.png",
+   "cover": "https://nynow.com/wp-content/uploads/2026/09/DSC07734-scaled.jpg",
+   "accent": "#91D500",
    "header": {
-    "backgroundColor": "#004191",
+    "backgroundColor": "#025157",
     "color": "#FFFFFF",
-    "activeColor": "#F58220"
+    "activeColor": "#91D500"
    }
   }
  },
@@ -479,6 +400,7 @@
   "02aa233b-7cb1-494d-9bf4-87d3714e74b8": "Readers Group B",
   "213a633e-82f2-4f6a-a69b-ac1fbbba7737": "View Group MZ",
   "30fd7628-9106-46a4-b7df-df7a9f9afae6": "Group A",
+  "33eaa938-3936-434e-ad83-e4f958699843": "ai view",
   "3cb0c87d-7448-4d21-a021-77158e05f6f0": "Product",
   "406f933d-bf6a-48dc-aca1-a472d643e270": "Editors Group B",
   "a2235497-d267-4a10-973d-ebef13a76866": "Webinar - October 2026 - Broze Group",
@@ -514,7 +436,7 @@
    "skills": [
     "all skills"
    ],
-   "availableToAll": true,
+   "availableToAll": false,
    "groups": [
     "analyze_group_id"
    ],
@@ -531,8 +453,10 @@
     "dashboard_summary",
     "metric"
    ],
-   "availableToAll": true,
-   "groups": [],
+   "availableToAll": false,
+   "groups": [
+    "adminGroup"
+   ],
    "conference": false
   },
   {
@@ -577,7 +501,7 @@
   {
    "id": "conference-summary-agent",
    "name": "Executive Summary Agent",
-   "description": "Summarizes dashboards and visualizations in 5 bullets: what moved, by how much, and why it matters for this merchant.",
+   "description": "Summarizes dashboards and visualizations in 5 bullets: what moved, by how much, and why it matters for this trade show.",
    "skills": [
     "dashboard_summary",
     "visualization_summary",
@@ -621,7 +545,8 @@
    ],
    "availableToAll": false,
    "groups": [
-    "view_group_id"
+    "30fd7628-9106-46a4-b7df-df7a9f9afae6",
+    "33eaa938-3936-434e-ad83-e4f958699843"
    ],
    "conference": false
   },

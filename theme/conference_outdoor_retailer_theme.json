@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#3B4223",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#F8F7F1",
+      "c2": "#EFEDE2",
+      "c3": "#E2DFD0",
+      "c4": "#CCC8B3",
+      "c5": "#A19D86",
+      "c6": "#737058",
+      "c7": "#4D4B3A",
+      "c8": "#2A2F18",
+      "c9": "#1A1C12"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#1A1C12",
+      "lineColor": "#E2DFD0"
+    },
+    "borderColor": "#E2DFD0",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#1A1C12"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#EFEDE2",
+    "axisColor": "#CCC8B3",
+    "axisLabelColor": "#8C8971",
+    "axisValueColor": "#4D4B3A",
+    "legendValueColor": "#4D4B3A",
+    "plotLineColor": "#CCC8B3",
+    "tooltipBackgroundColor": "#1A1C12",
+    "tooltipBorderColor": "#1A1C12",
+    "tooltipLabelColor": "#CCC8B3",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#2A2F18",
+    "nullValueColor": "#8C8971",
+    "hoverBackgroundColor": "#EFEDE2",
+    "loadingIconColor": "#3B4223",
+    "headerLabelColor": "#8C8971",
+    "headerHoverBackgroundColor": "#EFEDE2",
+    "subtotalBackgroundColor": "#EFEDE2",
+    "totalBackgroundColor": "#E2DFD0",
+    "totalValueColor": "#1A1C12"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#1A1C12",
+    "secondaryInfoColor": "#4D4B3A",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#1A1C12",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#3B4223",
+      "borderColor": "#2A2F18",
+      "item": {
+        "color": "#D9D6C2",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#2A2F18",
+        "selectedBackgroundColor": "#F5C518"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#E2DFD0",
+      "filterButton": {
+        "backgroundColor": "#F8F7F1"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#1A1C12",
+        "lineColor": "#E2DFD0"
+      },
+      "description": {
+        "color": "#4D4B3A"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#F8F7F1",
+      "widget": {
+        "title": {
+          "color": "#1A1C12",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#E2DFD0",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#D9D6C2",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#3B4223",
+        "borderColor": "#3B4223",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#F5C518",
+          "secondaryInfoColor": "#D9D6C2",
+          "value": {
+            "positiveColor": "#B8F0D8",
+            "negativeColor": "#FFB3BF"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#1A1C12"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#3B4223",
+      "#F5C518",
+      "#8A9A5B",
+      "#C8642D",
+      "#1A1C12",
+      "#D9D6C2",
+      "#5B7DB1",
+      "#E8D9A0",
+      "#737058",
+      "#2F9E7A"
+    ],
+    "page": {
+      "backgroundColor": "#E7E3D2"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#E7E3D2"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#F3F1E8"
+        },
+        {
+          "id": "accent",
+          "color": "#3B4223"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#1A1C12"
+        },
+        {
+          "id": "muted",
+          "color": "#4D4B3A"
+        },
+        {
+          "id": "subtle",
+          "color": "#8C8971"
+        },
+        {
+          "id": "accent",
+          "color": "#3B4223"
+        },
+        {
+          "id": "inverse",
+          "color": "#E7E3D2"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#1A1C12",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#1A1C12"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#1A1C12"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#1A1C12"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#1A1C12"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#1A1C12"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#1A1C12"
+        }
+      },
+      "paragraph": {
+        "color": "#4D4B3A",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#1A1C12"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#4D4B3A"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#8C8971"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#3B4223",
+    "color": "#ECE9D8",
+    "activeColor": "#F5C518"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_logo.png",
+        "title": "Outdoor Retailer logo",
+        "altText": "Outdoor Retailer logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_show_floor.jpg",
+        "title": "Cover background",
+        "altText": "Outdoor Retailer show floor in Minneapolis"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_show_floor.jpg",
+        "title": "Section background",
+        "altText": "Outdoor Retailer show floor in Minneapolis"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_show_floor.jpg",
+        "title": "Cover background",
+        "altText": "Outdoor Retailer show floor in Minneapolis"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_show_floor.jpg",
+        "title": "Section background",
+        "altText": "Outdoor Retailer show floor in Minneapolis"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/F5C518/F5C518/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_logo.png",
+        "title": "Outdoor Retailer logo",
+        "altText": "Outdoor Retailer logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_logo_cream.png)"
+  }
+}

@@ -25,6 +25,12 @@ Theme set "franconnect" (python3 theme/build_themes.py --set=franconnect --deplo
 - conference_arbys           -> child "Arby's" = merchant__electronics (Arby's red #DC0032)
 The ecommerce data and analytics stay as they are; only names, themes and palettes change.
 
+Theme set "emerald" (python3 theme/build_themes.py --set=emerald --deploy; also renames the workspaces):
+- conference_emerald          -> parent "Emerald" (dark teal #025157, green #91D500, from emeraldx.com CSS)
+- conference_nynow            -> child "NY NOW" = merchant__bigboxretailer (black, teal #184056, aqua #9AD0D5)
+- conference_outdoor_retailer -> child "Outdoor Retailer" = merchant__clothing (olive #3B4223, yellow #F5C518)
+- conference_cedia_expo       -> child "CEDIA Expo" = merchant__electronics (black, blue #00A3E0)
+
 conference_dark_lime_theme.json is the structural template: every brand theme is derived from it by swapping
 colours, so they all stay structurally identical.
 The business report takes its colours from documents.colors (backgrounds/texts by id), so the same report
@@ -302,7 +308,98 @@ FRANCONNECT = {
     },
 }
 
-SETS = {"original": ORIGINAL, "akitabox": AKITABOX, "franconnect": FRANCONNECT}
+# Emerald (emeraldx.com, B2B trade shows) as the publisher, three of its shows as tenants, each on the merchant whose
+# ecommerce data fits it: NY NOW (gift & home) = big-box home retailer, Outdoor Retailer (outdoor apparel & gear) =
+# clothing, CEDIA Expo (smart-home technology) = electronics. emeraldx.com, outdoorretailer.com and cediaexpo.com refuse
+# scripted downloads, so their logos and photos live in theme/emerald_assets (sources in its README) and are served
+# from the public GitHub repo; NY NOW assets are linked from nynow.com.
+EMERALD_RAW = "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/"
+EMERALD = {
+    "conference_emerald": {
+        "name": "Conference – Emerald (parent)", "ws": PARENT_WS, "brand": "Emerald", "ws_name": "Emerald",
+        "header": ("#025157", "#FFFFFF", "#91D500"),  # emeraldx.com: dark teal header, lime-green accent
+        "hex": {"page": "#FFFFFF", "card": "#F4F7F8", "panel": "#EDF1F4", "line": "#D5D8DD", "line2": "#C2C9D0",
+                "g5": "#9AA3AE", "g6": "#6E7884", "muted": "#5F6673", "g8": "#193A3D", "text": "#0E2A2D",
+                "subtle": "#8A929D", "accent": "#025157", "accent_hover": "#193A3D", "accent_dim": "#91D500"},
+        "primary": "#008098",
+        "nav": {"bg": "#025157", "border": "#193A3D", "item": "#C4DADC", "selected": "#025157",
+                "selected_bg": "#91D500"},
+        "viz": ["#025157", "#91D500", "#008098", "#193A3D", "#7AAAA0", "#C8E88A", "#2F7690", "#9AB9BC",
+                "#5F6673", "#F2A900"],
+        "rule": "91D500",
+        "kpi_tile": {"bg": "#025157", "border": "#025157", "title": "#C4DADC", "value": "#FFFFFF",
+                     "secondary": "#C4DADC", "good": "#B5EB5A", "bad": "#FFB3BF"},
+        "doc": {"page": "#EDF1F4", "card": "#FFFFFF", "panel": "#F4F7F8"},
+        "logo": EMERALD_RAW + "emerald_logo.png",
+        "header_logo": EMERALD_RAW + "emerald_logo_white.png",
+        "bg": "https://nynow.com/wp-content/uploads/2026/09/DSC07734-scaled.jpg",
+        "bg_alt": "Buyers walking a trade show aisle",
+    },
+    "conference_nynow": {
+        "name": "Conference – NY NOW", "ws": BLESSING_WS,  # merchant__bigboxretailer
+        "brand": "NY NOW", "ws_name": "NY NOW",
+        "header": ("#FFFFFF", "#0A0A0A", "#184056"),  # white top bar with the black roundel logo, like nynow.com
+        "hex": {"page": "#FFFFFF", "card": "#F5F9FA", "panel": "#E8F2F3", "line": "#D8E6E8", "line2": "#BCD3D7",
+                "g5": "#8FA9B0", "g6": "#627F88", "muted": "#3E5560", "g8": "#184056", "text": "#0A0A0A",
+                "subtle": "#7E949A", "accent": "#184056", "accent_hover": "#102C3C", "accent_dim": "#9AD0D5"},
+        "primary": "#184056",
+        "nav": {"bg": "#184056", "border": "#102C3C", "item": "#C9DEE3", "selected": "#184056",
+                "selected_bg": "#9AD0D5"},
+        "viz": ["#184056", "#9AD0D5", "#0A0A0A", "#7EBEC5", "#FCB900", "#3E7A8F", "#FF6900", "#C9DEE3",
+                "#627F88", "#E8B4A0"],
+        "rule": "9AD0D5",
+        "kpi_tile": {"bg": "#184056", "border": "#184056", "title": "#C9DEE3", "value": "#9AD0D5",
+                     "secondary": "#C9DEE3", "good": "#8FE3C0", "bad": "#FFB3BF"},
+        "doc": {"page": "#E8F2F3", "card": "#FFFFFF", "panel": "#F5F9FA"},
+        "logo": "https://nynow.com/wp-content/uploads/2026/06/NYNOW_Logo_Black_Nav.png",
+        "bg": "https://nynow.com/wp-content/uploads/2026/08/home-00.jpg",
+        "bg_alt": "Home decor on show at NY NOW",
+    },
+    "conference_outdoor_retailer": {
+        "name": "Conference – Outdoor Retailer", "ws": EDGEWOOD_WS,  # merchant__clothing
+        "brand": "Outdoor Retailer", "ws_name": "Outdoor Retailer",
+        "header": ("#3B4223", "#ECE9D8", "#F5C518"),  # olive, cream and yellow of the 2026 show campaign
+        "hex": {"page": "#FFFFFF", "card": "#F8F7F1", "panel": "#EFEDE2", "line": "#E2DFD0", "line2": "#CCC8B3",
+                "g5": "#A19D86", "g6": "#737058", "muted": "#4D4B3A", "g8": "#2A2F18", "text": "#1A1C12",
+                "subtle": "#8C8971", "accent": "#3B4223", "accent_hover": "#2A2F18", "accent_dim": "#F5C518"},
+        "primary": "#3B4223",
+        "nav": {"bg": "#3B4223", "border": "#2A2F18", "item": "#D9D6C2", "selected": "#2A2F18",
+                "selected_bg": "#F5C518"},
+        "viz": ["#3B4223", "#F5C518", "#8A9A5B", "#C8642D", "#1A1C12", "#D9D6C2", "#5B7DB1", "#E8D9A0",
+                "#737058", "#2F9E7A"],
+        "rule": "F5C518",
+        "kpi_tile": {"bg": "#3B4223", "border": "#3B4223", "title": "#D9D6C2", "value": "#F5C518",
+                     "secondary": "#D9D6C2", "good": "#B8F0D8", "bad": "#FFB3BF"},
+        "doc": {"page": "#E7E3D2", "card": "#FFFFFF", "panel": "#F3F1E8"},  # darker sand report page
+        "logo": EMERALD_RAW + "or_logo.png",
+        "header_logo": EMERALD_RAW + "or_logo_cream.png",
+        "bg": EMERALD_RAW + "or_show_floor.jpg",
+        "bg_alt": "Outdoor Retailer show floor in Minneapolis",
+    },
+    "conference_cedia_expo": {
+        "name": "Conference – CEDIA Expo", "ws": OHIO_WS,  # merchant__electronics
+        "brand": "CEDIA Expo", "ws_name": "CEDIA Expo",
+        "header": ("#111111", "#FFFFFF", "#00A3E0"),  # black wordmark brand; blue tech accent
+        "hex": {"page": "#FFFFFF", "card": "#F6F7F8", "panel": "#ECEEF1", "line": "#DFE2E6", "line2": "#C5CAD1",
+                "g5": "#979DA6", "g6": "#6B717A", "muted": "#444950", "g8": "#222222", "text": "#111111",
+                "subtle": "#858B94", "accent": "#0077C8", "accent_hover": "#005A99", "accent_dim": "#00A3E0"},
+        "primary": "#0077C8",
+        "nav": {"bg": "#111111", "border": "#000000", "item": "#C5CAD1", "selected": "#111111",
+                "selected_bg": "#00A3E0"},
+        "viz": ["#111111", "#00A3E0", "#0077C8", "#6B717A", "#7FD1F0", "#C5CAD1", "#E4572E", "#2F9E7A",
+                "#F2A900", "#444950"],
+        "rule": "00A3E0",
+        "kpi_tile": {"bg": "#111111", "border": "#111111", "title": "#C5CAD1", "value": "#FFFFFF",
+                     "secondary": "#C5CAD1", "good": "#8FE3C0", "bad": "#FFB3BF"},
+        "doc": {"page": "#ECEEF1", "card": "#FFFFFF", "panel": "#F6F7F8"},
+        "logo": EMERALD_RAW + "cedia_expo_logo.png",
+        "header_logo": EMERALD_RAW + "cedia_expo_logo_white.png",
+        "bg": EMERALD_RAW + "cedia_expo_panel.jpg",
+        "bg_alt": "Manufacturer panel on the Smart Stage at CEDIA Expo",
+    },
+}
+
+SETS = {"original": ORIGINAL, "akitabox": AKITABOX, "franconnect": FRANCONNECT, "emerald": EMERALD}
 
 
 def doc_colors(hexes):

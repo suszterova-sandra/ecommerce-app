@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#0077C8",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#F6F7F8",
+      "c2": "#ECEEF1",
+      "c3": "#DFE2E6",
+      "c4": "#C5CAD1",
+      "c5": "#979DA6",
+      "c6": "#6B717A",
+      "c7": "#444950",
+      "c8": "#222222",
+      "c9": "#111111"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#111111",
+      "lineColor": "#DFE2E6"
+    },
+    "borderColor": "#DFE2E6",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#111111"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#ECEEF1",
+    "axisColor": "#C5CAD1",
+    "axisLabelColor": "#858B94",
+    "axisValueColor": "#444950",
+    "legendValueColor": "#444950",
+    "plotLineColor": "#C5CAD1",
+    "tooltipBackgroundColor": "#111111",
+    "tooltipBorderColor": "#111111",
+    "tooltipLabelColor": "#C5CAD1",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#222222",
+    "nullValueColor": "#858B94",
+    "hoverBackgroundColor": "#ECEEF1",
+    "loadingIconColor": "#0077C8",
+    "headerLabelColor": "#858B94",
+    "headerHoverBackgroundColor": "#ECEEF1",
+    "subtotalBackgroundColor": "#ECEEF1",
+    "totalBackgroundColor": "#DFE2E6",
+    "totalValueColor": "#111111"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#111111",
+    "secondaryInfoColor": "#444950",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#111111",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#111111",
+      "borderColor": "#000000",
+      "item": {
+        "color": "#C5CAD1",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#111111",
+        "selectedBackgroundColor": "#00A3E0"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#DFE2E6",
+      "filterButton": {
+        "backgroundColor": "#F6F7F8"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#111111",
+        "lineColor": "#DFE2E6"
+      },
+      "description": {
+        "color": "#444950"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#F6F7F8",
+      "widget": {
+        "title": {
+          "color": "#111111",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#DFE2E6",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#C5CAD1",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#111111",
+        "borderColor": "#111111",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#FFFFFF",
+          "secondaryInfoColor": "#C5CAD1",
+          "value": {
+            "positiveColor": "#8FE3C0",
+            "negativeColor": "#FFB3BF"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#111111"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#111111",
+      "#00A3E0",
+      "#0077C8",
+      "#6B717A",
+      "#7FD1F0",
+      "#C5CAD1",
+      "#E4572E",
+      "#2F9E7A",
+      "#F2A900",
+      "#444950"
+    ],
+    "page": {
+      "backgroundColor": "#ECEEF1"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#ECEEF1"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#F6F7F8"
+        },
+        {
+          "id": "accent",
+          "color": "#0077C8"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#111111"
+        },
+        {
+          "id": "muted",
+          "color": "#444950"
+        },
+        {
+          "id": "subtle",
+          "color": "#858B94"
+        },
+        {
+          "id": "accent",
+          "color": "#0077C8"
+        },
+        {
+          "id": "inverse",
+          "color": "#ECEEF1"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#111111",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#111111"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#111111"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#111111"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#111111"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#111111"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#111111"
+        }
+      },
+      "paragraph": {
+        "color": "#444950",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#111111"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#444950"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#858B94"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#111111",
+    "color": "#FFFFFF",
+    "activeColor": "#00A3E0"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_logo.png",
+        "title": "CEDIA Expo logo",
+        "altText": "CEDIA Expo logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_panel.jpg",
+        "title": "Cover background",
+        "altText": "Manufacturer panel on the Smart Stage at CEDIA Expo"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_panel.jpg",
+        "title": "Section background",
+        "altText": "Manufacturer panel on the Smart Stage at CEDIA Expo"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_panel.jpg",
+        "title": "Cover background",
+        "altText": "Manufacturer panel on the Smart Stage at CEDIA Expo"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_panel.jpg",
+        "title": "Section background",
+        "altText": "Manufacturer panel on the Smart Stage at CEDIA Expo"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/00A3E0/00A3E0/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_logo.png",
+        "title": "CEDIA Expo logo",
+        "altText": "CEDIA Expo logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_logo_white.png)"
+  }
+}

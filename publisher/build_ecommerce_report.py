@@ -218,8 +218,8 @@ CHAPTERS = [
     ("04", "Orders & Fulfillment", "How orders move from placement to completion.",
      "Fulfillment Funnel  ·  Completed vs. Canceled"),
 ]
-REPORT_TITLE = "Franchise Business Report"
-SUMMARY = "Sales, products, customers and fulfillment across every franchise brand, in one view."
+REPORT_TITLE = "Event Portfolio Business Report"
+SUMMARY = "Sales, products, customers and fulfillment across every show, in one view."
 
 
 def cover():
@@ -395,7 +395,7 @@ def build():
             "defaults": {
                 "page_size": "widescreen",
                 "takeaway": {"generation": {"instructions": (
-                    "Act as a professional data analyst for a franchise brand on the FranConnect platform. Write short "
+                    "Act as a professional data analyst for a trade show in the Emerald portfolio. Write short "
                     "messages, max 255 "
                     "characters. Explain what stands behind the numbers (categories, brands, customer segments, "
                     "countries, order outcomes) more than restating the numbers themselves.")}},

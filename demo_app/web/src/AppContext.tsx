@@ -229,7 +229,7 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
     const homeWs = persona.id === "admin" ? overview.parent : workspaces.find((w) => !w.isParent)?.id || workspaces[0]?.id;
     const homeWsMeta = overview.workspaces.find((w) => w.id === homeWs);
     const tenantTheme = persona.id !== "admin" && homeWsMeta?.themeId ? overview.themes[homeWsMeta.themeId] : undefined;
-    // the admin's platform carries the parent's brand (FranConnect): its name, logo and theme colours;
+    // the admin's platform carries the parent's brand (Emerald): its name, logo and theme colours;
     // with the generic Dark Lime parent theme (theme set "original") it keeps the platform look
     const parentWs = overview.workspaces.find((w) => w.isParent);
     const parentTheme = parentWs?.themeId && parentWs.themeId !== "conference_dark_lime" ? overview.themes[parentWs.themeId] : undefined;
