@@ -31,6 +31,12 @@ Theme set "emerald" (python3 theme/build_themes.py --set=emerald --deploy; also 
 - conference_outdoor_retailer -> child "Outdoor Retailer" = merchant__clothing (olive #3B4223, yellow #F5C518)
 - conference_cedia_expo       -> child "CEDIA Expo" = merchant__electronics (black, blue #00A3E0)
 
+Theme set "oua" (python3 theme/build_themes.py --set=oua --deploy; also renames the workspaces):
+- conference_oua        -> parent "Open Universities Australia" (blue #3555A6, teal #4CBAAC, pink #E42251)
+- conference_curtin     -> child "Curtin University" = merchant__bigboxretailer (black, gold #C19609)
+- conference_griffith   -> child "Griffith University" = merchant__clothing (red #E51F30)
+- conference_swinburne  -> child "Swinburne University of Technology" = merchant__electronics (black, red #EC1B2E)
+
 conference_dark_lime_theme.json is the structural template: every brand theme is derived from it by swapping
 colours, so they all stay structurally identical.
 The business report takes its colours from documents.colors (backgrounds/texts by id), so the same report
@@ -399,7 +405,94 @@ EMERALD = {
     },
 }
 
-SETS = {"original": ORIGINAL, "akitabox": AKITABOX, "franconnect": FRANCONNECT, "emerald": EMERALD}
+# Open Universities Australia (open.edu.au, GoodData customer since 2014) as the publisher, three of its shareholder
+# universities as tenants. Colours from open.edu.au CSS; logos are open.edu.au SVGs rendered to PNG (theme/oua_assets).
+OUA_RAW = "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/"
+OUA = {
+    "conference_oua": {
+        "name": "Conference – Open Universities Australia (parent)", "ws": PARENT_WS,
+        "brand": "Open Universities Australia", "ws_name": "Open Universities Australia",
+        "header": ("#3555A6", "#FFFFFF", "#4CBAAC"),  # OUA blue bar, teal highlight
+        "hex": {"page": "#FFFFFF", "card": "#F5F6F7", "panel": "#EDF0F7", "line": "#DDE2EE", "line2": "#C3CBE0",
+                "g5": "#959DB3", "g6": "#6B7287", "muted": "#55585E", "g8": "#2A3C75", "text": "#3B3B3C",
+                "subtle": "#82879A", "accent": "#3555A6", "accent_hover": "#27407F", "accent_dim": "#4CBAAC"},
+        "primary": "#3555A6",
+        "nav": {"bg": "#3555A6", "border": "#27407F", "item": "#D2DAF0", "selected": "#1E2F5C",
+                "selected_bg": "#4CBAAC"},
+        "viz": ["#3555A6", "#E42251", "#4CBAAC", "#3B3B3C", "#8FA3D6", "#F28FA8", "#348179", "#C9D3EC",
+                "#F2A900", "#6B6B6D"],
+        "rule": "E42251",
+        "kpi_tile": {"bg": "#3555A6", "border": "#3555A6", "title": "#D2DAF0", "value": "#FFFFFF",
+                     "secondary": "#D2DAF0", "good": "#9BE3D9", "bad": "#FFB3C4"},
+        "doc": {"page": "#EDF0F7", "card": "#FFFFFF", "panel": "#F5F6F7"},
+        "logo": OUA_RAW + "oua_logo.png",
+        "header_logo": OUA_RAW + "oua_logo_white.png",
+        "bg": OUA_RAW + "oua_student.jpg",
+        "bg_alt": "Student studying online with a laptop",
+    },
+    "conference_curtin": {
+        "name": "Conference – Curtin University", "ws": BLESSING_WS,  # merchant__bigboxretailer
+        "brand": "Curtin University", "ws_name": "Curtin University",
+        "header": ("#FFFFFF", "#231F20", "#C19609"),  # white bar for the black-and-gold logo
+        "hex": {"page": "#FFFFFF", "card": "#F8F6F1", "panel": "#EFEBE1", "line": "#E3DED1", "line2": "#CCC5B2",
+                "g5": "#A39C88", "g6": "#77705E", "muted": "#4F4A3F", "g8": "#231F20", "text": "#231F20",
+                "subtle": "#8E8774", "accent": "#231F20", "accent_hover": "#000000", "accent_dim": "#C19609"},
+        "primary": "#231F20",
+        "nav": {"bg": "#231F20", "border": "#000000", "item": "#D9D4C7", "selected": "#231F20",
+                "selected_bg": "#C19609"},
+        "viz": ["#231F20", "#C19609", "#7A6A3A", "#E3C35A", "#5C5A57", "#B8B2A6", "#3555A6", "#2F9E7A",
+                "#D1435B", "#8C7A4B"],
+        "rule": "C19609",
+        "kpi_tile": {"bg": "#231F20", "border": "#231F20", "title": "#D9D4C7", "value": "#E3C35A",
+                     "secondary": "#D9D4C7", "good": "#8FE3C0", "bad": "#FFB3BF"},
+        "doc": {"page": "#EFEBE1", "card": "#FFFFFF", "panel": "#F8F6F1"},
+        "logo": OUA_RAW + "curtin_logo.png",
+        "bg": OUA_RAW + "oua_student.jpg",
+        "bg_alt": "Student studying online with a laptop",
+    },
+    "conference_griffith": {
+        "name": "Conference – Griffith University", "ws": EDGEWOOD_WS,  # merchant__clothing (demo users)
+        "brand": "Griffith University", "ws_name": "Griffith University",
+        "header": ("#FFFFFF", "#202020", "#E51F30"),
+        "hex": {"page": "#FFFFFF", "card": "#F8F6F6", "panel": "#F1EBEC", "line": "#E6DCDD", "line2": "#D0C2C4",
+                "g5": "#A6989A", "g6": "#7A6C6E", "muted": "#4D4446", "g8": "#202020", "text": "#202020",
+                "subtle": "#8F8284", "accent": "#C8102E", "accent_hover": "#9E0C24", "accent_dim": "#E51F30"},
+        "primary": "#C8102E",
+        "nav": {"bg": "#202020", "border": "#000000", "item": "#D6CFD0", "selected": "#FFFFFF",
+                "selected_bg": "#E51F30"},
+        "viz": ["#E51F30", "#202020", "#F28C96", "#7A6C6E", "#3555A6", "#F2A900", "#9E0C24", "#D0C2C4",
+                "#2F9E7A", "#4D4446"],
+        "rule": "E51F30",
+        "kpi_tile": {"bg": "#202020", "border": "#202020", "title": "#D6CFD0", "value": "#FFFFFF",
+                     "secondary": "#D6CFD0", "good": "#8FE3C0", "bad": "#FF9AA6"},
+        "doc": {"page": "#F1EBEC", "card": "#FFFFFF", "panel": "#F8F6F6"},
+        "logo": OUA_RAW + "griffith_logo.png",
+        "bg": OUA_RAW + "oua_student.jpg",
+        "bg_alt": "Student studying online with a laptop",
+    },
+    "conference_swinburne": {
+        "name": "Conference – Swinburne University", "ws": OHIO_WS,  # merchant__electronics
+        "brand": "Swinburne University of Technology", "ws_name": "Swinburne University of Technology",
+        "header": ("#FFFFFF", "#231F20", "#EC1B2E"),
+        "hex": {"page": "#FFFFFF", "card": "#F6F6F7", "panel": "#ECECEE", "line": "#DFDFE2", "line2": "#C5C5CA",
+                "g5": "#97979E", "g6": "#6B6B72", "muted": "#444448", "g8": "#231F20", "text": "#231F20",
+                "subtle": "#85858C", "accent": "#231F20", "accent_hover": "#000000", "accent_dim": "#EC1B2E"},
+        "primary": "#231F20",
+        "nav": {"bg": "#231F20", "border": "#000000", "item": "#C5C5CA", "selected": "#FFFFFF",
+                "selected_bg": "#EC1B2E"},
+        "viz": ["#231F20", "#EC1B2E", "#6B6B72", "#F58C96", "#C5C5CA", "#3555A6", "#F2A900", "#2F9E7A",
+                "#9E1220", "#444448"],
+        "rule": "EC1B2E",
+        "kpi_tile": {"bg": "#231F20", "border": "#231F20", "title": "#C5C5CA", "value": "#FFFFFF",
+                     "secondary": "#C5C5CA", "good": "#8FE3C0", "bad": "#FF9AA6"},
+        "doc": {"page": "#ECECEE", "card": "#FFFFFF", "panel": "#F6F6F7"},
+        "logo": OUA_RAW + "swinburne_logo.png",
+        "bg": OUA_RAW + "oua_advisor.jpg",
+        "bg_alt": "Student advisor with a laptop",
+    },
+}
+
+SETS = {"original": ORIGINAL, "akitabox": AKITABOX, "franconnect": FRANCONNECT, "emerald": EMERALD, "oua": OUA}
 
 
 def doc_colors(hexes):

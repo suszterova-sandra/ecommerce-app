@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#C8102E",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#F8F6F6",
+      "c2": "#F1EBEC",
+      "c3": "#E6DCDD",
+      "c4": "#D0C2C4",
+      "c5": "#A6989A",
+      "c6": "#7A6C6E",
+      "c7": "#4D4446",
+      "c8": "#202020",
+      "c9": "#202020"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#202020",
+      "lineColor": "#E6DCDD"
+    },
+    "borderColor": "#E6DCDD",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#202020"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#F1EBEC",
+    "axisColor": "#D0C2C4",
+    "axisLabelColor": "#8F8284",
+    "axisValueColor": "#4D4446",
+    "legendValueColor": "#4D4446",
+    "plotLineColor": "#D0C2C4",
+    "tooltipBackgroundColor": "#202020",
+    "tooltipBorderColor": "#202020",
+    "tooltipLabelColor": "#D0C2C4",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#202020",
+    "nullValueColor": "#8F8284",
+    "hoverBackgroundColor": "#F1EBEC",
+    "loadingIconColor": "#C8102E",
+    "headerLabelColor": "#8F8284",
+    "headerHoverBackgroundColor": "#F1EBEC",
+    "subtotalBackgroundColor": "#F1EBEC",
+    "totalBackgroundColor": "#E6DCDD",
+    "totalValueColor": "#202020"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#202020",
+    "secondaryInfoColor": "#4D4446",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#202020",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#202020",
+      "borderColor": "#000000",
+      "item": {
+        "color": "#D6CFD0",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#FFFFFF",
+        "selectedBackgroundColor": "#E51F30"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#E6DCDD",
+      "filterButton": {
+        "backgroundColor": "#F8F6F6"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#202020",
+        "lineColor": "#E6DCDD"
+      },
+      "description": {
+        "color": "#4D4446"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#F8F6F6",
+      "widget": {
+        "title": {
+          "color": "#202020",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#E6DCDD",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#D6CFD0",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#202020",
+        "borderColor": "#202020",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#FFFFFF",
+          "secondaryInfoColor": "#D6CFD0",
+          "value": {
+            "positiveColor": "#8FE3C0",
+            "negativeColor": "#FF9AA6"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#202020"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#E51F30",
+      "#202020",
+      "#F28C96",
+      "#7A6C6E",
+      "#3555A6",
+      "#F2A900",
+      "#9E0C24",
+      "#D0C2C4",
+      "#2F9E7A",
+      "#4D4446"
+    ],
+    "page": {
+      "backgroundColor": "#F1EBEC"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#F1EBEC"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#F8F6F6"
+        },
+        {
+          "id": "accent",
+          "color": "#C8102E"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#202020"
+        },
+        {
+          "id": "muted",
+          "color": "#4D4446"
+        },
+        {
+          "id": "subtle",
+          "color": "#8F8284"
+        },
+        {
+          "id": "accent",
+          "color": "#C8102E"
+        },
+        {
+          "id": "inverse",
+          "color": "#F1EBEC"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#202020",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#202020"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#202020"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#202020"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#202020"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#202020"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#202020"
+        }
+      },
+      "paragraph": {
+        "color": "#4D4446",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#202020"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#4D4446"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#8F8284"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#202020",
+    "activeColor": "#E51F30"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/griffith_logo.png",
+        "title": "Griffith University logo",
+        "altText": "Griffith University logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+        "title": "Cover background",
+        "altText": "Student studying online with a laptop"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+        "title": "Section background",
+        "altText": "Student studying online with a laptop"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+        "title": "Cover background",
+        "altText": "Student studying online with a laptop"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+        "title": "Section background",
+        "altText": "Student studying online with a laptop"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/E51F30/E51F30/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/griffith_logo.png",
+        "title": "Griffith University logo",
+        "altText": "Griffith University logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/griffith_logo.png)"
+  }
+}

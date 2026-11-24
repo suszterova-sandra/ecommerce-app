@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#231F20",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#F6F6F7",
+      "c2": "#ECECEE",
+      "c3": "#DFDFE2",
+      "c4": "#C5C5CA",
+      "c5": "#97979E",
+      "c6": "#6B6B72",
+      "c7": "#444448",
+      "c8": "#231F20",
+      "c9": "#231F20"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#231F20",
+      "lineColor": "#DFDFE2"
+    },
+    "borderColor": "#DFDFE2",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#231F20"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#ECECEE",
+    "axisColor": "#C5C5CA",
+    "axisLabelColor": "#85858C",
+    "axisValueColor": "#444448",
+    "legendValueColor": "#444448",
+    "plotLineColor": "#C5C5CA",
+    "tooltipBackgroundColor": "#231F20",
+    "tooltipBorderColor": "#231F20",
+    "tooltipLabelColor": "#C5C5CA",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#231F20",
+    "nullValueColor": "#85858C",
+    "hoverBackgroundColor": "#ECECEE",
+    "loadingIconColor": "#231F20",
+    "headerLabelColor": "#85858C",
+    "headerHoverBackgroundColor": "#ECECEE",
+    "subtotalBackgroundColor": "#ECECEE",
+    "totalBackgroundColor": "#DFDFE2",
+    "totalValueColor": "#231F20"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#231F20",
+    "secondaryInfoColor": "#444448",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#231F20",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#231F20",
+      "borderColor": "#000000",
+      "item": {
+        "color": "#C5C5CA",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#FFFFFF",
+        "selectedBackgroundColor": "#EC1B2E"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#DFDFE2",
+      "filterButton": {
+        "backgroundColor": "#F6F6F7"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#231F20",
+        "lineColor": "#DFDFE2"
+      },
+      "description": {
+        "color": "#444448"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#F6F6F7",
+      "widget": {
+        "title": {
+          "color": "#231F20",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#DFDFE2",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#C5C5CA",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#231F20",
+        "borderColor": "#231F20",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#FFFFFF",
+          "secondaryInfoColor": "#C5C5CA",
+          "value": {
+            "positiveColor": "#8FE3C0",
+            "negativeColor": "#FF9AA6"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#231F20"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#231F20",
+      "#EC1B2E",
+      "#6B6B72",
+      "#F58C96",
+      "#C5C5CA",
+      "#3555A6",
+      "#F2A900",
+      "#2F9E7A",
+      "#9E1220",
+      "#444448"
+    ],
+    "page": {
+      "backgroundColor": "#ECECEE"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#ECECEE"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#F6F6F7"
+        },
+        {
+          "id": "accent",
+          "color": "#231F20"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#231F20"
+        },
+        {
+          "id": "muted",
+          "color": "#444448"
+        },
+        {
+          "id": "subtle",
+          "color": "#85858C"
+        },
+        {
+          "id": "accent",
+          "color": "#231F20"
+        },
+        {
+          "id": "inverse",
+          "color": "#ECECEE"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#231F20",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#231F20"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#231F20"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#231F20"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#231F20"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#231F20"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#231F20"
+        }
+      },
+      "paragraph": {
+        "color": "#444448",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#231F20"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#444448"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#85858C"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#231F20",
+    "activeColor": "#EC1B2E"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/swinburne_logo.png",
+        "title": "Swinburne University of Technology logo",
+        "altText": "Swinburne University of Technology logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_advisor.jpg",
+        "title": "Cover background",
+        "altText": "Student advisor with a laptop"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_advisor.jpg",
+        "title": "Section background",
+        "altText": "Student advisor with a laptop"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_advisor.jpg",
+        "title": "Cover background",
+        "altText": "Student advisor with a laptop"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_advisor.jpg",
+        "title": "Section background",
+        "altText": "Student advisor with a laptop"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/EC1B2E/EC1B2E/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/swinburne_logo.png",
+        "title": "Swinburne University of Technology logo",
+        "altText": "Swinburne University of Technology logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/swinburne_logo.png)"
+  }
+}

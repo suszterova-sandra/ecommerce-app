@@ -48,9 +48,9 @@ PERSONAS = [
     {"id": "admin", "userId": "sandra.suszterova", "name": "Sandra Suszterova", "initials": "SS",
      "role": "Organization admin", "tagline": "Manages the parent workspace, tenants, themes and AI agents"},
     {"id": "analyze", "userId": "sas.analyze.user", "name": "Analyze User", "initials": "AU",
-     "role": "Analyst · Outdoor Retailer", "tagline": "Explores data, builds visualizations and metrics"},
+     "role": "Analyst · Griffith University", "tagline": "Explores data, builds visualizations and metrics"},
     {"id": "view", "userId": "sas.view.user", "name": "View User", "initials": "VU",
-     "role": "Viewer · Outdoor Retailer", "tagline": "Consumes dashboards, reports and AI summaries"},
+     "role": "Viewer · Griffith University", "tagline": "Consumes dashboards, reports and AI summaries"},
 ]
 
 

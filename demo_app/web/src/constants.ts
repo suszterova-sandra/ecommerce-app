@@ -4,8 +4,8 @@ export const AGENT_STYLE: Record<string, { ico: IconName; bg: string; fg: string
   "conference-summary-agent": { ico: "summary", bg: "#E0F2FE", fg: "#0369A1", short: "Summary" },
   "conference-next-steps-agent": { ico: "compass", bg: "#FEF3C7", fg: "#B45309", short: "Next steps" },
   "conference-recommendations-agent": { ico: "bulb", bg: "#EDE9FE", fg: "#6D28D9", short: "Recommendations" },
-  "fd66a9af-4011-41c9-927c-1362d10d36b5": { ico: "summary", bg: "#E6F2F3", fg: "#025157", short: "Show insights" },
-  "10609f98-4b4c-4119-8ddc-d70e2f260e03": { ico: "bulb", bg: "#F1FADF", fg: "#4D7300", short: "Analytics studio" },
+  "fd66a9af-4011-41c9-927c-1362d10d36b5": { ico: "summary", bg: "#E8EDF7", fg: "#3555A6", short: "Show insights" },
+  "10609f98-4b4c-4119-8ddc-d70e2f260e03": { ico: "bulb", bg: "#E3F4F2", fg: "#2A7F74", short: "Analytics studio" },
 };
 
 export const agentStyle = (id: string) => AGENT_STYLE[id] || { ico: "bot" as IconName, bg: "#F1F5F9", fg: "#334155", short: "Assistant" };

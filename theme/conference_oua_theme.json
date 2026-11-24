@@ -1,0 +1,352 @@
+{
+  "version": "2",
+  "palette": {
+    "primary": {
+      "base": "#3555A6",
+      "contrast": "#FFFFFF"
+    },
+    "error": {
+      "base": "#D1435B"
+    },
+    "warning": {
+      "base": "#FBBF24"
+    },
+    "success": {
+      "base": "#2F9E7A"
+    },
+    "complementary": {
+      "c0": "#FFFFFF",
+      "c1": "#F5F6F7",
+      "c2": "#EDF0F7",
+      "c3": "#DDE2EE",
+      "c4": "#C3CBE0",
+      "c5": "#959DB3",
+      "c6": "#6B7287",
+      "c7": "#55585E",
+      "c8": "#2A3C75",
+      "c9": "#3B3B3C"
+    }
+  },
+  "typography": {
+    "font": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+    "fontBold": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2"
+  },
+  "button": {
+    "borderRadius": "8",
+    "dropShadow": false,
+    "textCapitalization": false
+  },
+  "modal": {
+    "title": {
+      "color": "#3B3B3C",
+      "lineColor": "#DDE2EE"
+    },
+    "borderColor": "#DDE2EE",
+    "borderRadius": "14",
+    "borderWidth": "1",
+    "dropShadow": true,
+    "outsideBackgroundColor": "rgba(0, 0, 0, 0.45)"
+  },
+  "tooltip": {
+    "color": "#FFFFFF",
+    "backgroundColor": "#3B3B3C"
+  },
+  "chart": {
+    "backgroundColor": "#FFFFFF",
+    "gridColor": "#EDF0F7",
+    "axisColor": "#C3CBE0",
+    "axisLabelColor": "#82879A",
+    "axisValueColor": "#55585E",
+    "legendValueColor": "#55585E",
+    "plotLineColor": "#C3CBE0",
+    "tooltipBackgroundColor": "#3B3B3C",
+    "tooltipBorderColor": "#3B3B3C",
+    "tooltipLabelColor": "#C3CBE0",
+    "tooltipValueColor": "#FFFFFF"
+  },
+  "table": {
+    "valueColor": "#2A3C75",
+    "nullValueColor": "#82879A",
+    "hoverBackgroundColor": "#EDF0F7",
+    "loadingIconColor": "#3555A6",
+    "headerLabelColor": "#82879A",
+    "headerHoverBackgroundColor": "#EDF0F7",
+    "subtotalBackgroundColor": "#EDF0F7",
+    "totalBackgroundColor": "#DDE2EE",
+    "totalValueColor": "#3B3B3C"
+  },
+  "kpi": {
+    "primaryMeasureColor": "#3B3B3C",
+    "secondaryInfoColor": "#55585E",
+    "value": {
+      "positiveColor": "#2F9E7A",
+      "negativeColor": "#D1435B"
+    }
+  },
+  "dashboards": {
+    "title": {
+      "color": "#3B3B3C",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF"
+    },
+    "navigation": {
+      "title": {
+        "color": "#FFFFFF"
+      },
+      "backgroundColor": "#3555A6",
+      "borderColor": "#27407F",
+      "item": {
+        "color": "#D2DAF0",
+        "hoverColor": "#FFFFFF",
+        "selectedColor": "#1E2F5C",
+        "selectedBackgroundColor": "#4CBAAC"
+      }
+    },
+    "filterBar": {
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#DDE2EE",
+      "filterButton": {
+        "backgroundColor": "#F5F6F7"
+      }
+    },
+    "section": {
+      "title": {
+        "color": "#3B3B3C",
+        "lineColor": "#DDE2EE"
+      },
+      "description": {
+        "color": "#55585E"
+      },
+      "backgroundColor": "#FFFFFF"
+    },
+    "content": {
+      "backgroundColor": "#F5F6F7",
+      "widget": {
+        "title": {
+          "color": "#3B3B3C",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#DDE2EE",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false
+      },
+      "kpiWidget": {
+        "title": {
+          "color": "#D2DAF0",
+          "textAlign": "center"
+        },
+        "backgroundColor": "#3555A6",
+        "borderColor": "#3555A6",
+        "borderRadius": "14",
+        "borderWidth": "1",
+        "dropShadow": false,
+        "kpi": {
+          "primaryMeasureColor": "#FFFFFF",
+          "secondaryInfoColor": "#D2DAF0",
+          "value": {
+            "positiveColor": "#9BE3D9",
+            "negativeColor": "#FFB3C4"
+          }
+        }
+      }
+    }
+  },
+  "analyticalDesigner": {
+    "title": {
+      "color": "#3B3B3C"
+    }
+  },
+  "documents": {
+    "visualizationPalette": [
+      "#3555A6",
+      "#E42251",
+      "#4CBAAC",
+      "#3B3B3C",
+      "#8FA3D6",
+      "#F28FA8",
+      "#348179",
+      "#C9D3EC",
+      "#F2A900",
+      "#6B6B6D"
+    ],
+    "page": {
+      "backgroundColor": "#EDF0F7"
+    },
+    "colors": {
+      "backgrounds": [
+        {
+          "id": "page",
+          "color": "#EDF0F7"
+        },
+        {
+          "id": "card",
+          "color": "#FFFFFF"
+        },
+        {
+          "id": "panel",
+          "color": "#F5F6F7"
+        },
+        {
+          "id": "accent",
+          "color": "#3555A6"
+        }
+      ],
+      "texts": [
+        {
+          "id": "default",
+          "color": "#3B3B3C"
+        },
+        {
+          "id": "muted",
+          "color": "#55585E"
+        },
+        {
+          "id": "subtle",
+          "color": "#82879A"
+        },
+        {
+          "id": "accent",
+          "color": "#3555A6"
+        },
+        {
+          "id": "inverse",
+          "color": "#EDF0F7"
+        }
+      ]
+    },
+    "textStyle": {
+      "typography": {
+        "fontFamily": "Inter, Helvetica Neue, Arial, sans-serif",
+        "fonts": [
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 400
+          },
+          {
+            "family": "Inter",
+            "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hiJ-Ek-_0ew.woff2",
+            "weight": 700
+          }
+        ]
+      },
+      "heading": {
+        "color": "#3B3B3C",
+        "h1": {
+          "fontSize": 4.4,
+          "lineHeight": 5,
+          "color": "#3B3B3C"
+        },
+        "h2": {
+          "fontSize": 2.1,
+          "lineHeight": 2.7,
+          "color": "#3B3B3C"
+        },
+        "h3": {
+          "fontSize": 1.6,
+          "lineHeight": 2.1,
+          "color": "#3B3B3C"
+        },
+        "h4": {
+          "fontSize": 1.35,
+          "lineHeight": 1.8,
+          "color": "#3B3B3C"
+        },
+        "h5": {
+          "fontSize": 1.2,
+          "lineHeight": 1.6,
+          "color": "#3B3B3C"
+        },
+        "h6": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#3B3B3C"
+        }
+      },
+      "paragraph": {
+        "color": "#55585E",
+        "largeText": {
+          "fontSize": 1.65,
+          "lineHeight": 2.3,
+          "color": "#3B3B3C"
+        },
+        "normalText": {
+          "fontSize": 1.35,
+          "lineHeight": 1.9,
+          "color": "#55585E"
+        },
+        "smallText": {
+          "fontSize": 1.1,
+          "lineHeight": 1.5,
+          "color": "#82879A"
+        }
+      }
+    }
+  },
+  "header": {
+    "backgroundColor": "#3555A6",
+    "color": "#FFFFFF",
+    "activeColor": "#4CBAAC"
+  },
+  "assets": {
+    "logos": [
+      {
+        "id": "logo",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_logo.png",
+        "title": "Open Universities Australia logo",
+        "altText": "Open Universities Australia logo"
+      }
+    ],
+    "backgrounds": [
+      {
+        "id": "cover_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+        "title": "Cover background",
+        "altText": "Student studying online with a laptop"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+        "title": "Section background",
+        "altText": "Student studying online with a laptop"
+      }
+    ],
+    "images": [
+      {
+        "id": "cover_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+        "title": "Cover background",
+        "altText": "Student studying online with a laptop"
+      },
+      {
+        "id": "section_bg",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+        "title": "Section background",
+        "altText": "Student studying online with a laptop"
+      },
+      {
+        "id": "accent_bar",
+        "url": "https://placehold.co/1600x12/E42251/E42251/png",
+        "title": "Accent rule",
+        "altText": "Accent rule"
+      },
+      {
+        "id": "logo",
+        "url": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_logo.png",
+        "title": "Open Universities Australia logo",
+        "altText": "Open Universities Australia logo"
+      },
+      {
+        "id": "spacer",
+        "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "title": "Spacer",
+        "altText": ""
+      }
+    ]
+  },
+  "images": {
+    "logo": "url(https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_logo_white.png)"
+  }
+}
