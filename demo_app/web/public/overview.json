@@ -227,6 +227,45 @@
   }
  ],
  "themes": {
+  "conference_emerald": {
+   "id": "conference_emerald",
+   "name": "Conference \u2013 Emerald (parent)",
+   "palette": {
+    "primary": {
+     "base": "#008098",
+     "contrast": "#FFFFFF"
+    },
+    "error": {
+     "base": "#D1435B"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#2F9E7A"
+    },
+    "complementary": {
+     "c0": "#FFFFFF",
+     "c1": "#F4F7F8",
+     "c2": "#EDF1F4",
+     "c3": "#D5D8DD",
+     "c4": "#C2C9D0",
+     "c5": "#9AA3AE",
+     "c6": "#6E7884",
+     "c7": "#5F6673",
+     "c8": "#193A3D",
+     "c9": "#0E2A2D"
+    }
+   },
+   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/emerald_logo.png",
+   "cover": "https://nynow.com/wp-content/uploads/2026/09/DSC07734-scaled.jpg",
+   "accent": "#91D500",
+   "header": {
+    "backgroundColor": "#025157",
+    "color": "#FFFFFF",
+    "activeColor": "#91D500"
+   }
+  },
   "conference_cedia_expo": {
    "id": "conference_cedia_expo",
    "name": "Conference \u2013 CEDIA Expo",
@@ -343,45 +382,6 @@
     "color": "#ECE9D8",
     "activeColor": "#F5C518"
    }
-  },
-  "conference_emerald": {
-   "id": "conference_emerald",
-   "name": "Conference \u2013 Emerald (parent)",
-   "palette": {
-    "primary": {
-     "base": "#008098",
-     "contrast": "#FFFFFF"
-    },
-    "error": {
-     "base": "#D1435B"
-    },
-    "warning": {
-     "base": "#FBBF24"
-    },
-    "success": {
-     "base": "#2F9E7A"
-    },
-    "complementary": {
-     "c0": "#FFFFFF",
-     "c1": "#F4F7F8",
-     "c2": "#EDF1F4",
-     "c3": "#D5D8DD",
-     "c4": "#C2C9D0",
-     "c5": "#9AA3AE",
-     "c6": "#6E7884",
-     "c7": "#5F6673",
-     "c8": "#193A3D",
-     "c9": "#0E2A2D"
-    }
-   },
-   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/emerald_logo.png",
-   "cover": "https://nynow.com/wp-content/uploads/2026/09/DSC07734-scaled.jpg",
-   "accent": "#91D500",
-   "header": {
-    "backgroundColor": "#025157",
-    "color": "#FFFFFF",
-    "activeColor": "#91D500"
-   }
   }
  },
  "wdfs": [
@@ -458,10 +458,22 @@
  "agents": [
   {
    "id": "10609f98-4b4c-4119-8ddc-d70e2f260e03",
-   "name": "AI Assistant for business/data analysts",
-   "description": "An AI assistant for business and data analysts that helps users explore governed data, create visualizations and metrics, identify key drivers and anomalies, generate forecasts, and set up alerts using natural-language questions.",
+   "name": "Emerald Analytics Studio",
+   "description": "For analysts: explore governed data, build metrics, visualizations and your own dashboards, and run key drivers, what-if, forecasts and clustering. Standard Emerald content stays protected.",
    "skills": [
-    "all skills"
+    "visualization",
+    "metric",
+    "visualization_summary",
+    "dashboard_summary",
+    "key_driver_analysis",
+    "anomaly_detection",
+    "what_if_analysis",
+    "forecasting",
+    "clustering",
+    "alert",
+    "schedule_export",
+    "knowledge",
+    "dashboard_builder"
    ],
    "availableToAll": false,
    "groups": [
@@ -500,9 +512,7 @@
    ],
    "availableToAll": false,
    "groups": [
-    "adminGroup",
-    "analyze_group_id",
-    "view_group_id"
+    "adminGroup"
    ],
    "conference": true
   },
@@ -520,8 +530,7 @@
    ],
    "availableToAll": false,
    "groups": [
-    "adminGroup",
-    "analyze_group_id"
+    "adminGroup"
    ],
    "conference": true
   },
@@ -538,9 +547,7 @@
    ],
    "availableToAll": false,
    "groups": [
-    "adminGroup",
-    "analyze_group_id",
-    "view_group_id"
+    "adminGroup"
    ],
    "conference": true
   },
@@ -559,21 +566,23 @@
   },
   {
    "id": "fd66a9af-4011-41c9-927c-1362d10d36b5",
-   "name": "AI Assistant for business users and executives",
-   "description": "An AI assistant for business users and executives that helps summarize dashboards, explain trends, identify key drivers and anomalies, create visualizations, and forecast future performance using natural language.",
+   "name": "Emerald Show Insights",
+   "description": "For show and sales teams: ask about your show's numbers in plain language, get dashboard summaries, key drivers, anomalies and alerts. Read-only: it explains, it does not change content.",
    "skills": [
     "visualization",
     "visualization_summary",
     "dashboard_summary",
-    "alert",
-    "what_if_analysis",
     "key_driver_analysis",
-    "anomaly_detection"
+    "anomaly_detection",
+    "alert",
+    "schedule_export",
+    "knowledge"
    ],
    "availableToAll": false,
    "groups": [
     "30fd7628-9106-46a4-b7df-df7a9f9afae6",
-    "33eaa938-3936-434e-ad83-e4f958699843"
+    "33eaa938-3936-434e-ad83-e4f958699843",
+    "view_group_id"
    ],
    "conference": false
   },
