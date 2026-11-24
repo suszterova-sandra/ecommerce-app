@@ -94,6 +94,7 @@ async function liveOverview(nativeFetch: typeof fetch) {
             cover: (assets.backgrounds || []).find((b: any) => b.id === "cover_bg")?.url ?? null,
             accent: a.content.header?.activeColor ?? null,
             header: a.content.header ?? null,
+            headerLogo: /^url\((.+)\)$/.exec(a.content.images?.logo || "")?.[1] ?? null,
           },
         ];
       }),

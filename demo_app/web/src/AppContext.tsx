@@ -28,10 +28,14 @@ interface Ctx {
   t: (key: Key, vars?: Record<string, string>) => string;
   /** The shell's branding. `theme` colours the pages (the user's own show, or the platform for the admin);
    *  `chrome` is the portal's own brand (Emerald) that frames every persona; `sub` names the user's show. */
-  brand: { name: string; logo?: string | null; logoBg?: string; theme?: Theme; chrome?: Theme; sub?: string };
+  brand: Brand;
+  /** What frames the screen right now: the open workspace's brand (logo, name, colours), else `brand`. */
+  shell: Brand;
   /** The workspace a user belongs to (their tenant); the parent for the admin. */
   homeWs?: string;
 }
+
+type Brand = { name: string; logo?: string | null; logoBg?: string; theme?: Theme; chrome?: Theme; sub?: string };
 
 const AppCtx = createContext<Ctx | null>(null);
 export const useApp = () => useContext(AppCtx)!;
@@ -243,8 +247,16 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
       : parentTheme
         ? { name: parentWs?.name || "Platform", logo: parentTheme.logo, logoBg: "#FFFFFF", theme: parentTheme, chrome: parentTheme }
         : { name: "Ecommerce Platform" };
+    const openWs = route.view === "ws" ? workspaces.find((w) => w.id === route.ws) : undefined;
+    const openMeta = openWs && overview.workspaces.find((w) => w.id === openWs.id);
+    const openTheme = openMeta?.themeId ? overview.themes[openMeta.themeId] : undefined;
+    const shell: Brand = openWs && openTheme
+      ? { name: openWs.name, logo: openTheme.logo, logoBg: logoTile(openTheme), theme: openTheme, chrome: openTheme,
+          sub: openMeta?.isParent || !parentTheme ? undefined : `by ${parentWs?.name || "Platform"}` }
+      : brand;
     return {
       brand,
+      shell,
       homeWs,
       personas,
       persona,

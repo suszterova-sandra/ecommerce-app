@@ -243,45 +243,6 @@
   }
  ],
  "themes": {
-  "conference_swinburne": {
-   "id": "conference_swinburne",
-   "name": "Conference \u2013 Swinburne University",
-   "palette": {
-    "primary": {
-     "base": "#231F20",
-     "contrast": "#FFFFFF"
-    },
-    "error": {
-     "base": "#D1435B"
-    },
-    "warning": {
-     "base": "#FBBF24"
-    },
-    "success": {
-     "base": "#2F9E7A"
-    },
-    "complementary": {
-     "c0": "#FFFFFF",
-     "c1": "#F6F6F7",
-     "c2": "#ECECEE",
-     "c3": "#DFDFE2",
-     "c4": "#C5C5CA",
-     "c5": "#97979E",
-     "c6": "#6B6B72",
-     "c7": "#444448",
-     "c8": "#231F20",
-     "c9": "#231F20"
-    }
-   },
-   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/swinburne_logo.png",
-   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_advisor.jpg",
-   "accent": "#EC1B2E",
-   "header": {
-    "backgroundColor": "#FFFFFF",
-    "color": "#231F20",
-    "activeColor": "#EC1B2E"
-   }
-  },
   "conference_curtin": {
    "id": "conference_curtin",
    "name": "Conference \u2013 Curtin University",
@@ -319,7 +280,8 @@
     "backgroundColor": "#FFFFFF",
     "color": "#231F20",
     "activeColor": "#C19609"
-   }
+   },
+   "headerLogo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/curtin_logo.png"
   },
   "conference_griffith": {
    "id": "conference_griffith",
@@ -358,7 +320,48 @@
     "backgroundColor": "#FFFFFF",
     "color": "#202020",
     "activeColor": "#E51F30"
-   }
+   },
+   "headerLogo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/griffith_logo.png"
+  },
+  "conference_swinburne": {
+   "id": "conference_swinburne",
+   "name": "Conference \u2013 Swinburne University",
+   "palette": {
+    "primary": {
+     "base": "#231F20",
+     "contrast": "#FFFFFF"
+    },
+    "error": {
+     "base": "#D1435B"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#2F9E7A"
+    },
+    "complementary": {
+     "c0": "#FFFFFF",
+     "c1": "#F6F6F7",
+     "c2": "#ECECEE",
+     "c3": "#DFDFE2",
+     "c4": "#C5C5CA",
+     "c5": "#97979E",
+     "c6": "#6B6B72",
+     "c7": "#444448",
+     "c8": "#231F20",
+     "c9": "#231F20"
+    }
+   },
+   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/swinburne_logo.png",
+   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_advisor.jpg",
+   "accent": "#EC1B2E",
+   "header": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#231F20",
+    "activeColor": "#EC1B2E"
+   },
+   "headerLogo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/swinburne_logo.png"
   },
   "conference_oua": {
    "id": "conference_oua",
@@ -397,7 +400,8 @@
     "backgroundColor": "#3555A6",
     "color": "#FFFFFF",
     "activeColor": "#4CBAAC"
-   }
+   },
+   "headerLogo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_logo_white.png"
   }
  },
  "wdfs": [

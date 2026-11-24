@@ -1,6 +1,6 @@
 import { useApp } from "../AppContext";
 import { canCreateContent, useCatalog, usePermissions } from "../catalog";
-import { logoTile } from "../theme";
+import { isDark, logoTile } from "../theme";
 import type { Workspace } from "../types";
 import { Icon } from "../icons";
 
@@ -15,7 +15,9 @@ export function WsSwatch({ wsId }: { wsId: string }) {
 }
 
 export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle: () => void }) {
-  const { persona, workspaces, route, navigate, t, brand } = useApp();
+  const { persona, workspaces, route, navigate, t, shell: brand } = useApp();
+  // the sidebar is painted with a dark brand bar (applyChrome): use the brand's white logo there
+  const darkBar = Boolean(brand.chrome?.header?.backgroundColor && isDark(brand.chrome.header.backgroundColor) && (persona.id === "admin" || brand.chrome));
   const hasParent = workspaces.some((w) => w.isParent);
   const activeWs = route.view === "ws" ? route.ws : undefined;
   // a user with a single workspace always sees its dashboards
@@ -23,10 +25,10 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
 
   return (
     <aside className="sidebar">
-      <div className="brand">
-        <div className="brand-mark" style={brand.logo ? { background: brand.logoBg } : undefined}>
+      <div className={`brand${brand.logo ? " has-wordmark" : ""}`}>
+        <div className="brand-mark" title={brand.name} style={brand.logo ? { background: darkBar && brand.chrome?.headerLogo ? "transparent" : brand.logoBg } : undefined}>
           {brand.logo ? (
-            <img src={brand.logo} alt="" />
+            <img src={darkBar && brand.chrome?.headerLogo ? brand.chrome.headerLogo : brand.logo} alt={brand.name} />
           ) : (
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
               <path fill="currentColor" d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM16.5 13a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z" />
@@ -34,7 +36,8 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
           )}
         </div>
         <div className="brand-text">
-          <div className="brand-name">{brand.name}</div>
+          {/* a wordmark logo already says the name */}
+          {!brand.logo && <div className="brand-name">{brand.name}</div>}
           <div className="brand-sub">{brand.sub || "Powered by GoodData"}</div>
         </div>
         <button className="collapse-btn" onClick={onToggle} title={collapsed ? "Expand sidebar" : "Collapse sidebar"} aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"} aria-expanded={!collapsed}>

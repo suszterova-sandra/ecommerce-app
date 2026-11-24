@@ -25,6 +25,8 @@ export interface Theme {
   accent?: string | null;
   /** Theme top bar colours; a dark one also paints the admin's sidebar (Emerald teal) */
   header?: { backgroundColor?: string; color?: string; activeColor?: string } | null;
+  /** Logo variant for the theme's top bar (white wordmark on a dark bar) */
+  headerLogo?: string | null;
 }
 
 export interface Permission {

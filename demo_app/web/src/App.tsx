@@ -16,7 +16,7 @@ const initialMode = (): ColorMode => {
 };
 
 function Main() {
-  const { route, themeOf, persona, brand } = useApp();
+  const { route, themeOf, persona, shell: brand } = useApp();
   const chatbot = useChatbot();
   const [collapsed, setCollapsed] = useState(() => localStorage.getItem("sidebarCollapsed") === "1");
   const [mode, setMode] = useState<ColorMode>(initialMode);

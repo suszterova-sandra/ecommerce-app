@@ -700,3 +700,11 @@ body, .sidebar, .main, .topbar, .card, .composer { transition: background-color 
 /* dark brand sidebar (Emerald teal for the admin): light borders on logo tiles, readable children lines */
 :root[data-chrome="dark"] .sidebar .ws-logo, :root[data-chrome="dark"] .nav-item .sw { border-color: rgba(255,255,255,.18); }
 :root[data-chrome="dark"] .nav-item.active { box-shadow: inset 3px 0 0 var(--chrome-accent); }
+
+/* wordmark brand: the logo is the name; it takes the first row with the collapse button, the subtitle sits below */
+.brand.has-wordmark { flex-wrap: wrap; row-gap: 8px; }
+.brand.has-wordmark .brand-mark { width: auto; min-width: 0; max-width: 178px; height: 44px; padding: 6px 10px; border-radius: 10px; flex: 0 1 auto; }
+.brand.has-wordmark .brand-mark img { width: auto; height: 32px; max-width: 158px; object-fit: contain; }
+.brand.has-wordmark .brand-text { order: 3; flex-basis: 100%; padding-left: 2px; }
+.app.collapsed .brand.has-wordmark .brand-mark { max-width: 48px; height: 36px; padding: 4px; }
+.app.collapsed .brand.has-wordmark .brand-mark img { max-width: 40px; height: 28px; }
