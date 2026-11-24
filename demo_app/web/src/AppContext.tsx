@@ -235,12 +235,11 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
     const parentWs = overview.workspaces.find((w) => w.isParent);
     const parentTheme = parentWs?.themeId && parentWs.themeId !== "conference_dark_lime" ? overview.themes[parentWs.themeId] : undefined;
     const homeName = workspaces.find((w) => w.id === homeWs)?.name || "Workspace";
-    // a branded parent (Emerald) is the portal for everyone: its name, logo and chrome; a show user's pages keep the
-    // show's theme. Without one (theme set "original") a tenant user's portal is white-labelled to the tenant.
-    const brand = tenantTheme && parentTheme
-      ? { name: parentWs?.name || "Platform", logo: parentTheme.logo, logoBg: "#FFFFFF", theme: tenantTheme, chrome: parentTheme, sub: homeName }
-      : tenantTheme
-      ? { name: homeName, logo: tenantTheme.logo, logoBg: logoTile(tenantTheme), theme: tenantTheme }
+    // a show user's portal is white-labelled to their show (name, logo, colours), with the parent named underneath
+    // ("by Emerald"); the admin gets the parent's brand (Emerald), or the platform look with theme set "original"
+    const brand = tenantTheme
+      ? { name: homeName, logo: tenantTheme.logo, logoBg: logoTile(tenantTheme), theme: tenantTheme,
+          sub: parentTheme ? `by ${parentWs?.name || "Platform"}` : undefined }
       : parentTheme
         ? { name: parentWs?.name || "Platform", logo: parentTheme.logo, logoBg: "#FFFFFF", theme: parentTheme, chrome: parentTheme }
         : { name: "Ecommerce Platform" };
