@@ -5,9 +5,9 @@
  "workspaces": [
   {
    "id": "gdc_demo_86a46377-cad8-4c3d-ab7c-6ba753b49b2c",
-   "name": "Outdoor Retailer",
+   "name": "Griffith University",
    "isParent": false,
-   "themeId": "conference_outdoor_retailer",
+   "themeId": "conference_griffith",
    "permissions": [
     {
      "name": "ANALYZE",
@@ -102,6 +102,10 @@
      "title": "My Measure Explorer (copy)"
     },
     {
+     "id": "10df84c4-953a-4303-bc89-bcf53d651690",
+     "title": "Copy of 1. Overview"
+    },
+    {
      "id": "customers",
      "title": "3. Customers"
     },
@@ -125,12 +129,16 @@
   },
   {
    "id": "gdc_demo_9df6e6ad-de8a-42e3-9893-f13abe01e203",
-   "name": "CEDIA Expo",
+   "name": "Swinburne University of Technology",
    "isParent": false,
-   "themeId": "conference_cedia_expo",
+   "themeId": "conference_swinburne",
    "permissions": [],
    "hierarchyPermissions": [],
    "dashboards": [
+    {
+     "id": "10df84c4-953a-4303-bc89-bcf53d651690",
+     "title": "Copy of 1. Overview"
+    },
     {
      "id": "customers",
      "title": "3. Customers"
@@ -155,12 +163,16 @@
   },
   {
    "id": "gdc_demo_a7c3afa0-ca91-40db-a3a8-df4d5044e92f",
-   "name": "Emerald",
+   "name": "Open Universities Australia",
    "isParent": true,
-   "themeId": "conference_emerald",
+   "themeId": "conference_oua",
    "permissions": [],
    "hierarchyPermissions": [],
    "dashboards": [
+    {
+     "id": "10df84c4-953a-4303-bc89-bcf53d651690",
+     "title": "Copy of 1. Overview"
+    },
     {
      "id": "customers",
      "title": "3. Customers"
@@ -185,12 +197,16 @@
   },
   {
    "id": "gdc_demo_c8e457e4-64e9-4226-b2d7-b914e5f260b5",
-   "name": "NY NOW",
+   "name": "Curtin University",
    "isParent": false,
-   "themeId": "conference_nynow",
+   "themeId": "conference_curtin",
    "permissions": [],
    "hierarchyPermissions": [],
    "dashboards": [
+    {
+     "id": "10df84c4-953a-4303-bc89-bcf53d651690",
+     "title": "Copy of 1. Overview"
+    },
     {
      "id": "customers",
      "title": "3. Customers"
@@ -227,12 +243,12 @@
   }
  ],
  "themes": {
-  "conference_emerald": {
-   "id": "conference_emerald",
-   "name": "Conference \u2013 Emerald (parent)",
+  "conference_swinburne": {
+   "id": "conference_swinburne",
+   "name": "Conference \u2013 Swinburne University",
    "palette": {
     "primary": {
-     "base": "#008098",
+     "base": "#231F20",
      "contrast": "#FFFFFF"
     },
     "error": {
@@ -246,110 +262,32 @@
     },
     "complementary": {
      "c0": "#FFFFFF",
-     "c1": "#F4F7F8",
-     "c2": "#EDF1F4",
-     "c3": "#D5D8DD",
-     "c4": "#C2C9D0",
-     "c5": "#9AA3AE",
-     "c6": "#6E7884",
-     "c7": "#5F6673",
-     "c8": "#193A3D",
-     "c9": "#0E2A2D"
+     "c1": "#F6F6F7",
+     "c2": "#ECECEE",
+     "c3": "#DFDFE2",
+     "c4": "#C5C5CA",
+     "c5": "#97979E",
+     "c6": "#6B6B72",
+     "c7": "#444448",
+     "c8": "#231F20",
+     "c9": "#231F20"
     }
    },
-   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/emerald_logo.png",
-   "cover": "https://nynow.com/wp-content/uploads/2026/09/DSC07734-scaled.jpg",
-   "accent": "#91D500",
-   "header": {
-    "backgroundColor": "#025157",
-    "color": "#FFFFFF",
-    "activeColor": "#91D500"
-   }
-  },
-  "conference_cedia_expo": {
-   "id": "conference_cedia_expo",
-   "name": "Conference \u2013 CEDIA Expo",
-   "palette": {
-    "primary": {
-     "base": "#0077C8",
-     "contrast": "#FFFFFF"
-    },
-    "error": {
-     "base": "#D1435B"
-    },
-    "warning": {
-     "base": "#FBBF24"
-    },
-    "success": {
-     "base": "#2F9E7A"
-    },
-    "complementary": {
-     "c0": "#FFFFFF",
-     "c1": "#F6F7F8",
-     "c2": "#ECEEF1",
-     "c3": "#DFE2E6",
-     "c4": "#C5CAD1",
-     "c5": "#979DA6",
-     "c6": "#6B717A",
-     "c7": "#444950",
-     "c8": "#222222",
-     "c9": "#111111"
-    }
-   },
-   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_logo.png",
-   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/cedia_expo_panel.jpg",
-   "accent": "#00A3E0",
-   "header": {
-    "backgroundColor": "#111111",
-    "color": "#FFFFFF",
-    "activeColor": "#00A3E0"
-   }
-  },
-  "conference_nynow": {
-   "id": "conference_nynow",
-   "name": "Conference \u2013 NY NOW",
-   "palette": {
-    "primary": {
-     "base": "#184056",
-     "contrast": "#FFFFFF"
-    },
-    "error": {
-     "base": "#D1435B"
-    },
-    "warning": {
-     "base": "#FBBF24"
-    },
-    "success": {
-     "base": "#2F9E7A"
-    },
-    "complementary": {
-     "c0": "#FFFFFF",
-     "c1": "#F5F9FA",
-     "c2": "#E8F2F3",
-     "c3": "#D8E6E8",
-     "c4": "#BCD3D7",
-     "c5": "#8FA9B0",
-     "c6": "#627F88",
-     "c7": "#3E5560",
-     "c8": "#184056",
-     "c9": "#0A0A0A"
-    }
-   },
-   "logo": "https://nynow.com/wp-content/uploads/2026/06/NYNOW_Logo_Black_Nav.png",
-   "cover": "https://nynow.com/wp-content/uploads/2026/08/home-00.jpg",
-   "accent": "#184056",
+   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/swinburne_logo.png",
+   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_advisor.jpg",
+   "accent": "#EC1B2E",
    "header": {
     "backgroundColor": "#FFFFFF",
-    "color": "#0A0A0A",
-    "activeColor": "#184056"
+    "color": "#231F20",
+    "activeColor": "#EC1B2E"
    }
   },
-  "conference_outdoor_retailer": {
-   "id": "conference_outdoor_retailer",
-   "name": "Conference \u2013 Outdoor Retailer",
+  "conference_curtin": {
+   "id": "conference_curtin",
+   "name": "Conference \u2013 Curtin University",
    "palette": {
     "primary": {
-     "base": "#3B4223",
+     "base": "#231F20",
      "contrast": "#FFFFFF"
     },
     "error": {
@@ -363,24 +301,102 @@
     },
     "complementary": {
      "c0": "#FFFFFF",
-     "c1": "#F8F7F1",
-     "c2": "#EFEDE2",
-     "c3": "#E2DFD0",
-     "c4": "#CCC8B3",
-     "c5": "#A19D86",
-     "c6": "#737058",
-     "c7": "#4D4B3A",
-     "c8": "#2A2F18",
-     "c9": "#1A1C12"
+     "c1": "#F8F6F1",
+     "c2": "#EFEBE1",
+     "c3": "#E3DED1",
+     "c4": "#CCC5B2",
+     "c5": "#A39C88",
+     "c6": "#77705E",
+     "c7": "#4F4A3F",
+     "c8": "#231F20",
+     "c9": "#231F20"
     }
    },
-   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_logo.png",
-   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/emerald_assets/or_show_floor.jpg",
-   "accent": "#F5C518",
+   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/curtin_logo.png",
+   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+   "accent": "#C19609",
    "header": {
-    "backgroundColor": "#3B4223",
-    "color": "#ECE9D8",
-    "activeColor": "#F5C518"
+    "backgroundColor": "#FFFFFF",
+    "color": "#231F20",
+    "activeColor": "#C19609"
+   }
+  },
+  "conference_griffith": {
+   "id": "conference_griffith",
+   "name": "Conference \u2013 Griffith University",
+   "palette": {
+    "primary": {
+     "base": "#C8102E",
+     "contrast": "#FFFFFF"
+    },
+    "error": {
+     "base": "#D1435B"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#2F9E7A"
+    },
+    "complementary": {
+     "c0": "#FFFFFF",
+     "c1": "#F8F6F6",
+     "c2": "#F1EBEC",
+     "c3": "#E6DCDD",
+     "c4": "#D0C2C4",
+     "c5": "#A6989A",
+     "c6": "#7A6C6E",
+     "c7": "#4D4446",
+     "c8": "#202020",
+     "c9": "#202020"
+    }
+   },
+   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/griffith_logo.png",
+   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+   "accent": "#E51F30",
+   "header": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#202020",
+    "activeColor": "#E51F30"
+   }
+  },
+  "conference_oua": {
+   "id": "conference_oua",
+   "name": "Conference \u2013 Open Universities Australia (parent)",
+   "palette": {
+    "primary": {
+     "base": "#3555A6",
+     "contrast": "#FFFFFF"
+    },
+    "error": {
+     "base": "#D1435B"
+    },
+    "warning": {
+     "base": "#FBBF24"
+    },
+    "success": {
+     "base": "#2F9E7A"
+    },
+    "complementary": {
+     "c0": "#FFFFFF",
+     "c1": "#F5F6F7",
+     "c2": "#EDF0F7",
+     "c3": "#DDE2EE",
+     "c4": "#C3CBE0",
+     "c5": "#959DB3",
+     "c6": "#6B7287",
+     "c7": "#55585E",
+     "c8": "#2A3C75",
+     "c9": "#3B3B3C"
+    }
+   },
+   "logo": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_logo.png",
+   "cover": "https://raw.githubusercontent.com/suszterova-sandra/ecommerce-app/main/theme/oua_assets/oua_student.jpg",
+   "accent": "#4CBAAC",
+   "header": {
+    "backgroundColor": "#3555A6",
+    "color": "#FFFFFF",
+    "activeColor": "#4CBAAC"
    }
   }
  },
@@ -580,8 +596,6 @@
    ],
    "availableToAll": false,
    "groups": [
-    "30fd7628-9106-46a4-b7df-df7a9f9afae6",
-    "33eaa938-3936-434e-ad83-e4f958699843",
     "view_group_id"
    ],
    "conference": false
