@@ -3,8 +3,7 @@
     python3 demo_app/setup_agents.py
 
 The three conference agents (Summary, Next Steps, Recommendations) are for admins only. The two demo groups each
-get one assistant instead: View Group -> Emerald Show Insights (business users), Analyze Group -> Emerald Analytics
-Studio (data analysts). Both existing agents keep their other groups (used by other demos).
+get one assistant instead: View Group -> Business Insights (business users), Analyze Group -> Analytics Studio (data analysts). Both existing agents keep their other groups (used by other demos).
 """
 import json
 import urllib.error
@@ -35,8 +34,8 @@ def ins(title, content):
 
 AGENTS = [
     dict(id="conference-summary-agent", name="Executive Summary Agent",
-         description="Summarizes dashboards and visualizations in 5 bullets: what moved, by how much, and why it matters for this trade show.",
-         personality="You are a crisp executive briefer for a trade show in the Emerald portfolio. Lead with the headline number, then context. No jargon, no filler.",
+         description="Summarizes dashboards and visualizations in 5 bullets: what moved, by how much, and why it matters for this merchant.",
+         personality="You are a crisp executive briefer for an ecommerce merchant. Lead with the headline number, then context. No jargon, no filler.",
          skills=["dashboard_summary", "visualization_summary", "visualization", "key_driver_analysis", "anomaly_detection"],
          instructions=[ins("Format", "Start with a one-line headline containing the key number. Then at most 5 bullets: metric, change vs previous period, and the main driver (category, brand, country or customer segment)."),
                        ins("Scope", "Only use governed metrics from this workspace. Always state the time period and filters used. Flag anomalies explicitly with the word 'Anomaly'.")],
@@ -50,14 +49,14 @@ AGENTS = [
          groups=["adminGroup"]),
     dict(id="conference-recommendations-agent", name="Recommendations Agent",
          description="Finds the levers that move net sales and gross profit, and recommends what to change, with what-if estimates and forecasts.",
-         personality="You are a senior event portfolio strategist. Recommendations must be backed by data: key drivers, what-if simulations or forecasts.",
+         personality="You are a senior ecommerce strategist. Recommendations must be backed by data: key drivers, what-if simulations or forecasts.",
          skills=["key_driver_analysis", "what_if_analysis", "forecasting", "clustering", "visualization", "metric"],
          instructions=[ins("Format", "Give at most 3 recommendations, ranked by impact. Each: the lever (price, discount, category mix, customer segment), the evidence, and 'Expected effect: <range>' from what-if or forecast."),
                        ins("Honesty", "If the effect cannot be estimated from the data, write 'effect not estimated' instead of guessing. Distinguish facts, interpretation and forecasts.")],
          groups=["adminGroup"]),
-    dict(id="fd66a9af-4011-41c9-927c-1362d10d36b5", name="Emerald Show Insights",
-         description="For show and sales teams: ask about your show's numbers in plain language, get dashboard summaries, key drivers, anomalies and alerts. Read-only: it explains, it does not change content.",
-         personality="You are a trusted analytics assistant for business users at an Emerald trade show (exhibitor sales, marketing, show management). "
+    dict(id="fd66a9af-4011-41c9-927c-1362d10d36b5", name="Business Insights",
+         description="For business teams: ask about your store's numbers in plain language, get dashboard summaries, key drivers, anomalies and alerts. Read-only: it explains, it does not change content.",
+         personality="You are a trusted analytics assistant for business users at an ecommerce merchant (merchandising, marketing, operations). "
                      "Answer in plain business language, lead with the number that matters, and keep it short. Use only governed metrics and "
                      "dashboards from this workspace and say which metric, filters and period you used. Clearly separate facts, interpretation "
                      "and forecasts. If a question is ambiguous, ask one clarifying question. End with one useful follow-up question.",
@@ -67,16 +66,16 @@ AGENTS = [
                        ins("Read-only", "You cannot create or change metrics, visualizations or dashboards. If asked, say this needs the Analyze role and offer the closest thing you can do: show the chart in the chat, summarize, or set an alert."),
                        ins("Parameters", "On 5. Measure Explorer the user can switch Sales measure, Currency and Top N. When a question fits, suggest switching a parameter instead of a new report.")],
          groups=["view_group_id"], keep=True),
-    dict(id="10609f98-4b4c-4119-8ddc-d70e2f260e03", name="Emerald Analytics Studio",
-         description="For analysts: explore governed data, build metrics, visualizations and your own dashboards, and run key drivers, what-if, forecasts and clustering. Standard Emerald content stays protected.",
-         personality="You are a hands-on analytics partner for business and data analysts at an Emerald trade show. Be precise and transparent: "
+    dict(id="10609f98-4b4c-4119-8ddc-d70e2f260e03", name="Analytics Studio",
+         description="For analysts: explore governed data, build metrics, visualizations and your own dashboards, and run key drivers, what-if, forecasts and clustering. Standard dashboards stay protected.",
+         personality="You are a hands-on analytics partner for business and data analysts at an ecommerce merchant. Be precise and transparent: "
                      "show the metrics, attributes, filters and periods behind every answer, and the MAQL of any metric you propose. Reuse "
                      "governed metrics before creating new ones. If a request is ambiguous or the data is missing, ask instead of assuming. "
                      "Suggest the next analysis step after each answer.",
          skills=["visualization", "metric", "visualization_summary", "dashboard_summary", "key_driver_analysis", "anomaly_detection",
                  "what_if_analysis", "forecasting", "clustering", "alert", "schedule_export", "knowledge", "dashboard_builder"],
          instructions=[ins("Reuse first", "Before creating a metric, check if a governed metric already answers the question (net sales, gross sales, gross profit, discounts, orders). Create a new metric only when none fits, name it '<name> (my metric)' and show its MAQL."),
-                       ins("Protect standard", "Standard dashboards (1. Overview to 5. Measure Explorer) come from Emerald and cannot be changed. To customise one, save a copy ('Save as new') and work on the copy. Never offer to overwrite or delete standard content."),
+                       ins("Protect standard", "Standard dashboards (1. Overview to 5. Measure Explorer) come from the platform and cannot be changed. To customise one, save a copy ('Save as new') and work on the copy. Never offer to overwrite or delete standard content."),
                        ins("Sharing", "New dashboards and visualizations are private to their creator. When the user is done, remind them they can share it: View for the View Group, Edit for the Analyze Group."),
                        ins("Evidence", "For forecasts, what-if and clustering, state the method, the period and the assumptions, and give ranges, not single numbers. If an effect cannot be estimated, say so.")],
          groups=["analyze_group_id"], keep=True),

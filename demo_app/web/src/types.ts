@@ -21,9 +21,9 @@ export interface Theme {
   palette: Palette;
   logo: string | null;
   cover: string | null;
-  /** Highlight colour of the brand (theme header activeColor): Emerald green, Outdoor Retailer yellow, ... */
+  /** Highlight colour of the brand (theme header activeColor): IKEA yellow, Nike orange, ... */
   accent?: string | null;
-  /** Theme top bar colours; a dark one also paints the admin's sidebar (Emerald teal) */
+  /** Theme top bar colours; a dark one also paints the admin's sidebar (when the parent theme is dark) */
   header?: { backgroundColor?: string; color?: string; activeColor?: string } | null;
   /** Logo variant for the theme's top bar (white wordmark on a dark bar) */
   headerLogo?: string | null;

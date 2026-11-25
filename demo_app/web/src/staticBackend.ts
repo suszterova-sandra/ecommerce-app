@@ -17,8 +17,8 @@ const REPORT_ID = "ecommerce_business_report";
 
 const PERSONAS = [
   { id: "admin", userId: "sandra.suszterova", name: "Sandra Suszterova", initials: "SS", role: "Organization admin", tagline: "Sign in with your GoodData account" },
-  { id: "analyze", userId: "sas.analyze.user", name: "Analyze User", initials: "AU", role: "Analyst · Griffith University", tagline: "Explores data, builds visualizations and metrics" },
-  { id: "view", userId: "sas.view.user", name: "View User", initials: "VU", role: "Viewer · Griffith University", tagline: "Consumes dashboards, reports and AI summaries" },
+  { id: "analyze", userId: "sas.analyze.user", name: "Analyze User", initials: "AU", role: "Analyst · Fashion Store", tagline: "Explores data, builds visualizations and metrics" },
+  { id: "view", userId: "sas.view.user", name: "View User", initials: "VU", role: "Viewer · Fashion Store", tagline: "Consumes dashboards, reports and AI summaries" },
 ];
 
 const TOKENS: Record<string, string | undefined> = {

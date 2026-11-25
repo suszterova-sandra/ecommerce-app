@@ -27,7 +27,7 @@ interface Ctx {
   localeReady: boolean;
   t: (key: Key, vars?: Record<string, string>) => string;
   /** The shell's branding. `theme` colours the pages (the user's own show, or the platform for the admin);
-   *  `chrome` is the portal's own brand (Emerald) that frames every persona; `sub` names the user's show. */
+   *  `chrome` is the portal's own brand (e.g. a branded parent) that frames every persona; `sub` names the user's show. */
   brand: Brand;
   /** What frames the screen right now: the open workspace's brand (logo, name, colours), else `brand`. */
   shell: Brand;
@@ -234,13 +234,13 @@ export function AppProvider({ children }: { children: (state: "loading" | "ready
     const homeWs = persona.id === "admin" ? overview.parent : workspaces.find((w) => !w.isParent)?.id || workspaces[0]?.id;
     const homeWsMeta = overview.workspaces.find((w) => w.id === homeWs);
     const tenantTheme = persona.id !== "admin" && homeWsMeta?.themeId ? overview.themes[homeWsMeta.themeId] : undefined;
-    // the admin's platform carries the parent's brand (Emerald): its name, logo and theme colours;
+    // the admin's platform carries the parent's brand (e.g. a branded parent): its name, logo and theme colours;
     // with the generic Dark Lime parent theme (theme set "original") it keeps the platform look
     const parentWs = overview.workspaces.find((w) => w.isParent);
     const parentTheme = parentWs?.themeId && parentWs.themeId !== "conference_dark_lime" ? overview.themes[parentWs.themeId] : undefined;
     const homeName = workspaces.find((w) => w.id === homeWs)?.name || "Workspace";
     // a show user's portal is white-labelled to their show (name, logo, colours), with the parent named underneath
-    // ("by Emerald"); the admin gets the parent's brand (Emerald), or the platform look with theme set "original"
+    // ("by <parent>"); the admin gets the parent's brand (e.g. a branded parent), or the platform look with theme set "original"
     const brand = tenantTheme
       ? { name: homeName, logo: tenantTheme.logo, logoBg: logoTile(tenantTheme), theme: tenantTheme,
           sub: parentTheme ? `by ${parentWs?.name || "Platform"}` : undefined }

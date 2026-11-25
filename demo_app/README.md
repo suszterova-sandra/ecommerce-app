@@ -1,7 +1,7 @@
 # Conference demo app
 
-React (Vite + TypeScript) shell around the **Emerald** conference workspaces (ecommerce data) on
-`navy-blue-eagle.trial.cloud.gooddata.com`, built to show one parent (Emerald) with three branded tenants (NY NOW, Outdoor Retailer, CEDIA Expo), switching
+React (Vite + TypeScript) shell around the **Ecommerce (Conference)** workspaces on
+`navy-blue-eagle.trial.cloud.gooddata.com`, built to show one parent (Ecommerce Platform) with three branded tenants (Home & Living Store, Fashion Store, Electronics Store), switching
 between users with their real permissions, the embedded AI report, and AI Hub agents.
 
 ## Run

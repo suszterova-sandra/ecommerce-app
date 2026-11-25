@@ -6,11 +6,11 @@ Build the conference themes and chart palettes, and optionally deploy them.
     python3 theme/build_themes.py conference_nike --deploy   # only one theme
     python3 theme/build_themes.py --set=akitabox --deploy   # switch to the AkitaBox branding
 
-Theme set "original" (default, active):
-- conference_dark_lime  -> parent (near-black, lime accent, GoodData visuals)
-- conference_ikea       -> child merchant__bigboxretailer (white, IKEA blue and yellow)
-- conference_nike       -> child merchant__clothing (white, black, Nike orange)
-- conference_samsung    -> child merchant__electronics (white, Samsung blue)
+Theme set "original" (default, active; the basic GoodData template; also renames the workspaces):
+- conference_dark_lime  -> parent "Ecommerce Platform" (near-black, lime accent, GoodData visuals)
+- conference_ikea       -> child "Home & Living Store" = merchant__bigboxretailer (white, IKEA blue and yellow)
+- conference_nike       -> child "Fashion Store" = merchant__clothing (white, black, Nike orange)
+- conference_samsung    -> child "Electronics Store" = merchant__electronics (white, Samsung blue)
 
 Theme set "akitabox":
 - conference_akitabox         -> parent "AkitaBox" (navy #2B3144, gold #F2C318)
@@ -160,7 +160,7 @@ AKITABOX = {
 # Pre-AkitaBox look (the default): Dark Lime parent + IKEA / Nike / Samsung tenant themes.
 ORIGINAL = {
     "conference_ikea": {
-        "name": "Conference – IKEA (BigBox Retailer)", "ws": BLESSING_WS, "brand": "IKEA",
+        "name": "Conference – IKEA (BigBox Retailer)", "ws": BLESSING_WS, "brand": "IKEA", "ws_name": "Home & Living Store",
         "header": ("#0058A3", "#FFFFFF", "#FFDB00"),  # top bar: background, text, active item
         "hex": {"page": "#FFFFFF", "card": "#F4F7FB", "panel": "#E8F0F9", "line": "#D6E2EF", "line2": "#B8CCE3",
                 "g5": "#8AA4C2", "g6": "#5F7FA3", "muted": "#3D5A7A", "g8": "#1F3A5C", "text": "#0B1F33",
@@ -180,7 +180,7 @@ ORIGINAL = {
         "bg": "https://cc.cz/wp-content/uploads/2017/01/ikea.jpg", "bg_alt": "IKEA store at dusk",
     },
     "conference_nike": {
-        "name": "Conference – Nike (Clothing)", "ws": EDGEWOOD_WS, "brand": "Nike",
+        "name": "Conference – Nike (Clothing)", "ws": EDGEWOOD_WS, "brand": "Nike", "ws_name": "Fashion Store",
         "header": ("#111111", "#FFFFFF", "#FA5400"),  # top bar: background, text, active item
         "hex": {"page": "#FFFFFF", "card": "#F5F5F5", "panel": "#EFEFEF", "line": "#E2E2E2", "line2": "#CCCCCC",
                 "g5": "#9E9E9E", "g6": "#757575", "muted": "#4D4D4D", "g8": "#2B2B2B", "text": "#111111",
@@ -198,7 +198,7 @@ ORIGINAL = {
         "bg_alt": "Nike store front at night",
     },
     "conference_samsung": {
-        "name": "Conference – Samsung (Electronics)", "ws": OHIO_WS, "brand": "Samsung",
+        "name": "Conference – Samsung (Electronics)", "ws": OHIO_WS, "brand": "Samsung", "ws_name": "Electronics Store",
         "header": ("#1428A0", "#FFFFFF", "#8FD3FF"),  # top bar: background, text, active item
         "hex": {"page": "#FFFFFF", "card": "#F5F6F8", "panel": "#ECEEF3", "line": "#DDE1EA", "line2": "#C3C9D6",
                 "g5": "#98A1B3", "g6": "#6B7487", "muted": "#474F60", "g8": "#262B36", "text": "#0B0B0B",
@@ -624,7 +624,7 @@ def main():
                   "| ACTIVE_THEME", activate(ws, "ACTIVE_THEME", {"id": tid, "type": "theme"}),
                   "| ACTIVE_COLOR_PALETTE", activate(ws, "ACTIVE_COLOR_PALETTE", {"id": tid, "type": "colorPalette"}),
                   f"-> {ws}")
-            ws_name = tenants.get(tid, {}).get("ws_name")
+            ws_name = tenants.get(tid, {}).get("ws_name") or ("Ecommerce Platform" if tid == "conference_dark_lime" else None)
             if ws_name:
                 code, cur = api("GET", f"/api/v1/entities/workspaces/{ws}")
                 if code == 200 and cur["data"]["attributes"].get("name") != ws_name:

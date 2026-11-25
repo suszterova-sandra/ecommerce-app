@@ -187,7 +187,7 @@ def standard():
     upsert(PARENT, "analyticalDashboards", STANDARD_DASHBOARD, {
         "title": "5. Measure Explorer",
         "description": "Standard dashboard: switch the measure, currency and Top N with parameters. "
-                       "Read-only in every show; use Save as new to make your own copy.",
+                       "Read-only in every tenant; use Save as new to make your own copy.",
         "content": dashboard_content(fc, STANDARD_SECTIONS, STANDARD_PARAMETERS)})
     # standard content: everyone views, nobody but the developers edits. The Currency metric was private to its
     # author (object-level permissions), which hid its table from tenant users, so it is opened for viewing too.
@@ -196,7 +196,7 @@ def standard():
         for oid in oids:
             share(PARENT, oid, EVERYONE_VIEW, kind=kind)
 
-    print(f"Group permissions in Outdoor Retailer ({TENANT})")
+    print(f"Group permissions in Fashion Store ({TENANT})")
     code, layout = api("GET", f"/api/v1/layout/workspaces/{TENANT}/permissions")
     keep = [p for p in layout["permissions"] if p["assignee"]["id"] not in GROUP_PERMISSIONS]
     new = keep + [{"name": n, "assignee": {"id": g, "type": "userGroup"}}

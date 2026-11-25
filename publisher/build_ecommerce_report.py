@@ -218,8 +218,8 @@ CHAPTERS = [
     ("04", "Orders & Fulfillment", "How orders move from placement to completion.",
      "Fulfillment Funnel  ·  Completed vs. Canceled"),
 ]
-REPORT_TITLE = "Event Portfolio Business Report"
-SUMMARY = "Sales, products, customers and fulfillment across every show, in one view."
+REPORT_TITLE = "Ecommerce Business Report"
+SUMMARY = "Sales, products, customers and fulfillment across every tenant, in one view."
 
 
 def cover():
@@ -395,8 +395,7 @@ def build():
             "defaults": {
                 "page_size": "widescreen",
                 "takeaway": {"generation": {"instructions": (
-                    "Act as a professional data analyst for a trade show in the Emerald portfolio. Write short "
-                    "messages, max 255 "
+                    "Act as a professional data analyst for an ecommerce company. Write short messages, max 255 "
                     "characters. Explain what stands behind the numbers (categories, brands, customer segments, "
                     "countries, order outcomes) more than restating the numbers themselves.")}},
             },
